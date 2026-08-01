@@ -104,6 +104,10 @@
     }
     nav { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .national-logo { display: block; width: auto; height: 58px; }
+    .brand-divider { width: 1px; height: 34px; background: var(--line); }
+    .local-lockup { display: grid; gap: 1px; color: var(--lagoon-dark); font-size: .68rem; font-weight: 800; letter-spacing: .1em; line-height: 1.18; text-transform: uppercase; }
+    .local-lockup strong { color: var(--ink); font-size: .8rem; letter-spacing: .04em; }
     .brand-word { font-size: 1.5rem; font-weight: 950; letter-spacing: -.07em; }
     .brand-place { color: var(--lagoon); font-size: .78rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
     .bangs { display: flex; align-items: end; gap: 3px; height: 28px; }
@@ -190,13 +194,18 @@
     .mission-number { display: block; margin-bottom: 54px; color: var(--lagoon); font-weight: 900; }
     .mission p { margin-bottom: 0; color: var(--muted); }
 
-    .news-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 20px; }
+    .news-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; }
     .news-card { display: flex; min-height: 360px; padding: 34px; border-radius: var(--radius-lg); background: var(--paper); box-shadow: 0 10px 36px rgba(8,72,73,.07); flex-direction: column; justify-content: space-between; }
-    .news-card.primary { color: white; background: var(--lagoon); }
+    .news-card.primary { grid-row: span 2; min-height: 100%; color: white; background: var(--lagoon-dark); }
     .news-card.primary p { color: rgba(255,255,255,.75); }
     .news-tag { width: fit-content; padding: 7px 11px; border-radius: 999px; color: var(--ink); background: var(--yellow); font-size: .72rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .news-card:not(.primary) { min-height: 250px; }
     .news-card:not(.primary) .news-tag { color: white; background: var(--violet); }
     .news-card a { width: fit-content; color: inherit; font-weight: 850; text-underline-offset: 4px; }
+    .source-mark { display: flex; align-items: center; gap: 8px; margin-bottom: 22px; color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .source-mark::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--coral); }
+    .news-card.primary .source-mark { color: rgba(255,255,255,.72); }
+    .news-actions { display: flex; justify-content: flex-end; margin-top: 28px; }
 
     .agenda { color: white; background: var(--lagoon-dark); }
     .agenda .eyebrow { color: var(--yellow); }
@@ -264,6 +273,8 @@
       section { padding: 76px 0; }
       nav { min-height: 70px; }
       .brand-place { display: none; }
+      .national-logo { height: 48px; }
+      .brand-divider, .local-lockup { display: none; }
       .nav-links { inset-block-start: 70px; }
       .hero { padding: 66px 0 72px; }
       .hero-grid { gap: 38px; }
@@ -305,9 +316,9 @@
     <div class="container">
       <nav aria-label="Navigation principale">
         <a class="brand" href="#accueil" aria-label="BAMP Nouméa, accueil">
-          <span class="bangs" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <span class="brand-word">BAMP!</span>
-          <span class="brand-place">Nouvelle-Calédonie</span>
+          <img class="national-logo" src="https://www.bamp.fr/wp-content/themes/bamp/assets/dist/images/design/logo_bamp_light.svg" alt="Collectif BAMP">
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="local-lockup">Antenne de<strong>Nouvelle-Calédonie</strong></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
         <div class="nav-links" id="menu">
@@ -382,20 +393,27 @@
       <div class="container">
         <div class="section-head">
           <div><p class="eyebrow">À la une</p><h2>La vie du collectif</h2></div>
-          <p>Les informations locales sont publiées sur Facebook. Retrouvez aussi les grands dossiers et campagnes du Collectif BAMP national.</p>
+          <p>Les publications du site national consacrées à l’antenne, aux bénévoles et aux parcours d’AMP en Nouvelle-Calédonie.</p>
         </div>
         <div class="news-grid">
           <article class="news-card primary">
+            <span class="source-mark">Publié sur BAMP.fr · 25 février 2026</span>
             <span class="news-tag">10 ans à Nouméa</span>
-            <div><h3>Une décennie d’écoute et d’engagement en Nouvelle-Calédonie</h3><p>Créée en 2016, l’antenne locale poursuit sa mission aux côtés des personnes concernées par l’infertilité et l’AMP.</p></div>
-            <a href="https://www.bamp.fr/" target="_blank" rel="noopener">Les actualités BAMP →</a>
+            <div><h3>Merci Déborah, et bienvenue à Geneviève</h3><p>Le Collectif national revient sur dix années d’engagement à Nouméa et présente la nouvelle responsable de l’antenne locale.</p></div>
+            <a href="https://www.bamp.fr/2026/02/25/10-ans-de-lantenne-bamp-noumea-merci-deborah-et-bienvenue-a-genevieve/" target="_blank" rel="noopener">Lire l’article complet →</a>
           </article>
           <article class="news-card">
-            <span class="news-tag">En direct</span>
-            <div><h3>Suivez BAMP Nouvelle-Calédonie</h3><p>Annonces, rencontres et temps forts de l’antenne sont partagés sur notre page Facebook.</p></div>
-            <a href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener">Ouvrir Facebook ↗</a>
+            <span class="source-mark">Publié sur BAMP.fr · 15 février 2024</span>
+            <div><h3>Les bénévoles de l’association</h3><p>Le réseau national met à l’honneur celles et ceux qui accueillent et accompagnent les patients, notamment à Nouméa.</p></div>
+            <a href="https://www.bamp.fr/2024/02/15/les-benevoles-de-lassociation/" target="_blank" rel="noopener">Découvrir l’équipe →</a>
+          </article>
+          <article class="news-card">
+            <span class="source-mark">Publié sur BAMP.fr · 14 septembre 2023</span>
+            <div><h3>Infertilité : quelle prise en charge au pays ?</h3><p>Retour sur l’émission calédonienne consacrée à la fertilité, à l’AMP, aux démarches CAFAT et aux droits des patients.</p></div>
+            <a href="https://www.bamp.fr/2023/09/14/bamp-noumea/" target="_blank" rel="noopener">Lire l’article →</a>
           </article>
         </div>
+        <div class="news-actions"><a class="button outline" href="https://www.bamp.fr/category/bamp-en-regions/bamp-nouvelle-caledonie/" target="_blank" rel="noopener">Toutes les actualités Nouvelle-Calédonie sur BAMP.fr ↗</a></div>
       </div>
     </section>
 
@@ -502,7 +520,7 @@
 
   <footer>
     <div class="container footer-row">
-      <a class="brand" href="#accueil"><span class="bangs" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-word">BAMP!</span><span class="brand-place">Nouvelle-Calédonie</span></a>
+      <a class="brand" href="#accueil"><img class="national-logo" src="https://www.bamp.fr/wp-content/themes/bamp/assets/dist/images/design/logo_bamp_light.svg" alt="Collectif BAMP"><span class="brand-divider" aria-hidden="true"></span><span class="local-lockup">Antenne de<strong>Nouvelle-Calédonie</strong></span></a>
       <span>Écoute et soutien autour de l’infertilité et de l’AMP en Nouvelle-Calédonie.</span>
     </div>
   </footer>
