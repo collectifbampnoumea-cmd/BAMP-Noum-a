@@ -4,21 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="BAMP Nouméa accompagne, informe et rassemble les personnes concernées par l’infertilité et les parcours d’assistance médicale à la procréation en Nouvelle-Calédonie.">
-  <meta name="theme-color" content="#9f285c">
+  <meta name="theme-color" content="#0d6668">
+  <meta property="og:title" content="BAMP Nouméa — Vous n’êtes pas seul·e">
+  <meta property="og:description" content="Écoute, information et soutien autour de l’infertilité et de l’AMP en Nouvelle-Calédonie.">
+  <meta property="og:type" content="website">
   <title>BAMP Nouméa — Écoute, information et soutien autour de l’AMP</title>
   <style>
     :root {
-      --plum: #672044;
-      --berry: #9f285c;
-      --coral: #e66d72;
-      --peach: #f8c7b8;
-      --cream: #fff8f3;
-      --ink: #2f2530;
-      --muted: #695c67;
-      --white: #fff;
-      --line: rgba(103, 32, 68, .14);
-      --shadow: 0 18px 50px rgba(76, 33, 54, .12);
-      --radius: 28px;
+      --ink: #172626;
+      --muted: #596868;
+      --lagoon: #0d6668;
+      --lagoon-dark: #084849;
+      --lagoon-soft: #d9eeeb;
+      --sand: #f7f2e9;
+      --paper: #fffdf9;
+      --coral: #ef665f;
+      --yellow: #f1c84c;
+      --blue: #4b9fce;
+      --violet: #8254a5;
+      --line: rgba(13, 102, 104, .15);
+      --shadow: 0 22px 60px rgba(8, 72, 73, .12);
+      --radius-lg: 34px;
+      --radius-md: 22px;
     }
 
     * { box-sizing: border-box; }
@@ -26,188 +33,239 @@
     body {
       margin: 0;
       color: var(--ink);
-      background: var(--cream);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.65;
+      background: var(--sand);
+      font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; }
-    img { max-width: 100%; }
+    button, input, textarea { font: inherit; }
+    .container { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
     .skip-link {
       position: fixed;
-      z-index: 100;
-      top: 12px;
-      left: 12px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      color: var(--white);
-      background: var(--plum);
+      z-index: 200;
+      top: 10px;
+      left: 10px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      color: white;
+      background: var(--lagoon-dark);
       transform: translateY(-160%);
     }
     .skip-link:focus { transform: translateY(0); }
-    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    :focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
+
     .eyebrow {
-      margin: 0 0 12px;
-      color: var(--berry);
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      color: var(--lagoon);
       font-size: .78rem;
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: .14em;
       text-transform: uppercase;
     }
-    h1, h2, h3 { margin-top: 0; line-height: 1.08; letter-spacing: -.035em; }
-    h1 { max-width: 750px; margin-bottom: 24px; font-size: clamp(3rem, 7vw, 6.8rem); }
-    h2 { max-width: 760px; margin-bottom: 18px; font-size: clamp(2rem, 4.5vw, 4rem); }
-    h3 { margin-bottom: 10px; font-size: 1.25rem; }
+    .eyebrow::before { content: ""; width: 25px; height: 4px; border-radius: 99px; background: var(--coral); }
+    h1, h2, h3 { margin-top: 0; line-height: 1.05; letter-spacing: -.045em; }
+    h1 { max-width: 900px; margin-bottom: 26px; font-size: clamp(3.4rem, 8vw, 7.8rem); font-weight: 900; }
+    h2 { max-width: 800px; margin-bottom: 18px; font-size: clamp(2.4rem, 5vw, 4.7rem); font-weight: 880; }
+    h3 { margin-bottom: 12px; font-size: clamp(1.25rem, 2vw, 1.65rem); font-weight: 820; }
     p { margin-top: 0; }
-    .lead { max-width: 680px; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.3rem); }
+    .lead { max-width: 720px; color: var(--muted); font-size: clamp(1.1rem, 2vw, 1.35rem); }
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 12px 20px;
-      border: 2px solid var(--berry);
+      gap: 9px;
+      min-height: 50px;
+      padding: 12px 21px;
+      border: 2px solid var(--lagoon);
       border-radius: 999px;
-      color: var(--white);
-      background: var(--berry);
-      font-weight: 750;
+      color: white;
+      background: var(--lagoon);
+      font-weight: 800;
       text-decoration: none;
       transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(159, 40, 92, .2); }
-    .button.secondary { color: var(--berry); background: transparent; }
-    .button.secondary:hover { background: rgba(159, 40, 92, .06); }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(13, 102, 104, .22); background: var(--lagoon-dark); }
+    .button.light { border-color: white; color: var(--lagoon-dark); background: white; }
+    .button.outline { color: var(--lagoon); background: transparent; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
     header {
       position: sticky;
-      z-index: 50;
+      z-index: 80;
       top: 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(255, 248, 243, .94);
+      background: rgba(247, 242, 233, .94);
       backdrop-filter: blur(18px);
     }
-    nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 24px; }
-    .brand { display: inline-flex; align-items: baseline; gap: 8px; font-weight: 900; text-decoration: none; letter-spacing: -.04em; }
-    .brand-mark { color: var(--berry); font-size: 1.6rem; }
-    .brand-place { color: var(--plum); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
-    .nav-links { display: flex; align-items: center; gap: 20px; }
-    .nav-links a { color: var(--muted); font-size: .9rem; font-weight: 700; text-decoration: none; }
-    .nav-links a:hover, .nav-links a:focus-visible { color: var(--berry); }
+    nav { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+    .brand-word { font-size: 1.5rem; font-weight: 950; letter-spacing: -.07em; }
+    .brand-place { color: var(--lagoon); font-size: .78rem; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .bangs { display: flex; align-items: end; gap: 3px; height: 28px; }
+    .bangs i { display: block; width: 6px; height: 21px; border-radius: 4px 4px 8px 8px; position: relative; }
+    .bangs i::after { content: ""; position: absolute; bottom: -7px; left: 1px; width: 4px; height: 4px; border-radius: 50%; background: inherit; }
+    .bangs i:nth-child(1) { background: var(--coral); }
+    .bangs i:nth-child(2) { height: 25px; background: var(--yellow); }
+    .bangs i:nth-child(3) { height: 19px; background: var(--blue); }
+    .bangs i:nth-child(4) { height: 23px; background: var(--violet); }
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+    .nav-links > a:not(.button) { color: var(--muted); font-size: .9rem; font-weight: 750; text-decoration: none; }
+    .nav-links > a:not(.button):hover { color: var(--lagoon); }
+    .menu-toggle { display: none; border: 0; background: transparent; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
 
-    .hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-      min-height: 760px;
-      padding: 110px 0 90px;
-      display: grid;
-      align-items: center;
-    }
-    .hero::before, .hero::after {
+    .hero { position: relative; overflow: hidden; padding: 95px 0 90px; }
+    .hero::before {
       content: "";
       position: absolute;
-      z-index: -1;
+      width: 570px;
+      height: 570px;
+      top: -270px;
+      right: -180px;
+      border: 80px solid rgba(75, 159, 206, .13);
       border-radius: 50%;
-      filter: blur(2px);
     }
-    .hero::before { width: 520px; height: 520px; top: -170px; right: -90px; background: rgba(248, 199, 184, .8); }
-    .hero::after { width: 370px; height: 370px; right: 16%; bottom: -200px; background: rgba(230, 109, 114, .18); }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr); align-items: end; gap: 64px; }
-    .hero-note {
-      position: relative;
-      padding: 32px;
-      border: 1px solid rgba(255, 255, 255, .8);
-      border-radius: var(--radius);
-      background: rgba(255, 255, 255, .62);
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .65fr); align-items: center; gap: 58px; }
+    .hero h1 span { color: var(--coral); }
+    .hero-aside { position: relative; min-height: 530px; }
+    .portrait-shape {
+      position: absolute;
+      inset: 24px 20px 0 0;
+      overflow: hidden;
+      border-radius: 46% 46% 30px 30px;
+      background: var(--lagoon);
       box-shadow: var(--shadow);
-      transform: rotate(2deg);
     }
-    .hero-note::before { content: "“"; color: var(--coral); font-family: Georgia, serif; font-size: 5rem; line-height: .7; }
-    .hero-note p { margin: 12px 0 0; color: var(--plum); font-size: 1.2rem; font-weight: 700; }
+    .portrait-shape::before, .portrait-shape::after { content: ""; position: absolute; border-radius: 50%; }
+    .portrait-shape::before { width: 310px; height: 310px; top: 50px; left: 44px; border: 56px solid rgba(255,255,255,.12); }
+    .portrait-shape::after { width: 180px; height: 180px; right: -42px; bottom: -34px; background: var(--coral); }
+    .support-note { position: absolute; z-index: 2; right: 0; bottom: 44px; width: min(310px, 82%); padding: 25px; border-radius: 24px; background: white; box-shadow: var(--shadow); transform: rotate(-2deg); }
+    .support-note strong { display: block; color: var(--lagoon-dark); font-size: 1.18rem; line-height: 1.28; }
+    .color-dots { display: flex; gap: 6px; margin-bottom: 16px; }
+    .color-dots span { width: 9px; height: 9px; border-radius: 50%; }
+    .color-dots span:nth-child(1) { background: var(--coral); }
+    .color-dots span:nth-child(2) { background: var(--yellow); }
+    .color-dots span:nth-child(3) { background: var(--blue); }
+    .color-dots span:nth-child(4) { background: var(--violet); }
 
-    section { padding: 100px 0; }
-    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 44px; }
-    .section-head p { max-width: 560px; margin-bottom: 5px; color: var(--muted); }
-    .intro { background: var(--white); }
-    .intro-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: start; }
-    .statement { color: var(--plum); font-size: clamp(1.45rem, 2.8vw, 2.35rem); font-weight: 750; line-height: 1.3; letter-spacing: -.03em; }
-    .pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .pillar { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--cream); }
-    .number { display: block; margin-bottom: 28px; color: var(--coral); font-weight: 900; }
+    .quickbar { position: relative; z-index: 3; margin-bottom: -50px; }
+    .quickbar-inner { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border-radius: 28px; box-shadow: var(--shadow); }
+    .quick-link { min-height: 140px; padding: 28px; color: white; text-decoration: none; transition: transform .2s ease, filter .2s ease; }
+    .quick-link:hover { filter: brightness(.94); }
+    .quick-link:nth-child(1) { background: var(--coral); }
+    .quick-link:nth-child(2) { color: var(--ink); background: var(--yellow); }
+    .quick-link:nth-child(3) { background: var(--violet); }
+    .quick-link span { display: block; margin-bottom: 22px; font-size: .76rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .quick-link strong { display: flex; align-items: end; justify-content: space-between; gap: 10px; font-size: 1.2rem; line-height: 1.2; }
 
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .card { padding: 28px; border: 1px solid var(--line); border-radius: 24px; background: var(--white); box-shadow: 0 8px 30px rgba(76, 33, 54, .05); }
-    .card p { color: var(--muted); }
-    .card a:not(.button) { color: var(--berry); font-weight: 750; text-underline-offset: 3px; }
-    .tag { display: inline-flex; margin-bottom: 22px; padding: 6px 10px; border-radius: 999px; color: var(--plum); background: var(--peach); font-size: .74rem; font-weight: 850; letter-spacing: .05em; text-transform: uppercase; }
-    .card.featured { grid-column: span 2; color: var(--white); background: var(--plum); }
-    .card.featured p { color: rgba(255,255,255,.78); }
-    .card.featured a:not(.button) { color: var(--peach); }
+    section { padding: 110px 0; }
+    .section-head { display: grid; grid-template-columns: 1fr .8fr; align-items: end; gap: 40px; margin-bottom: 48px; }
+    .section-head p { max-width: 570px; margin-bottom: 6px; color: var(--muted); }
+    .about { padding-top: 150px; background: var(--paper); }
+    .about-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: 76px; }
+    .about-copy { position: sticky; top: 120px; align-self: start; }
+    .about-copy .statement { color: var(--lagoon-dark); font-size: clamp(1.4rem, 2.7vw, 2.3rem); font-weight: 780; line-height: 1.28; letter-spacing: -.03em; }
+    .missions { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .mission { position: relative; min-height: 245px; padding: 28px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--sand); }
+    .mission:nth-child(2) { background: #edf6fa; }
+    .mission:nth-child(3) { background: #f7effa; }
+    .mission:nth-child(4) { background: #fff5d7; }
+    .mission-number { display: block; margin-bottom: 54px; color: var(--lagoon); font-weight: 900; }
+    .mission p { margin-bottom: 0; color: var(--muted); }
 
-    .agenda { color: var(--white); background: var(--plum); }
-    .agenda .eyebrow { color: var(--peach); }
-    .agenda .section-head p { color: rgba(255,255,255,.72); }
-    .event-list { border-top: 1px solid rgba(255,255,255,.16); }
-    .event { display: grid; grid-template-columns: 150px 1fr auto; align-items: center; gap: 30px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
-    .event-date { color: var(--peach); font-weight: 850; text-transform: uppercase; }
-    .event p { margin: 4px 0 0; color: rgba(255,255,255,.68); }
-    .event .button.secondary { border-color: var(--peach); color: var(--peach); }
+    .news-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 20px; }
+    .news-card { display: flex; min-height: 360px; padding: 34px; border-radius: var(--radius-lg); background: var(--paper); box-shadow: 0 10px 36px rgba(8,72,73,.07); flex-direction: column; justify-content: space-between; }
+    .news-card.primary { color: white; background: var(--lagoon); }
+    .news-card.primary p { color: rgba(255,255,255,.75); }
+    .news-tag { width: fit-content; padding: 7px 11px; border-radius: 999px; color: var(--ink); background: var(--yellow); font-size: .72rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
+    .news-card:not(.primary) .news-tag { color: white; background: var(--violet); }
+    .news-card a { width: fit-content; color: inherit; font-weight: 850; text-underline-offset: 4px; }
 
-    .guide-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .guide-panel { position: relative; overflow: hidden; min-height: 420px; padding: 42px; border-radius: var(--radius); background: var(--peach); }
-    .guide-panel.dark { color: var(--white); background: var(--berry); }
-    .guide-panel.dark p { color: rgba(255,255,255,.8); }
-    .guide-panel::after { content: "Bientôt"; position: absolute; right: -22px; bottom: 18px; color: rgba(255,255,255,.38); font-size: clamp(3.7rem, 8vw, 7rem); font-weight: 950; letter-spacing: -.08em; transform: rotate(-8deg); }
-    .check-list { margin: 24px 0 0; padding: 0; list-style: none; }
-    .check-list li { margin: 12px 0; padding-left: 28px; position: relative; }
-    .check-list li::before { content: "●"; position: absolute; left: 0; color: var(--coral); }
+    .agenda { color: white; background: var(--lagoon-dark); }
+    .agenda .eyebrow { color: var(--yellow); }
+    .agenda .section-head p { color: rgba(255,255,255,.68); }
+    .events { border-top: 1px solid rgba(255,255,255,.2); }
+    .event { display: grid; grid-template-columns: 150px 1fr auto; gap: 30px; align-items: center; padding: 30px 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+    .event-date { color: var(--yellow); font-size: .82rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+    .event h3 { margin: 0; }
+    .event p { margin: 5px 0 0; color: rgba(255,255,255,.65); }
 
-    .resources { background: var(--white); }
-    .resource-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .resource { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 24px; border: 1px solid var(--line); border-radius: 18px; text-decoration: none; }
-    .resource:hover { border-color: var(--coral); background: var(--cream); }
-    .resource span:last-child { color: var(--berry); font-size: 1.35rem; }
+    .guide-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 20px; }
+    .guide-main, .guide-side { min-height: 450px; padding: 42px; border-radius: var(--radius-lg); }
+    .guide-main { position: relative; overflow: hidden; color: white; background: var(--blue); }
+    .guide-main::after { content: "À VENIR"; position: absolute; right: -20px; bottom: -16px; color: rgba(255,255,255,.18); font-size: clamp(4rem, 9vw, 8.5rem); font-weight: 950; letter-spacing: -.08em; }
+    .guide-main p { max-width: 580px; color: rgba(255,255,255,.82); }
+    .guide-side { background: var(--paper); }
+    .guide-side ul { margin: 28px 0 0; padding: 0; list-style: none; }
+    .guide-side li { position: relative; margin: 15px 0; padding: 0 0 15px 29px; border-bottom: 1px solid var(--line); }
+    .guide-side li::before { content: ""; position: absolute; top: 8px; left: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--coral); }
 
-    .testimony { text-align: center; }
-    .quote { max-width: 900px; margin: 0 auto 30px; color: var(--plum); font-family: Georgia, serif; font-size: clamp(1.8rem, 4vw, 3.7rem); line-height: 1.25; letter-spacing: -.025em; }
-    .fine { color: var(--muted); font-size: .92rem; }
+    .resources { background: var(--paper); }
+    .resource-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .resource { display: grid; grid-template-columns: 50px 1fr auto; align-items: center; gap: 18px; padding: 23px; border: 1px solid var(--line); border-radius: 20px; text-decoration: none; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+    .resource:hover { transform: translateY(-3px); border-color: var(--coral); background: var(--sand); }
+    .resource-icon { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 16px; color: white; background: var(--lagoon); font-size: 1.2rem; font-weight: 900; }
+    .resource:nth-child(2) .resource-icon { color: var(--ink); background: var(--yellow); }
+    .resource:nth-child(3) .resource-icon { background: var(--violet); }
+    .resource:nth-child(4) .resource-icon { background: var(--coral); }
+    .resource small { color: var(--muted); }
+    .resource-arrow { color: var(--lagoon); font-size: 1.4rem; }
 
-    .partners { padding-top: 40px; }
-    .partner-row { display: flex; flex-wrap: wrap; gap: 12px; }
-    .partner { padding: 14px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--white); font-weight: 750; text-decoration: none; }
+    .voices { text-align: center; }
+    .quote { max-width: 930px; margin: 0 auto 28px; color: var(--lagoon-dark); font-size: clamp(2rem, 4.5vw, 4.5rem); font-weight: 850; line-height: 1.12; letter-spacing: -.05em; }
+    .fine { color: var(--muted); font-size: .94rem; }
+    .partners { padding-top: 20px; }
+    .partner-row { display: flex; flex-wrap: wrap; gap: 11px; }
+    .partner { padding: 13px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-weight: 780; text-decoration: none; }
 
-    .contact-card { display: grid; grid-template-columns: 1.2fr .8fr; gap: 50px; padding: 54px; border-radius: var(--radius); color: var(--white); background: linear-gradient(135deg, var(--berry), var(--plum)); box-shadow: var(--shadow); }
-    .contact-card p { color: rgba(255,255,255,.8); }
-    .contact-details { display: grid; align-content: center; gap: 10px; }
-    .contact-details a { width: fit-content; color: var(--peach); font-weight: 800; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    .contact { padding-bottom: 80px; }
+    .contact-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1.15fr .85fr; gap: 60px; padding: 60px; border-radius: 40px; color: white; background: var(--coral); box-shadow: var(--shadow); }
+    .contact-card::after { content: "!"; position: absolute; right: 40px; bottom: -150px; color: rgba(255,255,255,.14); font-size: 28rem; font-weight: 950; line-height: 1; }
+    .contact-card > * { position: relative; z-index: 1; }
+    .contact-card .eyebrow { color: white; }
+    .contact-card .eyebrow::before { background: var(--yellow); }
+    .contact-card p { color: rgba(255,255,255,.85); }
+    .contact-details { display: grid; align-content: center; gap: 8px; }
+    .contact-details strong { margin-top: 12px; color: #fff3c5; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+    .contact-details a { width: fit-content; color: white; font-size: 1.08rem; font-weight: 850; overflow-wrap: anywhere; text-underline-offset: 4px; }
 
-    footer { padding: 36px 0 52px; color: var(--muted); }
-    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-top: 28px; }
+    footer { padding: 40px 0 55px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
 
-    :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
-    @media (max-width: 900px) {
-      .nav-links a:not(.button) { display: none; }
-      .hero { min-height: auto; padding-top: 80px; }
-      .hero-grid, .intro-grid, .guide-wrap, .contact-card { grid-template-columns: 1fr; }
-      .hero-note { max-width: 560px; transform: none; }
-      .cards { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 960px) {
+      .nav-links { position: fixed; inset: 80px 0 auto; display: none; padding: 22px; border-bottom: 1px solid var(--line); background: var(--paper); flex-direction: column; align-items: stretch; }
+      .nav-links.open { display: flex; }
+      .menu-toggle { display: block; }
+      .hero-grid, .about-grid, .guide-layout, .contact-card { grid-template-columns: 1fr; }
+      .hero-aside { min-height: 430px; max-width: 560px; width: 100%; }
+      .about-copy { position: static; }
       .event { grid-template-columns: 120px 1fr; }
       .event .button { grid-column: 2; width: fit-content; }
     }
-    @media (max-width: 640px) {
-      .container { width: min(100% - 28px, 1120px); }
-      section { padding: 72px 0; }
-      nav { min-height: 68px; }
-      .nav-links .button { min-height: 42px; padding: 8px 13px; font-size: .82rem; }
-      .hero { padding: 70px 0; }
+    @media (max-width: 680px) {
+      .container { width: min(100% - 28px, 1180px); }
+      section { padding: 76px 0; }
+      nav { min-height: 70px; }
+      .brand-place { display: none; }
+      .nav-links { inset-block-start: 70px; }
+      .hero { padding: 66px 0 72px; }
       .hero-grid { gap: 38px; }
-      .section-head { display: block; }
-      .pillars, .cards, .resource-list { grid-template-columns: 1fr; }
-      .card.featured { grid-column: auto; }
+      .hero-aside { min-height: 370px; }
+      .portrait-shape { inset: 0; }
+      .support-note { right: 10px; bottom: 24px; }
+      .quickbar { margin-bottom: -20px; }
+      .quickbar-inner, .section-head, .missions, .news-grid, .resource-grid { grid-template-columns: 1fr; }
+      .quick-link { min-height: 112px; }
+      .about { padding-top: 100px; }
+      .mission { min-height: 210px; }
       .event { grid-template-columns: 1fr; gap: 6px; }
-      .event .button { grid-column: auto; margin-top: 10px; }
-      .guide-panel { min-height: 390px; padding: 30px; }
-      .contact-card { padding: 34px 26px; }
+      .event .button { grid-column: auto; margin-top: 12px; }
+      .guide-main, .guide-side { min-height: auto; padding: 30px; }
+      .guide-main { min-height: 410px; }
+      .contact-card { gap: 30px; padding: 38px 26px; border-radius: 30px; }
       .footer-row { align-items: start; flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
@@ -233,9 +291,12 @@
     <div class="container">
       <nav aria-label="Navigation principale">
         <a class="brand" href="#accueil" aria-label="BAMP Nouméa, accueil">
-          <span class="brand-mark">BAMP!</span><span class="brand-place">Nouméa</span>
+          <span class="bangs" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="brand-word">BAMP!</span>
+          <span class="brand-place">Nouvelle-Calédonie</span>
         </a>
-        <div class="nav-links">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
+        <div class="nav-links" id="menu">
           <a href="#association">L’association</a>
           <a href="#actualites">Actualités</a>
           <a href="#agenda">Agenda</a>
@@ -251,33 +312,44 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Antenne de Nouvelle-Calédonie</p>
-          <h1>Vous n’êtes pas seul·e.</h1>
+          <h1>Vous n’êtes <span>pas seul·e.</span></h1>
           <p class="lead">BAMP Nouméa écoute, informe et rassemble les personnes concernées par l’infertilité et les parcours d’assistance médicale à la procréation.</p>
           <div class="actions">
-            <a class="button" href="#contact">Parler avec l’équipe</a>
-            <a class="button secondary" href="#ressources">Trouver une ressource</a>
+            <a class="button" href="#contact">Parler avec l’équipe <span aria-hidden="true">→</span></a>
+            <a class="button outline" href="#ressources">Trouver une ressource</a>
           </div>
         </div>
-        <aside class="hero-note" aria-label="Notre conviction">
-          <p>Partager, informer, agir et soutenir — avec douceur, sans jugement et au plus près des réalités du territoire.</p>
-        </aside>
+        <div class="hero-aside" aria-label="Notre engagement">
+          <div class="portrait-shape"></div>
+          <div class="support-note">
+            <div class="color-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <strong>Partager, informer, agir et soutenir — avec douceur et sans jugement.</strong>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="intro" id="association">
-      <div class="container intro-grid">
-        <div>
+    <div class="quickbar">
+      <div class="container quickbar-inner">
+        <a class="quick-link" href="#agenda"><span>01 · Se rencontrer</span><strong>Voir l’agenda <b aria-hidden="true">↘</b></strong></a>
+        <a class="quick-link" href="#ressources"><span>02 · S’informer</span><strong>Nos ressources <b aria-hidden="true">↘</b></strong></a>
+        <a class="quick-link" href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener"><span>03 · Nous suivre</span><strong>Facebook BAMP NC <b aria-hidden="true">↗</b></strong></a>
+      </div>
+    </div>
+
+    <section class="about" id="association">
+      <div class="container about-grid">
+        <div class="about-copy">
           <p class="eyebrow">Qui sommes-nous ?</p>
+          <h2>Une présence locale, un collectif national.</h2>
           <p class="statement">Depuis 2016, l’antenne BAMP de Nouvelle-Calédonie crée du lien autour de parcours qui peuvent être longs, intimes et éprouvants.</p>
+          <p>Nous accueillons les personnes infertiles, en parcours d’AMP, leurs proches et toutes celles et ceux qui souhaitent mieux comprendre ces réalités.</p>
         </div>
-        <div>
-          <p class="lead">Nous accueillons les personnes infertiles, en parcours d’AMP, leurs proches et toutes celles et ceux qui souhaitent mieux comprendre ces réalités.</p>
-          <div class="pillars">
-            <article class="pillar"><span class="number">01</span><h3>Écouter</h3><p>Offrir un espace de parole bienveillant et confidentiel.</p></article>
-            <article class="pillar"><span class="number">02</span><h3>Informer</h3><p>Partager des ressources fiables pour mieux vivre et comprendre son parcours.</p></article>
-            <article class="pillar"><span class="number">03</span><h3>Rassembler</h3><p>Créer des rencontres et rompre l’isolement sur le territoire.</p></article>
-            <article class="pillar"><span class="number">04</span><h3>Agir</h3><p>Faire progresser la sensibilisation et la prise en charge de l’infertilité.</p></article>
-          </div>
+        <div class="missions">
+          <article class="mission"><span class="mission-number">01</span><h3>Écouter</h3><p>Un espace de parole bienveillant et confidentiel, au plus près des réalités du territoire.</p></article>
+          <article class="mission"><span class="mission-number">02</span><h3>Informer</h3><p>Des ressources fiables pour comprendre son parcours et faire des choix éclairés.</p></article>
+          <article class="mission"><span class="mission-number">03</span><h3>Rassembler</h3><p>Des rencontres pour échanger, se soutenir et sortir de l’isolement.</p></article>
+          <article class="mission"><span class="mission-number">04</span><h3>Agir</h3><p>Faire progresser la sensibilisation et la prise en charge de l’infertilité.</p></article>
         </div>
       </div>
     </section>
@@ -285,21 +357,19 @@
     <section id="actualites">
       <div class="container">
         <div class="section-head">
-          <div><p class="eyebrow">À la une</p><h2>Actualités</h2></div>
-          <p>La vie de l’antenne, les informations utiles et les initiatives du Collectif BAMP.</p>
+          <div><p class="eyebrow">À la une</p><h2>La vie du collectif</h2></div>
+          <p>Les informations locales sont publiées sur Facebook. Retrouvez aussi les grands dossiers et campagnes du Collectif BAMP national.</p>
         </div>
-        <div class="cards">
-          <article class="card featured">
-            <span class="tag">10 ans à Nouméa</span>
-            <h3>Une décennie de présence en Nouvelle-Calédonie</h3>
-            <p>Créée en 2016, l’antenne locale célèbre dix années d’écoute, de rencontres et d’engagement aux côtés des personnes concernées par l’infertilité et l’AMP.</p>
-            <a href="https://www.bamp.fr/" target="_blank" rel="noopener">Lire les actualités sur BAMP.fr →</a>
+        <div class="news-grid">
+          <article class="news-card primary">
+            <span class="news-tag">10 ans à Nouméa</span>
+            <div><h3>Une décennie d’écoute et d’engagement en Nouvelle-Calédonie</h3><p>Créée en 2016, l’antenne locale poursuit sa mission aux côtés des personnes concernées par l’infertilité et l’AMP.</p></div>
+            <a href="https://www.bamp.fr/" target="_blank" rel="noopener">Les actualités BAMP →</a>
           </article>
-          <article class="card">
-            <span class="tag">Réseaux</span>
-            <h3>Suivez l’antenne</h3>
-            <p>Retrouvez les annonces, les prochaines rencontres et la vie de BAMP Nouméa sur Facebook.</p>
-            <a href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener">Ouvrir la page Facebook →</a>
+          <article class="news-card">
+            <span class="news-tag">En direct</span>
+            <div><h3>Suivez BAMP Nouvelle-Calédonie</h3><p>Annonces, rencontres et temps forts de l’antenne sont partagés sur notre page Facebook.</p></div>
+            <a href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener">Ouvrir Facebook ↗</a>
           </article>
         </div>
       </div>
@@ -309,18 +379,18 @@
       <div class="container">
         <div class="section-head">
           <div><p class="eyebrow">Se retrouver</p><h2>Agenda</h2></div>
-          <p>Les dates sont publiées dès leur confirmation par l’équipe bénévole.</p>
+          <p>Les dates sont ajoutées dès leur confirmation par l’équipe bénévole.</p>
         </div>
-        <div class="event-list">
+        <div class="events">
           <article class="event">
             <div class="event-date">À venir</div>
             <div><h3>Prochaine rencontre BAMP Nouméa</h3><p>Date, lieu et modalités seront annoncés prochainement.</p></div>
-            <a class="button secondary" href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener">Voir les annonces</a>
+            <a class="button light" href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener">Voir les annonces</a>
           </article>
           <article class="event">
             <div class="event-date">Sur demande</div>
             <div><h3>Échanger avec l’antenne</h3><p>Une question, un besoin d’écoute ou l’envie de rejoindre le collectif ? Écrivez-nous.</p></div>
-            <a class="button secondary" href="mailto:collectifbampnoumea@gmail.com">Envoyer un e-mail</a>
+            <a class="button light" href="mailto:collectifbampnoumea@gmail.com">Envoyer un e-mail</a>
           </article>
         </div>
       </div>
@@ -330,21 +400,21 @@
       <div class="container">
         <div class="section-head">
           <div><p class="eyebrow">S’orienter</p><h2>Guide AMP & thérapeutes</h2></div>
-          <p>Un futur repère local pour identifier les professionnels et mieux préparer chaque étape de son parcours.</p>
+          <p>Un futur repère local pour identifier les professionnels et préparer chaque étape de son parcours.</p>
         </div>
-        <div class="guide-wrap">
-          <article class="guide-panel dark">
-            <span class="tag">En préparation</span>
-            <h3>Un annuaire pensé pour le territoire</h3>
+        <div class="guide-layout">
+          <article class="guide-main">
+            <span class="news-tag">En préparation</span>
+            <h3 style="margin-top:30px">Un annuaire pensé pour le territoire</h3>
             <p>Ce guide réunira des contacts utiles en Nouvelle-Calédonie, avec des informations pratiques et régulièrement vérifiées.</p>
           </article>
-          <article class="guide-panel">
+          <article class="guide-side">
             <h3>Ce que vous y trouverez</h3>
-            <ul class="check-list">
+            <ul>
               <li>Professionnels de l’accompagnement</li>
               <li>Spécialités et modalités de consultation</li>
               <li>Ressources pour préparer ses rendez-vous</li>
-              <li>Informations pratiques pour les parcours hors territoire</li>
+              <li>Informations pour les parcours hors territoire</li>
             </ul>
           </article>
         </div>
@@ -357,21 +427,21 @@
           <div><p class="eyebrow">S’informer</p><h2>Ressources utiles</h2></div>
           <p>Des portes d’entrée fiables pour comprendre l’infertilité, l’AMP et connaître ses droits.</p>
         </div>
-        <div class="resource-list">
-          <a class="resource" href="https://www.bamp.fr/" target="_blank" rel="noopener"><span><strong>Site national BAMP</strong><br><small>Actualités, dossiers et accompagnement</small></span><span aria-hidden="true">↗</span></a>
-          <a class="resource" href="https://www.bamp.fr/qui-sommes-nous/association-nationale-amp-pma/" target="_blank" rel="noopener"><span><strong>Comprendre le Collectif</strong><br><small>Missions, valeurs et actions</small></span><span aria-hidden="true">↗</span></a>
-          <a class="resource" href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener"><span><strong>Adhérer ou soutenir</strong><br><small>Espace officiel sur HelloAsso</small></span><span aria-hidden="true">↗</span></a>
-          <a class="resource" href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener"><span><strong>BAMP Nouméa sur Facebook</strong><br><small>Informations et annonces locales</small></span><span aria-hidden="true">↗</span></a>
+        <div class="resource-grid">
+          <a class="resource" href="https://www.bamp.fr/" target="_blank" rel="noopener"><span class="resource-icon">B!</span><span><strong>Site national BAMP</strong><br><small>Actualités, dossiers et accompagnement</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>
+          <a class="resource" href="https://www.bamp.fr/qui-sommes-nous/association-nationale-amp-pma/" target="_blank" rel="noopener"><span class="resource-icon">i</span><span><strong>Comprendre le Collectif</strong><br><small>Missions, valeurs et actions</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>
+          <a class="resource" href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener"><span class="resource-icon">♥</span><span><strong>Adhérer ou soutenir</strong><br><small>Espace officiel sur HelloAsso</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>
+          <a class="resource" href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener"><span class="resource-icon">f</span><span><strong>BAMP NC sur Facebook</strong><br><small>Informations et annonces locales</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="testimony" id="temoignages">
+    <section class="voices" id="temoignages">
       <div class="container">
         <p class="eyebrow">Vos voix comptent</p>
         <p class="quote">« Mettre des mots sur son parcours, c’est parfois déjà sortir un peu de l’isolement. »</p>
-        <p class="fine">La rubrique témoignages accueillera prochainement des récits partagés avec l’accord explicite de leurs auteur·rices.</p>
-        <div class="actions" style="justify-content:center"><a class="button secondary" href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a></div>
+        <p class="fine">Cette rubrique accueillera des récits partagés avec l’accord explicite de leurs auteur·rices.</p>
+        <div class="actions" style="justify-content:center"><a class="button outline" href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a></div>
       </div>
     </section>
 
@@ -386,20 +456,20 @@
       </div>
     </section>
 
-    <section id="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="contact-card">
           <div>
-            <p class="eyebrow" style="color:var(--peach)">Nous contacter</p>
+            <p class="eyebrow">Nous contacter</p>
             <h2>Une question, un besoin d’écoute ?</h2>
             <p>Écrivez à l’équipe bénévole de BAMP Nouméa. Votre message sera accueilli avec bienveillance et discrétion.</p>
-            <a class="button" style="background:var(--peach);border-color:var(--peach);color:var(--plum)" href="mailto:collectifbampnoumea@gmail.com">Envoyer un e-mail</a>
+            <a class="button light" href="mailto:collectifbampnoumea@gmail.com">Envoyer un e-mail</a>
           </div>
           <div class="contact-details">
             <strong>E-mail</strong>
             <a href="mailto:collectifbampnoumea@gmail.com">collectifbampnoumea@gmail.com</a>
-            <strong style="margin-top:18px">Facebook</strong>
-            <a href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener">BAMP Nouméa</a>
+            <strong>Facebook</strong>
+            <a href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener">BAMP Nouvelle-Calédonie ↗</a>
           </div>
         </div>
       </div>
@@ -408,9 +478,24 @@
 
   <footer>
     <div class="container footer-row">
-      <a class="brand" href="#accueil"><span class="brand-mark">BAMP!</span><span class="brand-place">Nouméa</span></a>
-      <span>Association de soutien autour de l’infertilité et de l’AMP en Nouvelle-Calédonie.</span>
+      <a class="brand" href="#accueil"><span class="bangs" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="brand-word">BAMP!</span><span class="brand-place">Nouvelle-Calédonie</span></a>
+      <span>Écoute et soutien autour de l’infertilité et de l’AMP en Nouvelle-Calédonie.</span>
     </div>
   </footer>
+
+  <script>
+    const button = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('#menu');
+    button.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+      button.textContent = isOpen ? '×' : '☰';
+    });
+    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      button.setAttribute('aria-expanded', 'false');
+      button.textContent = '☰';
+    }));
+  </script>
 </body>
 </html>
