@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAMP Nouméa — Collectif BAMP, antenne de Nouvelle-Calédonie</title>
+<meta name="description" content="Antenne locale du Collectif BAMP à Nouméa : information, écoute et accompagnement des personnes concernées par l'infertilité et les parcours d'AMP en Nouvelle-Calédonie.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --sable:      #F3F1E9;
+    --sable-deep: #EAE6D8;
+    --lagon:      #144A4C;
+    --lagon-deep: #0D3335;
+    --corail:     #DD6E6A;
+    --corail-deep:#C25652;
+    --or:         #C99A44;
+    --encre:      #1C2523;
+    --encre-soft: #4B5754;
+    --blanc:      #FFFDF8;
+
+    --serif: "Fraunces", Georgia, serif;
+    --sans:  "Public Sans", -apple-system, sans-serif;
+    --mono:  "IBM Plex Mono", monospace;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--sable);
+    color:var(--encre);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  section{ padding:96px 24px; position:relative; }
+  .wrap{ max-width:1080px; margin:0 auto; }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--corail-deep);
+    display:inline-block;
+    margin-bottom:14px;
+  }
+  h1,h2,h3{ font-family:var(--serif); font-weight:600; color:var(--lagon-deep); line-height:1.12; }
+  h2{ font-size:clamp(28px,4vw,42px); margin-bottom:20px; }
+  h3{ font-size:20px; margin-bottom:10px; }
+  p{ color:var(--encre-soft); }
+  .lede{ font-size:18px; max-width:640px; }
+
+  /* ---------- skip link / focus ---------- */
+  .skip{ position:absolute; left:-999px; top:0; background:var(--lagon); color:var(--blanc); padding:10px 16px; z-index:200; }
+  .skip:focus{ left:12px; top:12px; }
+  a:focus-visible, button:focus-visible{ outline:3px solid var(--or); outline-offset:3px; }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(243,241,233,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--sable-deep);
+  }
+  .nav{
+    max-width:1080px; margin:0 auto; padding:16px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-size:20px; font-weight:600; color:var(--lagon-deep); text-decoration:none; }
+  .brand .dot{ width:11px; height:11px; border-radius:50%; background:var(--corail); }
+  nav ul{ list-style:none; display:flex; gap:26px; }
+  nav a{ text-decoration:none; font-size:14.5px; font-weight:500; color:var(--encre); position:relative; padding:4px 0; }
+  nav a:hover{ color:var(--corail-deep); }
+  .nav-toggle{ display:none; background:none; border:none; font-size:24px; cursor:pointer; color:var(--lagon-deep); }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 20px; border-radius:999px;
+    font-weight:600; font-size:14.5px; text-decoration:none;
+    border:1.5px solid transparent; cursor:pointer;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-primary{ background:var(--corail); color:var(--blanc); }
+  .btn-primary:hover{ background:var(--corail-deep); transform:translateY(-1px); }
+  .btn-ghost{ border-color:var(--lagon-deep); color:var(--lagon-deep); }
+  .btn-ghost:hover{ background:var(--lagon-deep); color:var(--blanc); }
+
+  /* ---------- wave signature divider ---------- */
+  .wave{ display:block; width:100%; height:64px; }
+  .wave path{ fill:var(--sable); }
+  .wave.flip path{ fill:var(--lagon-deep); }
+
+  /* ---------- hero ---------- */
+  #accueil{
+    padding-top:88px; padding-bottom:0;
+    background:
+      radial-gradient(ellipse at 82% 10%, rgba(221,110,106,.14), transparent 55%),
+      var(--sable);
+  }
+  .hero{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; padding-bottom:64px; }
+  .hero h1{ font-size:clamp(34px,5vw,54px); margin-bottom:22px; }
+  .hero .lede{ margin-bottom:32px; }
+  .hero-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+  .path-card{
+    background:var(--blanc); border-radius:20px; padding:32px;
+    border:1px solid var(--sable-deep);
+    box-shadow:0 24px 48px -24px rgba(20,74,76,.25);
+  }
+  .path-card .eyebrow{ margin-bottom:6px; }
+  .path-steps{ list-style:none; margin-top:18px; }
+  .path-steps li{
+    display:flex; gap:14px; padding:12px 0;
+    border-top:1px solid var(--sable-deep);
+    font-size:14.5px; color:var(--encre-soft);
+  }
+  .path-steps li:first-child{ border-top:none; }
+  .path-steps .mark{
+    font-family:var(--mono); font-size:12px; color:var(--corail-deep);
+    min-width:20px; padding-top:2px;
+  }
+
+  /* ---------- présentation ---------- */
+  #presentation{ background:var(--sable); }
+  .split{ display:grid; grid-template-columns:.9fr 1.1fr; gap:60px; align-items:start; }
+  .stat-row{ display:flex; gap:36px; margin-top:28px; flex-wrap:wrap; }
+  .stat b{ display:block; font-family:var(--serif); font-size:30px; color:var(--corail-deep); }
+  .stat span{ font-size:13px; color:var(--encre-soft); }
+  .mission-list{ list-style:none; display:grid; gap:16px; }
+  .mission-list li{
+    background:var(--blanc); border:1px solid var(--sable-deep); border-radius:14px;
+    padding:18px 20px; font-size:15px; display:flex; gap:12px;
+  }
+  .mission-list li::before{ content:"—"; color:var(--corail); font-weight:700; }
+
+  /* ---------- actualités ---------- */
+  #actualites{ background:var(--lagon-deep); color:var(--sable); }
+  #actualites .eyebrow{ color:var(--or); }
+  #actualites h2{ color:var(--sable); }
+  #actualites p{ color:#CBDAD8; }
+  .news-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:36px; }
+  .news-card{
+    background:rgba(255,253,248,.05); border:1px solid rgba(255,253,248,.14);
+    border-radius:16px; padding:24px; display:flex; flex-direction:column; gap:10px;
+  }
+  .news-date{ font-family:var(--mono); font-size:12.5px; color:var(--or); letter-spacing:.04em; }
+  .news-card h3{ color:var(--sable); font-size:18px; }
+  .news-card p{ font-size:14.5px; flex:1; }
+  .news-tag{ align-self:flex-start; font-size:11.5px; font-family:var(--mono); background:rgba(221,110,106,.22); color:#F3A5A2; padding:3px 10px; border-radius:999px; }
+  .news-foot{ margin-top:40px; text-align:center; }
+  .news-foot a{ color:var(--or); text-decoration:none; font-weight:600; font-size:14.5px; }
+  .news-foot a:hover{ text-decoration:underline; }
+
+  /* ---------- agenda ---------- */
+  #agenda{ background:var(--sable); }
+  .timeline{ margin-top:40px; }
+  .tl-item{
+    display:grid; grid-template-columns:130px 1fr; gap:28px;
+    padding:26px 0; border-top:1px solid var(--sable-deep);
+    position:relative;
+  }
+  .tl-item:first-child{ border-top:none; }
+  .tl-item::before{
+    content:""; position:absolute; left:139px; top:32px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--corail); border:3px solid var(--sable);
+    box-shadow:0 0 0 1px var(--corail);
+  }
+  .tl-date{ font-family:var(--mono); font-size:13px; color:var(--lagon); padding-top:2px; }
+  .tl-body h3{ margin-bottom:6px; }
+  .tl-meta{ font-size:13px; color:var(--corail-deep); font-weight:600; margin-bottom:6px; }
+
+  /* ---------- guide (à venir) ---------- */
+  #guide{
+    background:linear-gradient(135deg, var(--lagon) 0%, var(--lagon-deep) 100%);
+    color:var(--sable); text-align:center;
+  }
+  #guide .wrap{ max-width:680px; }
+  #guide .eyebrow{ color:var(--or); }
+  #guide h2{ color:var(--blanc); }
+  #guide p{ color:#CBDAD8; }
+  .soon-badge{
+    display:inline-flex; align-items:center; gap:8px; margin-top:24px;
+    padding:10px 20px; border-radius:999px; border:1.5px dashed rgba(243,241,233,.4);
+    font-family:var(--mono); font-size:13px; color:var(--or);
+  }
+  .soon-badge .pulse{ width:8px; height:8px; border-radius:50%; background:var(--corail); animation:pulse 1.8s infinite; }
+  @keyframes pulse{ 0%,100%{ opacity:1; } 50%{ opacity:.25; } }
+
+  /* ---------- ressources ---------- */
+  #ressources{ background:var(--sable); }
+  .res-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:36px; }
+  .res-card{
+    background:var(--blanc); border:1px solid var(--sable-deep); border-radius:16px;
+    padding:24px; text-decoration:none; display:block;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .res-card:hover{ border-color:var(--corail); transform:translateY(-3px); }
+  .res-card .icon{ font-size:22px; margin-bottom:12px; }
+  .res-card h3{ font-size:17px; }
+  .res-card p{ font-size:14px; margin-top:4px; }
+
+  /* ---------- témoignages ---------- */
+  #temoignages{ background:var(--sable-deep); }
+  .quote-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:36px; }
+  .quote-card{
+    background:var(--blanc); border-radius:18px; padding:28px 26px;
+    border-top:4px solid var(--corail);
+  }
+  .quote-card p{ font-family:var(--serif); font-size:17px; font-style:italic; color:var(--encre); line-height:1.5; }
+  .quote-who{ margin-top:16px; font-family:var(--mono); font-size:12.5px; color:var(--lagon); }
+
+  /* ---------- partenaires ---------- */
+  #partenaires{ background:var(--sable); text-align:center; }
+  .partner-row{
+    margin-top:40px; display:flex; flex-wrap:wrap; justify-content:center; gap:16px;
+  }
+  .partner-chip{
+    padding:16px 26px; background:var(--blanc); border:1px solid var(--sable-deep);
+    border-radius:12px; font-family:var(--serif); font-size:15px; color:var(--encre-soft);
+    min-width:150px;
+  }
+
+  /* ---------- contact ---------- */
+  #contact{ background:var(--lagon-deep); color:var(--sable); }
+  #contact .eyebrow{ color:var(--or); }
+  #contact h2{ color:var(--blanc); }
+  #contact p{ color:#CBDAD8; }
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; margin-top:36px; }
+  .contact-info li{ list-style:none; display:flex; gap:12px; padding:14px 0; border-top:1px solid rgba(255,253,248,.14); font-size:15px; }
+  .contact-info li:first-child{ border-top:none; }
+  .contact-info a{ color:var(--sable); text-decoration:underline; text-underline-offset:3px; }
+  form{ display:grid; gap:14px; }
+  label{ font-size:13px; font-family:var(--mono); color:var(--or); }
+  input, textarea{
+    width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(255,253,248,.25);
+    background:rgba(255,253,248,.06); color:var(--sable); font-family:var(--sans); font-size:14.5px;
+  }
+  input::placeholder, textarea::placeholder{ color:#9FB4B1; }
+  textarea{ min-height:110px; resize:vertical; }
+  form .btn-primary{ justify-self:start; border:none; }
+
+  /* ---------- footer ---------- */
+  footer{ background:#0A2627; color:#9FB4B1; padding:40px 24px; text-align:center; font-size:13px; }
+  footer a{ color:var(--sable); text-decoration:none; }
+  footer a:hover{ text-decoration:underline; }
+  .footer-links{ display:flex; gap:22px; justify-content:center; margin-bottom:16px; flex-wrap:wrap; }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:860px){
+    nav ul{ position:fixed; inset:64px 0 auto 0; background:var(--sable); flex-direction:column; padding:20px 24px; gap:6px; border-bottom:1px solid var(--sable-deep); transform:translateY(-130%); transition:transform .25s ease; }
+    nav ul.open{ transform:translateY(0); }
+    nav a{ display:block; padding:10px 0; }
+    .nav-toggle{ display:block; }
+    .hero{ grid-template-columns:1fr; }
+    .split{ grid-template-columns:1fr; }
+    .news-grid, .res-grid, .quote-row{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .tl-item{ grid-template-columns:1fr; }
+    .tl-item::before{ display:none; }
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{ scroll-behavior:auto; }
+    .soon-badge .pulse{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#accueil">Aller au contenu</a>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#accueil"><span class="dot"></span> BAMP Nouméa</a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" id="navToggle">☰</button>
+    <ul id="navMenu">
+      <li><a href="#presentation">Présentation</a></li>
+      <li><a href="#actualites">Actualités</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#guide">Guide AMP</a></li>
+      <li><a href="#ressources">Ressources</a></li>
+      <li><a href="#temoignages">Témoignages</a></li>
+      <li><a href="#partenaires">Partenaires</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="#contact" style="flex-shrink:0;">Nous écrire</a>
+  </div>
+</header>
+
+<main id="accueil">
+  <section style="padding-bottom:0;">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">Antenne locale du Collectif BAMP · depuis 2016</span>
+        <h1>Vous n'êtes pas seul·e face à l'infertilité, à Nouméa aussi.</h1>
+        <p class="lede">BAMP Nouméa informe, écoute et accompagne les personnes et couples concernés par l'infertilité et les parcours d'AMP en Nouvelle-Calédonie — patient·es et ex-patient·es réuni·es pour se soutenir et faire avancer les choses localement.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Prendre contact</a>
+          <a class="btn btn-ghost" href="https://www.facebook.com/BampNoumea" target="_blank" rel="noopener">Suivre sur Facebook ↗</a>
+        </div>
+      </div>
+      <div class="path-card">
+        <span class="eyebrow">Un parcours, pas un chemin solitaire</span>
+        <h3>Ce que propose l'antenne</h3>
+        <ul class="path-steps">
+          <li><span class="mark">01</span> Rencontres et groupes de parole en présentiel à Nouméa</li>
+          <li><span class="mark">02</span> Information fiable sur l'AMP, le don de gamètes, l'autoconservation</li>
+          <li><span class="mark">03</span> Mise en lien avec d'autres personnes qui vivent la même chose</li>
+          <li><span class="mark">04</span> Sensibilisation auprès des institutions et employeurs locaux</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C200,60 400,0 600,30 C800,60 1000,0 1200,30 L1200,60 L0,60 Z"></path></svg>
+  </section>
+</main>
+
+<section id="presentation">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Qui sommes-nous</span>
+      <h2>Le Collectif BAMP, une antenne au cœur de la Nouvelle-Calédonie</h2>
+      <p class="lede">BAMP (« Bébé Après ... ») est une association nationale de patient·es et ex-patient·es de l'AMP. L'antenne de Nouméa a été créée en 2016 par Déborah, responsable locale, avec le soutien du gouvernement local pour faciliter les autorisations d'absence liées aux parcours de soin.</p>
+      <div class="stat-row">
+        <div class="stat"><b>2016</b><span>Création de l'antenne à Nouméa</span></div>
+        <div class="stat"><b>9</b><span>Antennes BAMP en France et Outre-mer</span></div>
+        <div class="stat"><b>1/6</b><span>Couples concernés par l'infertilité *</span></div>
+      </div>
+      <p style="font-size:12.5px; margin-top:10px;">* Ordre de grandeur communiqué par le Collectif BAMP national — à ajuster avec vos chiffres à jour.</p>
+    </div>
+    <ul class="mission-list">
+      <li>Informer sur les parcours d'AMP, le don de gamètes, l'autoconservation et le DPI-A.</li>
+      <li>Écouter et soutenir grâce à des bénévoles elles-mêmes passées par un parcours d'AMP.</li>
+      <li>Représenter les patient·es auprès des institutions publiques et politiques locales.</li>
+      <li>Sensibiliser les entreprises calédoniennes à la réalité d'un parcours d'AMP au travail.</li>
+      <li>Organiser chaque année la Semaine de Sensibilisation à l'Infertilité (SSI) à Nouméa.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="actualites">
+  <div class="wrap">
+    <span class="eyebrow">Actualités</span>
+    <h2>Ce qui se passe du côté de l'antenne</h2>
+    <p style="max-width:600px;">Un aperçu des dernières nouvelles de BAMP Nouméa. Les publications complètes et les échanges en temps réel restent sur notre page Facebook.</p>
+    <div class="news-grid">
+      <article class="news-card">
+        <span class="news-tag">À personnaliser</span>
+        <span class="news-date">Exemple — Septembre 2026</span>
+        <h3>Semaine de Sensibilisation à l'Infertilité 2026</h3>
+        <p>Retour sur les rendez-vous organisés à Nouméa : rencontres, table ronde et présence dans les médias locaux.</p>
+      </article>
+      <article class="news-card">
+        <span class="news-tag">À personnaliser</span>
+        <span class="news-date">Exemple — Juillet 2026</span>
+        <h3>Reprise des groupes de parole</h3>
+        <p>Les rencontres mensuelles reprennent au Jardin des Parents. Inscription via Facebook ou par e-mail.</p>
+      </article>
+      <article class="news-card">
+        <span class="news-tag">À personnaliser</span>
+        <span class="news-date">Exemple — Mai 2026</span>
+        <h3>Table ronde « Après un parcours en AMP »</h3>
+        <p>Un temps d'échange animé par Déborah autour des naissances après un parcours d'AMP.</p>
+      </article>
+    </div>
+    <div class="news-foot">
+      <a href="https://www.facebook.com/BampNoumea" target="_blank" rel="noopener">Voir toutes les actualités sur Facebook ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="wrap">
+    <span class="eyebrow">Agenda</span>
+    <h2>Prochains rendez-vous</h2>
+    <p style="max-width:600px;">Rencontres, groupes de parole et temps forts de l'antenne. Les dates ci-dessous sont des exemples : remplacez-les par votre calendrier réel.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">Exemple<br>12 sept. 2026</div>
+        <div class="tl-body">
+          <div class="tl-meta">Groupe de parole</div>
+          <h3>Rencontre mensuelle — Jardin des Parents</h3>
+          <p>Un temps d'échange en présentiel pour les personnes en parcours d'AMP. Inscription conseillée.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Exemple<br>10 oct. 2026</div>
+        <div class="tl-body">
+          <div class="tl-meta">Semaine de sensibilisation</div>
+          <h3>Lancement de la SSI 2026 à Nouméa</h3>
+          <p>Programme complet et rendez-vous en visio et en présentiel toute la semaine.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Exemple<br>14 nov. 2026</div>
+        <div class="tl-body">
+          <div class="tl-meta">Table ronde</div>
+          <h3>« Quand des bébés naissent après un parcours en AMP »</h3>
+          <p>Témoignages et échanges ouverts à toutes et tous, sur inscription.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="guide">
+  <div class="wrap">
+    <span class="eyebrow">Bientôt disponible</span>
+    <h2>Guide AMP · Thérapeute</h2>
+    <p>Un annuaire de praticien·nes calédonien·nes sensibilisé·es à l'accompagnement des parcours d'AMP — psychologues, sophrologues, thérapeutes — pour orienter plus facilement les personnes que nous rencontrons.</p>
+    <div class="soon-badge"><span class="pulse"></span> En cours de construction</div>
+  </div>
+</section>
+
+<section id="ressources">
+  <div class="wrap">
+    <span class="eyebrow">Ressources utiles</span>
+    <h2>Pour aller plus loin</h2>
+    <div class="res-grid">
+      <a class="res-card" href="https://www.bamp.fr" target="_blank" rel="noopener">
+        <div class="icon">🌐</div>
+        <h3>Collectif BAMP national</h3>
+        <p>Présentation, actions, manifeste et podcast de l'association nationale.</p>
+      </a>
+      <a class="res-card" href="https://podcast.ausha.co/bamp-le-podcast" target="_blank" rel="noopener">
+        <div class="icon">🎧</div>
+        <h3>Podcast BAMP</h3>
+        <p>Témoignages et éclairages sur l'infertilité, à écouter à votre rythme.</p>
+      </a>
+      <a class="res-card" href="https://www.helloasso.com/associations/collectif-bamp-antenne-de-nouvelle-caledonie" target="_blank" rel="noopener">
+        <div class="icon">🤝</div>
+        <h3>Adhérer / faire un don</h3>
+        <p>Soutenez l'antenne de Nouvelle-Calédonie via HelloAsso, sans frais.</p>
+      </a>
+      <a class="res-card" href="#" >
+        <div class="icon">📚</div>
+        <h3>Livres recommandés</h3>
+        <p>Une sélection sur l'infertilité, la parentalité avec don de gamètes — y compris pour les enfants. <em>(liste à compléter)</em></p>
+      </a>
+      <a class="res-card" href="#">
+        <div class="icon">🏥</div>
+        <h3>Sites institutionnels</h3>
+        <p>Liens vers les organismes de santé et l'Agence de la biomédecine. <em>(liens à ajouter)</em></p>
+      </a>
+      <a class="res-card" href="#contact">
+        <div class="icon">💬</div>
+        <h3>Deuxième avis médical</h3>
+        <p>Accompagnement dédié aux moments clés d'un parcours de FIV pour les adhérent·es.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="temoignages">
+  <div class="wrap">
+    <span class="eyebrow">Témoignages</span>
+    <h2>Des parcours, racontés par celles et ceux qui les vivent</h2>
+    <div class="quote-row">
+      <div class="quote-card">
+        <p>« Trouver un groupe de parole à Nouméa a changé mon parcours : je ne me sentais plus seule face aux rendez-vous médicaux. »</p>
+        <div class="quote-who">Témoignage exemple — à remplacer</div>
+      </div>
+      <div class="quote-card">
+        <p>« BAMP nous a aidés, mon conjoint et moi, à mettre des mots sur ce qu'on traversait, et à obtenir un deuxième avis médical. »</p>
+        <div class="quote-who">Témoignage exemple — à remplacer</div>
+      </div>
+      <div class="quote-card">
+        <p>« Les bénévoles connaissent le sujet de l'intérieur. On se sent écouté sans avoir à tout réexpliquer. »</p>
+        <div class="quote-who">Témoignage exemple — à remplacer</div>
+      </div>
+    </div>
+    <p style="margin-top:24px; font-size:13px;">Ces témoignages sont des exemples de mise en page. Remplacez-les par de vrais témoignages, avec l'accord explicite des personnes concernées.</p>
+  </div>
+</section>
+
+<section id="partenaires">
+  <div class="wrap">
+    <span class="eyebrow">Partenaires</span>
+    <h2>Ils soutiennent l'antenne de Nouvelle-Calédonie</h2>
+    <div class="partner-row">
+      <div class="partner-chip">Collectif BAMP national</div>
+      <div class="partner-chip">Le Jardin des Parents</div>
+      <div class="partner-chip">Gouvernement de la Nouvelle-Calédonie</div>
+      <div class="partner-chip">Partenaire à ajouter</div>
+      <div class="partner-chip">Partenaire à ajouter</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Parlons-en</h2>
+    <p style="max-width:560px;">Que vous soyez concerné·e par un parcours d'AMP, professionnel·le de santé ou partenaire potentiel, l'équipe de l'antenne vous répond.</p>
+    <div class="contact-grid">
+      <ul class="contact-info">
+        <li>📧 <a href="mailto:collectifbampnoumea@gmail.com">collectifbampnoumea@gmail.com</a></li>
+        <li>📘 <a href="https://www.facebook.com/BampNoumea" target="_blank" rel="noopener">facebook.com/BampNoumea</a></li>
+        <li>📍 Nouméa, Nouvelle-Calédonie <em style="opacity:.7;">(adresse précise à ajouter)</em></li>
+        <li>👤 Responsable d'antenne : Déborah</li>
+      </ul>
+      <form action="https://formsubmit.co/collectifbampnoumea@gmail.com" method="POST">
+        <div>
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" type="text" placeholder="Votre nom" required>
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="vous@exemple.com" required>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="#presentation">Présentation</a>
+    <a href="#actualites">Actualités</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#ressources">Ressources</a>
+    <a href="https://www.facebook.com/BampNoumea" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <p>© <span id="year"></span> Collectif BAMP — Antenne de Nouvelle-Calédonie. Site associatif non lucratif.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
