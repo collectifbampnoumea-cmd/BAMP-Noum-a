@@ -11,19 +11,20 @@
   <title>BAMP Nouméa — Écoute, information et soutien autour de l’AMP</title>
   <style>
     :root {
-      --ink: #172626;
-      --muted: #596868;
-      --lagoon: #0d6668;
-      --lagoon-dark: #084849;
-      --lagoon-soft: #d9eeeb;
-      --sand: #f7f2e9;
+      --ink: #272626;
+      --muted: #667071;
+      --lagoon: #73bfc1;
+      --lagoon-dark: #347d7f;
+      --lagoon-soft: #e2f1ef;
+      --sand: #fbf7f1;
       --paper: #fffdf9;
-      --coral: #ef665f;
-      --yellow: #f1c84c;
-      --blue: #4b9fce;
-      --violet: #8254a5;
-      --line: rgba(13, 102, 104, .15);
-      --shadow: 0 22px 60px rgba(8, 72, 73, .12);
+      --coral: #e96165;
+      --yellow: #e7bd35;
+      --blue: #218fc2;
+      --violet: #8c4da1;
+      --blush: #efc7bd;
+      --line: rgba(52, 125, 127, .17);
+      --shadow: 0 22px 60px rgba(52, 125, 127, .13);
       --radius-lg: 34px;
       --radius-md: 22px;
     }
@@ -60,7 +61,7 @@
       align-items: center;
       gap: 9px;
       margin: 0 0 14px;
-      color: var(--lagoon);
+      color: var(--lagoon-dark);
       font-size: .78rem;
       font-weight: 850;
       letter-spacing: .14em;
@@ -80,17 +81,17 @@
       gap: 9px;
       min-height: 50px;
       padding: 12px 21px;
-      border: 2px solid var(--lagoon);
+      border: 2px solid var(--lagoon-dark);
       border-radius: 999px;
       color: white;
-      background: var(--lagoon);
+      background: var(--lagoon-dark);
       font-weight: 800;
       text-decoration: none;
       transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
     .button:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(13, 102, 104, .22); background: var(--lagoon-dark); }
     .button.light { border-color: white; color: var(--lagoon-dark); background: white; }
-    .button.outline { color: var(--lagoon); background: transparent; }
+    .button.outline { color: var(--lagoon-dark); background: transparent; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
     header {
@@ -98,7 +99,7 @@
       z-index: 80;
       top: 0;
       border-bottom: 1px solid var(--line);
-      background: rgba(247, 242, 233, .94);
+      background: rgba(251, 247, 241, .94);
       backdrop-filter: blur(18px);
     }
     nav { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: 24px; }
@@ -117,7 +118,14 @@
     .nav-links > a:not(.button):hover { color: var(--lagoon); }
     .menu-toggle { display: none; border: 0; background: transparent; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
 
-    .hero { position: relative; overflow: hidden; padding: 95px 0 90px; }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 95px 0 90px;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(115,191,193,.16), transparent 25%),
+        radial-gradient(circle at 8% 92%, rgba(239,199,189,.32), transparent 28%);
+    }
     .hero::before {
       content: "";
       position: absolute;
@@ -125,23 +133,28 @@
       height: 570px;
       top: -270px;
       right: -180px;
-      border: 80px solid rgba(75, 159, 206, .13);
+      border: 80px solid rgba(115, 191, 193, .13);
       border-radius: 50%;
     }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .65fr); align-items: center; gap: 58px; }
-    .hero h1 span { color: var(--coral); }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .65fr); align-items: center; gap: 58px; }
+    .hero h1 span { color: var(--lagoon-dark); }
+    .botanical { position: absolute; z-index: 0; pointer-events: none; fill: none; stroke: var(--lagoon); stroke-width: 2; opacity: .62; }
+    .botanical-left { width: 310px; top: -30px; left: -34px; transform: rotate(-8deg); }
+    .botanical-right { width: 250px; right: -35px; bottom: 0; transform: rotate(12deg); }
     .hero-aside { position: relative; min-height: 530px; }
     .portrait-shape {
       position: absolute;
       inset: 24px 20px 0 0;
       overflow: hidden;
       border-radius: 46% 46% 30px 30px;
-      background: var(--lagoon);
+      background: var(--blush);
       box-shadow: var(--shadow);
     }
     .portrait-shape::before, .portrait-shape::after { content: ""; position: absolute; border-radius: 50%; }
-    .portrait-shape::before { width: 310px; height: 310px; top: 50px; left: 44px; border: 56px solid rgba(255,255,255,.12); }
-    .portrait-shape::after { width: 180px; height: 180px; right: -42px; bottom: -34px; background: var(--coral); }
+    .portrait-shape::before { width: 310px; height: 310px; top: 50px; left: 44px; border: 56px solid rgba(255,255,255,.34); }
+    .portrait-shape::after { width: 180px; height: 180px; right: -42px; bottom: -34px; background: rgba(115,191,193,.72); }
+    .heart-line { position: absolute; z-index: 1; width: 220px; left: 50%; top: 42%; fill: none; stroke: white; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transform: translate(-50%,-50%); opacity: .88; }
+    .dot-field { position: absolute; z-index: 1; top: 50px; right: 24px; width: 92px; height: 70px; opacity: .5; background-image: radial-gradient(var(--coral) 2px, transparent 2px); background-size: 13px 13px; transform: rotate(-7deg); }
     .support-note { position: absolute; z-index: 2; right: 0; bottom: 44px; width: min(310px, 82%); padding: 25px; border-radius: 24px; background: white; box-shadow: var(--shadow); transform: rotate(-2deg); }
     .support-note strong { display: block; color: var(--lagoon-dark); font-size: 1.18rem; line-height: 1.28; }
     .color-dots { display: flex; gap: 6px; margin-bottom: 16px; }
@@ -155,9 +168,9 @@
     .quickbar-inner { display: grid; grid-template-columns: repeat(3, 1fr); overflow: hidden; border-radius: 28px; box-shadow: var(--shadow); }
     .quick-link { min-height: 140px; padding: 28px; color: white; text-decoration: none; transition: transform .2s ease, filter .2s ease; }
     .quick-link:hover { filter: brightness(.94); }
-    .quick-link:nth-child(1) { background: var(--coral); }
-    .quick-link:nth-child(2) { color: var(--ink); background: var(--yellow); }
-    .quick-link:nth-child(3) { background: var(--violet); }
+    .quick-link:nth-child(1) { background: var(--lagoon-dark); }
+    .quick-link:nth-child(2) { color: var(--ink); background: var(--blush); }
+    .quick-link:nth-child(3) { color: var(--ink); background: var(--lagoon-soft); }
     .quick-link span { display: block; margin-bottom: 22px; font-size: .76rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
     .quick-link strong { display: flex; align-items: end; justify-content: space-between; gap: 10px; font-size: 1.2rem; line-height: 1.2; }
 
@@ -170,8 +183,9 @@
     .about-copy .statement { color: var(--lagoon-dark); font-size: clamp(1.4rem, 2.7vw, 2.3rem); font-weight: 780; line-height: 1.28; letter-spacing: -.03em; }
     .missions { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .mission { position: relative; min-height: 245px; padding: 28px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--sand); }
-    .mission:nth-child(2) { background: #edf6fa; }
-    .mission:nth-child(3) { background: #f7effa; }
+    .mission:nth-child(1) { background: #edf8f6; }
+    .mission:nth-child(2) { background: #fae8e3; }
+    .mission:nth-child(3) { background: #f5edf7; }
     .mission:nth-child(4) { background: #fff5d7; }
     .mission-number { display: block; margin-bottom: 54px; color: var(--lagoon); font-weight: 900; }
     .mission p { margin-bottom: 0; color: var(--muted); }
@@ -222,15 +236,15 @@
     .partner { padding: 13px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-weight: 780; text-decoration: none; }
 
     .contact { padding-bottom: 80px; }
-    .contact-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1.15fr .85fr; gap: 60px; padding: 60px; border-radius: 40px; color: white; background: var(--coral); box-shadow: var(--shadow); }
-    .contact-card::after { content: "!"; position: absolute; right: 40px; bottom: -150px; color: rgba(255,255,255,.14); font-size: 28rem; font-weight: 950; line-height: 1; }
+    .contact-card { position: relative; overflow: hidden; display: grid; grid-template-columns: 1.15fr .85fr; gap: 60px; padding: 60px; border-radius: 40px; color: var(--ink); background: var(--blush); box-shadow: var(--shadow); }
+    .contact-card::after { content: "♡"; position: absolute; right: 38px; bottom: -75px; color: rgba(255,255,255,.42); font-size: 20rem; font-weight: 500; line-height: 1; }
     .contact-card > * { position: relative; z-index: 1; }
-    .contact-card .eyebrow { color: white; }
+    .contact-card .eyebrow { color: var(--lagoon-dark); }
     .contact-card .eyebrow::before { background: var(--yellow); }
-    .contact-card p { color: rgba(255,255,255,.85); }
+    .contact-card p { color: #5f5756; }
     .contact-details { display: grid; align-content: center; gap: 8px; }
-    .contact-details strong { margin-top: 12px; color: #fff3c5; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
-    .contact-details a { width: fit-content; color: white; font-size: 1.08rem; font-weight: 850; overflow-wrap: anywhere; text-underline-offset: 4px; }
+    .contact-details strong { margin-top: 12px; color: var(--lagoon-dark); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; }
+    .contact-details a { width: fit-content; color: var(--ink); font-size: 1.08rem; font-weight: 850; overflow-wrap: anywhere; text-underline-offset: 4px; }
 
     footer { padding: 40px 0 55px; }
     .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 30px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
@@ -309,6 +323,13 @@
 
   <main id="contenu">
     <section class="hero" id="accueil">
+      <svg class="botanical botanical-left" viewBox="0 0 300 260" aria-hidden="true">
+        <path d="M22 242C53 178 72 107 91 12M74 81C45 70 27 48 18 19M70 98C101 83 122 60 134 27M57 145C27 137 11 120 3 93M54 160C88 151 116 132 140 103M39 206C21 202 9 194 1 181M39 212C67 210 92 200 115 181"/>
+        <path d="M18 19c27 6 43 24 56 62M134 27c-26 5-42 23-60 54M3 93c27 4 43 20 54 52M140 103c-33 5-54 24-86 57M1 181c19 0 29 10 38 25M115 181c-31 3-50 15-76 31"/>
+      </svg>
+      <svg class="botanical botanical-right" viewBox="0 0 260 300" aria-hidden="true">
+        <path d="M238 289C201 224 178 147 161 15M175 88C203 75 224 55 239 27M177 109C145 95 122 72 105 40M190 165C220 153 239 134 251 105M191 180C158 169 132 148 109 120M213 236C235 229 248 217 257 202M212 244C183 236 158 220 138 198"/>
+      </svg>
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Antenne de Nouvelle-Calédonie</p>
@@ -320,10 +341,13 @@
           </div>
         </div>
         <div class="hero-aside" aria-label="Notre engagement">
-          <div class="portrait-shape"></div>
+          <div class="portrait-shape">
+            <div class="dot-field" aria-hidden="true"></div>
+            <svg class="heart-line" viewBox="0 0 220 190" aria-hidden="true"><path d="M110 160S30 113 30 59c0-32 38-45 59-18l21 27 21-27c21-27 59-14 59 18 0 54-80 101-80 101Z"/><path d="M65 93c18 12 31 26 45 42 14-16 27-30 45-42"/></svg>
+          </div>
           <div class="support-note">
             <div class="color-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <strong>Partager, informer, agir et soutenir — avec douceur et sans jugement.</strong>
+            <strong>Une communauté bienveillante et engagée, avec douceur et sans jugement.</strong>
           </div>
         </div>
       </div>
