@@ -272,6 +272,8 @@
     .guide-disclaimer { margin: 20px 0 0; padding: 18px 20px; border-left: 5px solid var(--yellow); border-radius: 12px; color: var(--muted); background: var(--sand); }
     .event-redirect { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 32px; padding: 36px 0; border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); }
     .event-redirect p { margin-bottom: 0; color: white; }
+    .event-action { display: grid; gap: 10px; }
+    .facebook-mobile-help { display: none; max-width: 360px; margin: 0; font-size: .78rem; line-height: 1.45; text-align: center; }
 
     .resources { background: var(--paper); }
     .resource-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -372,6 +374,7 @@
       .agenda .section-head { margin-bottom: 22px; }
       .event-redirect { grid-template-columns: 1fr; gap: 20px; padding: 24px 0; }
       .event-redirect .button { width: 100%; }
+      .facebook-mobile-help { display: block; }
       .event { grid-template-columns: 1fr; gap: 6px; }
       .event .button { grid-column: auto; margin-top: 12px; }
       .guide-main { min-height: auto; padding: 26px; }
@@ -544,7 +547,10 @@
         </div>
         <div class="event-redirect">
           <div><h3>Rencontres, groupes de parole et rendez-vous BAMP NC</h3><p>Consultez les prochains événements et leurs éventuelles modifications sur la page Facebook officielle de l’antenne.</p></div>
-          <a class="button light" href="https://www.facebook.com/BampNoumea/events?locale=fr_FR" target="_blank" rel="noopener">Voir les événements sur Facebook ↗</a>
+          <div class="event-action">
+            <a class="button light" href="https://www.facebook.com/profile.php?id=100064595986300&amp;sk=events" target="_blank" rel="noopener">Voir les événements sur Facebook ↗</a>
+            <p class="facebook-mobile-help">Si l’application ouvre l’accueil de la page, touchez « Plus », puis « Évènements ».</p>
+          </div>
         </div>
       </div>
     </section>
