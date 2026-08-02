@@ -289,7 +289,14 @@
     .voices { text-align: center; }
     .quote { max-width: 930px; margin: 0 auto 28px; color: var(--lagoon-dark); font-size: clamp(2rem, 4.5vw, 4.5rem); font-weight: 850; line-height: 1.12; letter-spacing: -.05em; }
     .fine { color: var(--muted); font-size: .94rem; }
-    .testimony-callout { max-width: 680px; margin: 26px auto 0; padding: 20px 24px; border: 1px solid var(--line); border-radius: 18px; color: var(--muted); background: var(--paper); }
+    .testimony-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 1100px; margin: 40px auto 0; text-align: left; }
+    .testimony-card { display: flex; min-height: 300px; padding: 30px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--paper); box-shadow: 0 10px 36px rgba(8,72,73,.07); flex-direction: column; }
+    .testimony-card:nth-child(2) { color: white; border-color: transparent; background: var(--lagoon-dark); }
+    .testimony-card:nth-child(2) p, .testimony-card:nth-child(2) .testimony-meta { color: white; }
+    .testimony-meta { margin-bottom: 22px; color: var(--lagoon-dark); font-size: .72rem; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+    .testimony-card h3 { margin-bottom: 14px; font-size: clamp(1.45rem, 2.4vw, 2rem); }
+    .testimony-card p { margin: 0 0 24px; }
+    .testimony-card a { width: fit-content; margin-top: auto; color: inherit; font-weight: 900; text-underline-offset: 4px; }
     .partners { padding-top: 20px; }
     .partner-row { display: flex; flex-wrap: wrap; gap: 11px; }
     .partner { padding: 13px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); font-weight: 780; text-decoration: none; }
@@ -394,7 +401,11 @@
       .resource { flex: 0 0 82vw; min-height: 112px; scroll-snap-align: center; }
       .voices { padding-block: 42px; }
       .quote { margin-bottom: 18px; font-size: clamp(1.8rem, 8vw, 2.35rem); }
-      .testimony-callout { display: none; }
+      .voices .container { width: 100%; }
+      .voices > .container > .eyebrow, .voices .quote, .voices .actions { width: calc(100% - 28px); margin-inline: auto; }
+      .testimony-grid { display: flex; max-width: none; margin-top: 26px; padding: 0 14px 10px; gap: 12px; overflow-x: auto; text-align: left; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .testimony-grid::-webkit-scrollbar { display: none; }
+      .testimony-card { flex: 0 0 82vw; min-height: 300px; padding: 24px; scroll-snap-align: center; }
       .voices .actions { margin-top: 18px; }
       .partners { display: none; }
       .contact { padding-block: 42px; }
@@ -615,7 +626,20 @@
       <div class="container">
         <p class="eyebrow">Vos voix comptent</p>
         <p class="quote">« Mettre des mots sur son parcours, c’est parfois déjà sortir un peu de l’isolement. »</p>
-        <div class="testimony-callout">Le premier témoignage authentique sera publié ici après validation de son auteur·rice. Le texte peut être signé, anonymisé ou présenté sous un prénom d’emprunt, selon le choix de la personne.</div>
+        <div class="testimony-grid">
+          <article class="testimony-card">
+            <span class="testimony-meta">Nouvelle-Calédonie · Émission</span>
+            <h3>L’infertilité : quelle prise en charge au pays ?</h3>
+            <p>Déborah, responsable de BAMP Nouméa, partage la réalité des parcours d’AMP en Nouvelle-Calédonie aux côtés de la Dre Clotilde Dechanet.</p>
+            <a href="https://www.bamp.fr/2023/09/14/bamp-noumea/" target="_blank" rel="noopener">Voir l’émission sur BAMP.fr ↗</a>
+          </article>
+          <article class="testimony-card">
+            <span class="testimony-meta">Nouméa · Podcast</span>
+            <h3>Témoignage de Déborah — partie 2</h3>
+            <p>Un épisode du podcast BAMP qui donne la parole à Déborah et fait entendre une expérience portée depuis la Nouvelle-Calédonie.</p>
+            <a href="https://www.bamp.fr/2022/11/10/temoignage-de-deborah-partie-2/" target="_blank" rel="noopener">Écouter sur BAMP.fr ↗</a>
+          </article>
+        </div>
         <div class="actions" style="justify-content:center"><a class="button outline" href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a></div>
       </div>
     </section>
