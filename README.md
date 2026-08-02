@@ -2,6 +2,12 @@
 
 Site vitrine statique de l’antenne BAMP de Nouvelle-Calédonie.
 
+## Versions sauvegardées
+
+- `v1-association-2026-08-02` : version stable centrée sur la présentation de l’association, avant l’ajout du parcours AMP détaillé.
+
+Ce tag permet de consulter ou restaurer l’ancienne version sans perdre les évolutions ultérieures.
+
 ## Mise en ligne avec GitHub Pages
 
 1. Déposer `index.html` à la racine d’un dépôt GitHub public.
@@ -17,6 +23,9 @@ Le site ne nécessite ni installation, ni compilation, ni service payant.
 - `professionnels.js` : fiches validées du guide local.
 - `informations-legales.html` : mentions légales, confidentialité et règles de traitement des données.
 - `assets/partage-bamp-nc.png` : aperçu utilisé lors du partage du site sur les réseaux sociaux.
+- `assets/affiche-antenne-bamp-nc.png` : présentation complète de l’antenne locale.
+- `assets/affiche-insemination-bamp-nc.png` : parcours pédagogique de l’insémination.
+- `assets/affiche-fiv-icsi-bamp-nc.png` : parcours pédagogiques de la FIV et de la FIV-ICSI.
 
 ## Compléter le guide des professionnels
 
@@ -29,3 +38,11 @@ sont présentes, les filtres par activité et secteur apparaissent automatiqueme
 Vérifier au moins une fois par an l’exactitude des fiches publiées. Les demandes non
 publiées doivent être supprimées au plus tard douze mois après leur réception, conformément
 à la politique de confidentialité affichée sur le site.
+
+## Vérifier les informations sur l’AMP
+
+Les règles d’accès, les autorisations du centre et les conditions de prise en charge peuvent
+évoluer. Contrôler au minimum tous les six mois les sections **Mon parcours**, **Accès en NC**
+et **Prise en charge** à partir des sources officielles liées dans `index.html` : DASS,
+CHT/Médipôle, Légifrance et CAFAT. Mettre également à jour la date de vérification affichée
+sur le site.

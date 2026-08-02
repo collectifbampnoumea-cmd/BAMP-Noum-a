@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="BAMP Nouméa accompagne, informe et rassemble les personnes concernées par l’infertilité et les parcours d’assistance médicale à la procréation en Nouvelle-Calédonie.">
+  <meta name="description" content="Comprendre le parcours d’assistance médicale à la procréation en Nouvelle-Calédonie : premières démarches, centre AMP du Médipôle, techniques disponibles, accès, prise en charge et soutien BAMP NC.">
   <meta name="author" content="Collectif BAMP — Antenne de Nouvelle-Calédonie">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0d6668">
   <link rel="canonical" href="https://collectifbampnoumea-cmd.github.io/BAMP-Noum-a/">
   <link rel="icon" type="image/svg+xml" href="assets/logo_bamp.svg">
-  <meta property="og:title" content="BAMP Nouméa — Vous n’êtes pas seul·e">
-  <meta property="og:description" content="Écoute, Information et Soutien autour de l’infertilité et de l’AMP en Nouvelle-Calédonie.">
+  <meta property="og:title" content="L’AMP en Nouvelle-Calédonie — BAMP Nouméa">
+  <meta property="og:description" content="Les démarches, le centre du Médipôle, l’offre locale et le soutien BAMP NC, étape par étape.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="BAMP Nouméa">
@@ -18,12 +18,12 @@
   <meta property="og:image" content="https://collectifbampnoumea-cmd.github.io/BAMP-Noum-a/assets/partage-bamp-nc.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="BAMP Nouméa — Vous n’êtes pas seul·e">
+  <meta property="og:image:alt" content="L’AMP en Nouvelle-Calédonie — BAMP Nouméa">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BAMP Nouméa — Vous n’êtes pas seul·e">
-  <meta name="twitter:description" content="Écoute, information et soutien autour de l’infertilité et de l’AMP en Nouvelle-Calédonie.">
+  <meta name="twitter:title" content="L’AMP en Nouvelle-Calédonie — BAMP Nouméa">
+  <meta name="twitter:description" content="Les démarches, le centre du Médipôle, l’offre locale et le soutien BAMP NC, étape par étape.">
   <meta name="twitter:image" content="https://collectifbampnoumea-cmd.github.io/BAMP-Noum-a/assets/partage-bamp-nc.png">
-  <title>BAMP Nouméa — Écoute, information et soutien autour de l’AMP</title>
+  <title>L’AMP en Nouvelle-Calédonie — Guide BAMP Nouméa</title>
   <style>
     :root {
       --ink: #272626;
@@ -156,6 +156,7 @@
       border-radius: 50%;
     }
     .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .65fr); align-items: center; gap: 58px; }
+    .hero h1 { font-size: clamp(3.4rem, 6.3vw, 6.3rem); }
     .hero h1 span { color: var(--lagoon-dark); }
     .botanical { position: absolute; z-index: 0; pointer-events: none; fill: none; stroke: var(--lagoon); stroke-width: 2; opacity: .62; }
     .botanical-left { width: 310px; top: -30px; left: -34px; transform: rotate(-8deg); }
@@ -192,6 +193,82 @@
     .quick-link:nth-child(3) { color: var(--ink); background: var(--lagoon-soft); }
     .quick-link span { display: block; margin-bottom: 22px; font-size: .76rem; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
     .quick-link strong { display: flex; align-items: end; justify-content: space-between; gap: 10px; font-size: 1.2rem; line-height: 1.2; }
+
+    .journey { padding-top: 160px; background: var(--paper); }
+    .journey-intro { display: grid; grid-template-columns: 1.1fr .9fr; align-items: end; gap: 50px; margin-bottom: 42px; }
+    .journey-intro p { max-width: 590px; margin-bottom: 8px; color: var(--muted); font-size: 1.08rem; }
+    .journey-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 26px; }
+    .journey-fact { padding: 22px; border-radius: 20px; color: var(--ink); background: var(--lagoon-soft); }
+    .journey-fact:nth-child(2) { background: #fae8e3; }
+    .journey-fact:nth-child(3) { background: #fff5d7; }
+    .journey-fact strong { display: block; margin-bottom: 4px; color: var(--lagoon-dark); font-size: 1.5rem; line-height: 1.1; }
+    .journey-fact span { color: var(--muted); font-size: .9rem; }
+    .journey-track { position: relative; display: grid; gap: 14px; }
+    .journey-step { display: grid; grid-template-columns: 76px minmax(0, 1fr) minmax(250px, .65fr); align-items: center; gap: 26px; padding: 28px; border: 1px solid var(--line); border-radius: 26px; background: var(--sand); }
+    .journey-step:nth-child(even) { background: #edf8f6; }
+    .step-number { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 50%; color: white; background: var(--lagoon-dark); font-size: 1.05rem; font-weight: 950; }
+    .journey-step h3 { margin-bottom: 8px; font-size: clamp(1.4rem, 2.4vw, 2rem); }
+    .journey-step p { margin-bottom: 0; color: var(--muted); }
+    .step-note { padding: 18px 20px; border-radius: 17px; color: #514b4a; background: var(--paper); font-size: .9rem; }
+    .step-note strong { display: block; margin-bottom: 3px; color: var(--ink); }
+
+    .poster-story { padding-top: 80px; background: var(--paper); }
+    .poster-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .poster-card { display: flex; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: var(--sand); box-shadow: 0 10px 36px rgba(8,72,73,.07); flex-direction: column; }
+    .poster-visual { position: relative; display: block; height: 500px; overflow: hidden; background: var(--lagoon-soft); }
+    .poster-visual::after { content: "Agrandir ↗"; position: absolute; right: 15px; bottom: 15px; padding: 8px 12px; border-radius: 999px; color: var(--ink); background: rgba(255,255,255,.94); font-size: .76rem; font-weight: 900; }
+    .poster-visual img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .5s ease; }
+    .poster-visual:hover img { transform: scale(1.025); }
+    .poster-copy { display: flex; min-height: 205px; padding: 24px; flex-direction: column; }
+    .poster-copy span { margin-bottom: 18px; color: var(--lagoon-dark); font-size: .72rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .poster-copy h3 { margin-bottom: 10px; }
+    .poster-copy p { margin-bottom: 0; color: var(--muted); font-size: .92rem; }
+    .poster-disclaimer { margin: 20px 0 0; padding: 18px 20px; border-left: 5px solid var(--yellow); border-radius: 14px; color: var(--muted); background: var(--sand); font-size: .88rem; }
+    .reveal-ready .reveal { opacity: 0; transform: translateY(26px); transition: opacity .65s ease, transform .65s ease; transition-delay: calc(var(--reveal-order, 0) * 110ms); }
+    .reveal-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    .center-card { display: grid; grid-template-columns: 1.05fr .95fr; gap: 55px; padding: 52px; border-radius: 40px; color: white; background: var(--lagoon-dark); box-shadow: var(--shadow); }
+    .center-card .eyebrow, .center-card p { color: white; }
+    .center-card .eyebrow::before { background: var(--yellow); }
+    .center-card h2 { font-size: clamp(2.35rem, 5vw, 4.5rem); }
+    .center-details { display: grid; align-content: center; gap: 13px; padding: 28px; border-radius: 25px; color: var(--ink); background: white; }
+    .center-details span { color: var(--muted); font-size: .82rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+    .center-details strong, .center-details a { font-size: 1.05rem; font-weight: 850; }
+    .center-details a { color: var(--lagoon-dark); text-underline-offset: 3px; }
+    .center-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+
+    .access { background: #eef7f5; }
+    .access-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .access-card { padding: 34px; border-radius: var(--radius-lg); background: var(--paper); }
+    .access-card.highlight { color: white; background: #176d93; }
+    .access-card.highlight p, .access-card.highlight li { color: white; }
+    .access-kicker { display: inline-flex; margin-bottom: 22px; padding: 7px 11px; border-radius: 999px; color: var(--ink); background: var(--yellow); font-size: .72rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+    .access-card ul { margin: 20px 0 0; padding-left: 21px; }
+    .access-card li { margin-block: 10px; color: var(--muted); }
+    .access-alert { margin-top: 18px; padding: 23px 26px; border-left: 6px solid var(--coral); border-radius: 18px; background: var(--paper); }
+    .access-alert p { margin-bottom: 0; color: var(--muted); }
+
+    .coverage { padding-block: 80px; color: white; background: var(--ink); }
+    .coverage .eyebrow, .coverage p { color: white; }
+    .coverage .eyebrow::before { background: var(--yellow); }
+    .coverage-grid { display: grid; grid-template-columns: .8fr repeat(3, 1fr); align-items: stretch; gap: 14px; }
+    .coverage-intro { padding-right: 25px; }
+    .coverage-item { padding: 26px; border: 1px solid rgba(255,255,255,.18); border-radius: 22px; background: rgba(255,255,255,.06); }
+    .coverage-item strong { display: block; margin-bottom: 8px; color: var(--yellow); font-size: 2.2rem; line-height: 1; }
+    .coverage-item span { font-size: .92rem; }
+    .coverage-note { margin: 20px 0 0; color: rgba(255,255,255,.75) !important; font-size: .84rem; }
+
+    .local-issues { padding-top: 90px; }
+    .issue-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .issue-card { min-height: 230px; padding: 28px; border: 1px solid var(--line); border-radius: 24px; background: var(--paper); }
+    .issue-card:nth-child(2) { background: #fae8e3; }
+    .issue-card:nth-child(3) { background: #f5edf7; }
+    .issue-card span { display: block; margin-bottom: 40px; color: var(--lagoon-dark); font-size: .76rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .info-status { display: flex; align-items: start; justify-content: space-between; gap: 28px; margin-top: 24px; padding: 20px 24px; border-radius: 18px; color: #514b4a; background: #fff5d7; }
+    .info-status p { margin: 0; }
+    .info-status strong { color: var(--ink); }
+    .official-sources { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 10px; }
+    .official-sources a { color: var(--lagoon-dark); font-size: .86rem; font-weight: 800; text-underline-offset: 3px; }
 
     section { padding: 110px 0; }
     .section-head { display: grid; grid-template-columns: 1fr .8fr; align-items: end; gap: 40px; margin-bottom: 48px; }
@@ -332,9 +409,13 @@
       .nav-links { position: fixed; inset: 80px 0 auto; display: none; padding: 22px; border-bottom: 1px solid var(--line); background: var(--paper); flex-direction: column; align-items: stretch; }
       .nav-links.open { display: flex; }
       .menu-toggle { display: block; }
-      .hero-grid, .about-grid, .guide-layout, .contact-card { grid-template-columns: 1fr; }
+      .hero-grid, .journey-intro, .center-card, .about-grid, .guide-layout, .contact-card { grid-template-columns: 1fr; }
       .hero-aside { min-height: 430px; max-width: 560px; width: 100%; }
       .about-copy { position: static; }
+      .journey-step { grid-template-columns: 70px 1fr; }
+      .step-note { grid-column: 2; }
+      .coverage-grid { grid-template-columns: repeat(3, 1fr); }
+      .coverage-intro { grid-column: 1 / -1; }
       .event { grid-template-columns: 120px 1fr; }
       .event .button { grid-column: 2; width: fit-content; }
     }
@@ -361,6 +442,48 @@
       .quickbar-inner::-webkit-scrollbar, .news-grid::-webkit-scrollbar, .resource-grid::-webkit-scrollbar { display: none; }
       .quick-link { flex: 0 0 78vw; min-height: 106px; padding: 20px; border-radius: 20px; scroll-snap-align: start; }
       .quick-link span { margin-bottom: 15px; }
+      .journey { padding-top: 58px; }
+      .journey-intro { gap: 10px; margin-bottom: 28px; }
+      .journey-intro h2 { font-size: clamp(2.45rem, 12vw, 3.4rem); }
+      .journey-facts { display: flex; margin: 0 -14px 22px; padding: 0 14px 8px; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .journey-facts::-webkit-scrollbar { display: none; }
+      .journey-fact { flex: 0 0 72vw; scroll-snap-align: start; }
+      .journey-track { gap: 10px; }
+      .journey-step { grid-template-columns: 48px minmax(0, 1fr); gap: 14px; padding: 20px; border-radius: 20px; }
+      .step-number { width: 44px; height: 44px; font-size: .82rem; }
+      .journey-step h3 { font-size: 1.36rem; }
+      .journey-step p { font-size: .9rem; }
+      .step-note { grid-column: 1 / -1; padding: 14px 16px; font-size: .84rem; }
+      .poster-story { padding-top: 46px; }
+      .poster-story .container { width: 100%; }
+      .poster-story .section-head { width: calc(100% - 28px); margin-inline: auto; }
+      .poster-grid { display: flex; padding: 0 14px 10px; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .poster-grid::-webkit-scrollbar { display: none; }
+      .poster-card { flex: 0 0 84vw; scroll-snap-align: center; }
+      .poster-visual { height: 440px; }
+      .poster-copy { min-height: 190px; padding: 22px; }
+      .poster-disclaimer { width: calc(100% - 28px); margin-inline: auto; }
+      #centre-amp { padding-block: 48px; }
+      .center-card { gap: 24px; padding: 28px 22px; border-radius: 28px; }
+      .center-card h2 { font-size: clamp(2.35rem, 11vw, 3.1rem); }
+      .center-details { padding: 20px; border-radius: 20px; }
+      .center-actions .button { width: 100%; }
+      .access .container { width: 100%; }
+      .access .section-head { width: calc(100% - 28px); margin-inline: auto; }
+      .access-grid { display: flex; padding: 0 14px 10px; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .access-grid::-webkit-scrollbar { display: none; }
+      .access-card { flex: 0 0 86vw; padding: 24px; scroll-snap-align: center; }
+      .access-alert { width: calc(100% - 28px); margin-inline: auto; padding: 18px; }
+      .coverage { padding-block: 48px; }
+      .coverage-grid { display: flex; margin-right: -14px; padding-right: 14px; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .coverage-grid::-webkit-scrollbar { display: none; }
+      .coverage-intro { flex: 0 0 82vw; }
+      .coverage-item { flex: 0 0 65vw; scroll-snap-align: start; }
+      .local-issues { padding-top: 58px; }
+      .issue-grid { display: flex; margin: 0 -14px; padding: 0 14px 10px; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+      .issue-grid::-webkit-scrollbar { display: none; }
+      .issue-card { flex: 0 0 78vw; min-height: 230px; scroll-snap-align: start; }
+      .info-status { align-items: stretch; flex-direction: column; }
       .section-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 28px; }
       .section-head h2 { font-size: clamp(2.25rem, 11vw, 3.2rem); }
       .section-head > p { font-size: .95rem; }
@@ -431,6 +554,7 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
+      .reveal-ready .reveal { opacity: 1; transform: none; }
     }
   </style>
   <script type="application/ld+json">
@@ -460,10 +584,10 @@
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
         <div class="nav-links" id="menu">
-          <a href="#association">L’association</a>
-          <a href="#actualites">Actualités</a>
-          <a href="#agenda">Agenda</a>
-          <a href="#guide">Guide</a>
+          <a href="#parcours">Mon parcours</a>
+          <a href="#acces-amp">Accès en NC</a>
+          <a href="#centre-amp">Le centre AMP</a>
+          <a href="#association">BAMP NC</a>
           <a href="#ressources">Ressources</a>
           <a class="button" href="#contact">Nous contacter</a>
         </div>
@@ -483,11 +607,11 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Antenne de Nouvelle-Calédonie</p>
-          <h1>Vous n’êtes <span>pas seul·e.</span></h1>
-          <p class="lead">BAMP Nouméa écoute, informe et rassemble les personnes concernées par l’infertilité et les parcours d’assistance médicale à la procréation.</p>
+          <h1>L’AMP en Nouvelle-Calédonie, <span>étape par étape.</span></h1>
+          <p class="lead">Comprendre où commencer, ce qui se passe au Médipôle, ce qui est proposé localement et où trouver du soutien tout au long du parcours.</p>
           <div class="actions">
-            <a class="button" href="#contact">Parler avec l’équipe <span aria-hidden="true">→</span></a>
-            <a class="button outline" href="#ressources">Trouver une ressource</a>
+            <a class="button" href="#parcours">Commencer le parcours <span aria-hidden="true">↓</span></a>
+            <a class="button outline" href="#centre-amp">Contacter le centre AMP</a>
           </div>
         </div>
         <div class="hero-aside" aria-label="Notre engagement">
@@ -497,7 +621,7 @@
           </div>
           <div class="support-note">
             <div class="color-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <strong>Une communauté bienveillante et engagée, avec douceur et sans jugement.</strong>
+            <strong>Des repères clairs, des informations locales et une équipe à vos côtés.</strong>
           </div>
         </div>
       </div>
@@ -505,11 +629,162 @@
 
     <nav class="quickbar" aria-label="Accès rapides">
       <div class="container quickbar-inner">
-        <a class="quick-link" href="#agenda"><span>01 · Se rencontrer</span><strong>Voir l’agenda <b aria-hidden="true">↘</b></strong></a>
-        <a class="quick-link" href="#ressources"><span>02 · S’informer</span><strong>Nos ressources <b aria-hidden="true">↘</b></strong></a>
-        <a class="quick-link" href="https://www.facebook.com/BampNoumea?locale=fr_FR" target="_blank" rel="noopener"><span>03 · Nous suivre</span><strong>Facebook BAMP NC <b aria-hidden="true">↗</b></strong></a>
+        <a class="quick-link" href="#parcours"><span>01 · Par où commencer ?</span><strong>Les premières démarches <b aria-hidden="true">↘</b></strong></a>
+        <a class="quick-link" href="#acces-amp"><span>02 · Qui peut en bénéficier ?</span><strong>L’accès en Calédonie <b aria-hidden="true">↘</b></strong></a>
+        <a class="quick-link" href="#centre-amp"><span>03 · Où s’adresser ?</span><strong>Le centre du Médipôle <b aria-hidden="true">↘</b></strong></a>
       </div>
     </nav>
+
+    <section class="journey" id="parcours">
+      <div class="container">
+        <div class="journey-intro">
+          <div>
+            <p class="eyebrow">Votre parcours</p>
+            <h2>De la première question au projet de soin.</h2>
+          </div>
+          <p>Chaque situation est différente. Ce déroulé donne des repères sur le parcours généralement proposé en Nouvelle-Calédonie ; l’équipe médicale adapte ensuite les examens et la technique à votre situation.</p>
+        </div>
+        <div class="journey-facts" aria-label="Repères essentiels">
+          <div class="journey-fact"><strong>1 centre autorisé</strong><span>Le centre AMP du CHT au Médipôle de Koutio.</span></div>
+          <div class="journey-fact"><strong>IIU · FIV · ICSI</strong><span>Les principales techniques sont réalisées localement.</span></div>
+          <div class="journey-fact"><strong>20 83 01</strong><span>Le secrétariat AMP pour demander comment débuter.</span></div>
+        </div>
+        <div class="journey-track">
+          <article class="journey-step reveal" data-reveal style="--reveal-order:0">
+            <span class="step-number">01</span>
+            <div><h3>Faire le point et demander un premier avis</h3><p>Parlez de vos difficultés à concevoir avec votre médecin ou votre gynécologue. Vous pouvez aussi contacter le secrétariat AMP du CHT pour savoir comment organiser une première consultation.</p></div>
+            <div class="step-note"><strong>À préparer</strong>Vos antécédents, les examens déjà réalisés et les traitements éventuels. Le centre vous indiquera précisément les documents nécessaires.</div>
+          </article>
+          <article class="journey-step reveal" data-reveal style="--reveal-order:1">
+            <span class="step-number">02</span>
+            <div><h3>Comprendre l’origine des difficultés</h3><p>Le centre assure les consultations et l’exploration de l’infertilité. Lorsque le parcours est conjugal, le bilan concerne généralement les deux membres du couple.</p></div>
+            <div class="step-note"><strong>Pourquoi ce bilan ?</strong>Identifier les facteurs possibles et déterminer si une AMP est indiquée, sans présumer à l’avance de la technique.</div>
+          </article>
+          <article class="journey-step reveal" data-reveal style="--reveal-order:2">
+            <span class="step-number">03</span>
+            <div><h3>Rencontrer l’équipe spécialisée</h3><p>Plusieurs entretiens permettent d’expliquer les chances de réussite, les risques, les contraintes et les motifs qui pourraient empêcher ou interrompre la procédure.</p></div>
+            <div class="step-note"><strong>Vous pouvez demander</strong>Des explications écrites, un temps de réflexion et les coordonnées utiles pour le soutien psychologique ou associatif.</div>
+          </article>
+          <article class="journey-step reveal" data-reveal style="--reveal-order:3">
+            <span class="step-number">04</span>
+            <div><h3>Suivre le protocole proposé</h3><p>Selon le bilan, l’équipe peut proposer une insémination intra-utérine, une FIV conventionnelle ou une FIV-ICSI. Une stimulation ovarienne et un suivi clinique et biologique régulier peuvent être nécessaires.</p></div>
+            <div class="step-note"><strong>Le rythme varie</strong>Calendrier, médicaments, contrôles et gestes médicaux dépendent du protocole personnalisé par l’équipe du centre.</div>
+          </article>
+          <article class="journey-step reveal" data-reveal style="--reveal-order:4">
+            <span class="step-number">05</span>
+            <div><h3>Faire le point après la tentative</h3><p>L’équipe organise le suivi après l’insémination ou le transfert embryonnaire. Après une FIV, des embryons non transférés peuvent, selon la situation, être conservés pour une tentative ultérieure.</p></div>
+            <div class="step-note"><strong>Quel que soit le résultat</strong>Vous pouvez demander un rendez-vous de bilan et solliciter BAMP NC pour être écouté·e et orienté·e.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="poster-story" id="affiches">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Comprendre en images</p><h2>Les informations se dévoilent au fil du parcours.</h2></div>
+          <p>Ces affiches réalisées par BAMP NC permettent de visualiser l’antenne et les principales étapes de l’insémination, de la FIV conventionnelle et de la FIV-ICSI.</p>
+        </div>
+        <div class="poster-grid">
+          <article class="poster-card reveal" data-reveal style="--reveal-order:0">
+            <a class="poster-visual" href="assets/affiche-antenne-bamp-nc.png" target="_blank" rel="noopener" aria-label="Agrandir l’affiche de présentation de BAMP Nouvelle-Calédonie">
+              <img src="assets/affiche-antenne-bamp-nc.png" loading="lazy" decoding="async" alt="Affiche présentant les missions, les valeurs et les publics de l’antenne BAMP Nouvelle-Calédonie">
+            </a>
+            <div class="poster-copy"><span>01 · L’antenne locale</span><h3>BAMP NC en un coup d’œil</h3><p>Écoute, information, accompagnement et sensibilisation au plus près des réalités calédoniennes.</p></div>
+          </article>
+          <article class="poster-card reveal" data-reveal style="--reveal-order:1">
+            <a class="poster-visual" href="assets/affiche-insemination-bamp-nc.png" target="_blank" rel="noopener" aria-label="Agrandir l’affiche sur le parcours d’insémination">
+              <img src="assets/affiche-insemination-bamp-nc.png" loading="lazy" decoding="async" alt="Affiche pédagogique BAMP NC expliquant les six étapes d’un parcours d’insémination">
+            </a>
+            <div class="poster-copy"><span>02 · Insémination</span><h3>Du premier rendez-vous au test</h3><p>Consultation, stimulation, déclenchement, insémination puis phase lutéale et test de grossesse.</p></div>
+          </article>
+          <article class="poster-card reveal" data-reveal style="--reveal-order:2">
+            <a class="poster-visual" href="assets/affiche-fiv-icsi-bamp-nc.png" target="_blank" rel="noopener" aria-label="Agrandir l’affiche sur la FIV et la FIV-ICSI">
+              <img src="assets/affiche-fiv-icsi-bamp-nc.png" loading="lazy" decoding="async" alt="Affiche pédagogique BAMP NC comparant les étapes de la FIV conventionnelle et de la FIV-ICSI">
+            </a>
+            <div class="poster-copy"><span>03 · FIV & FIV-ICSI</span><h3>Deux techniques, un suivi personnalisé</h3><p>Stimulation, surveillance, ponction, fécondation, culture embryonnaire, transfert et test de grossesse.</p></div>
+          </article>
+        </div>
+        <p class="poster-disclaimer"><strong>À garder en tête :</strong> ces affiches présentent des parcours types. Le protocole prescrit par l’équipe du CHT et les règles locales en vigueur prévalent toujours. L’affiche sur l’insémination mentionne notamment le don de sperme, qui n’est pas proposé localement à ce jour.</p>
+      </div>
+    </section>
+
+    <section id="centre-amp">
+      <div class="container">
+        <div class="center-card">
+          <div>
+            <p class="eyebrow">Votre interlocuteur médical</p>
+            <h2>Le centre AMP du Médipôle.</h2>
+            <p>Le CHT est actuellement le seul établissement autorisé à réaliser les activités cliniques et biologiques d’AMP en Nouvelle-Calédonie. L’unité se trouve au rez-de-chaussée des consultations externes de la maternité.</p>
+            <div class="center-actions">
+              <a class="button light" href="tel:+687208301">Appeler le 20 83 01</a>
+              <a class="button" href="mailto:sec-amp@cht.nc">Écrire au secrétariat</a>
+            </div>
+          </div>
+          <div class="center-details">
+            <span>Où ?</span><strong>Médipôle de Koutio<br>110 boulevard Joseph-Wamytan, Dumbéa</strong>
+            <span>Secrétariat AMP</span><a href="tel:+687208301">20 83 01</a><a href="mailto:sec-amp@cht.nc">sec-amp@cht.nc</a>
+            <span>Horaires publiés par la maternité</span><strong>Du lundi au vendredi<br>7 h 30–12 h · 12 h 30–16 h</strong>
+            <a href="https://maternite.cht.nc/maternite-aide-medicale-a-la-procreation-amp/" target="_blank" rel="noopener">Consulter la page officielle du centre ↗</a>
+            <a href="https://maternite.cht.nc/venir-a-la-maternite/" target="_blank" rel="noopener">Accès et transports vers le Médipôle ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="access" id="acces-amp">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Qui peut en bénéficier ?</p><h2>Le droit a évolué. L’offre locale reste plus limitée.</h2></div>
+          <p>Il faut distinguer les possibilités ouvertes par la loi bioéthique et les activités effectivement autorisées et disponibles au centre AMP de Nouvelle-Calédonie.</p>
+        </div>
+        <div class="access-grid">
+          <article class="access-card">
+            <span class="access-kicker">Prise en charge locale publiée</span>
+            <h3>Une AMP intraconjugale</h3>
+            <p>L’information actuellement publiée par la DASS décrit l’accès local pour un couple composé d’un homme et d’une femme en âge de procréer, en cas d’infertilité pathologique diagnostiquée ou de risque de transmission d’une maladie grave.</p>
+            <ul><li>Insémination intra-utérine</li><li>FIV conventionnelle et FIV-ICSI</li><li>Conservation d’embryons dans le cadre du projet parental</li><li>Préservation des gamètes pour motif médical</li></ul>
+          </article>
+          <article class="access-card highlight">
+            <span class="access-kicker">Évolution bioéthique de 2023</span>
+            <h3>Des droits plus larges, sans solution locale pour tous les parcours</h3>
+            <p>L’ordonnance de 2023 a étendu et adapté en Nouvelle-Calédonie des avancées de la loi bioéthique, notamment l’ouverture à de nouveaux publics et la conservation de gamètes sans motif médical.</p>
+            <ul><li>Le centre local ne propose pas actuellement le don de spermatozoïdes ou d’ovocytes.</li><li>Les femmes seules et les couples de femmes ne disposent donc pas aujourd’hui d’une prise en charge AMP locale avec don.</li><li>L’autoconservation dite « sociétale » n’est pas proposée localement.</li></ul>
+          </article>
+        </div>
+        <div class="access-alert"><p><strong>Avant d’engager une démarche ou un déplacement :</strong> demandez au centre AMP et à la CAFAT une confirmation adaptée à votre situation. Les autorisations, l’organisation du centre et les règles de prise en charge peuvent évoluer.</p></div>
+      </div>
+    </section>
+
+    <section class="coverage" aria-labelledby="coverage-title">
+      <div class="container">
+        <div class="coverage-grid">
+          <div class="coverage-intro"><p class="eyebrow">Prise en charge</p><h2 id="coverage-title">Trois repères à connaître.</h2></div>
+          <div class="coverage-item"><strong>&lt; 43 ans</strong><span>La prise en charge cesse au 43e anniversaire de la femme.</span></div>
+          <div class="coverage-item"><strong>6 IIU</strong><span>Au maximum pour l’obtention d’une naissance, à raison d’une insémination par cycle.</span></div>
+          <div class="coverage-item"><strong>4 FIV</strong><span>Au maximum quatre ponctions ovocytaires pour FIV ou ICSI pour l’obtention d’une naissance.</span></div>
+        </div>
+        <p class="coverage-note">Ces repères résument les conditions publiées par la DASS. La décision médicale et l’accord administratif restent individualisés. Vérifiez les formalités et le tiers payant auprès de la CAFAT avant le début du protocole.</p>
+      </div>
+    </section>
+
+    <section class="local-issues" id="enjeux-locaux">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Pourquoi BAMP NC agit</p><h2>Les enjeux propres au territoire.</h2></div>
+          <p>Informer les personnes, mais aussi rendre visibles les écarts d’accès et soutenir l’évolution de l’offre locale.</p>
+        </div>
+        <div class="issue-grid">
+          <article class="issue-card"><span>Égalité d’accès</span><h3>Des parcours encore impossibles localement</h3><p>Le don de gamètes, l’accès pour les femmes seules ou les couples de femmes et l’autoconservation sans motif médical nécessitent aujourd’hui une solution hors du territoire.</p></article>
+          <article class="issue-card"><span>Continuité des soins</span><h3>Une offre concentrée dans un seul centre</h3><p>L’absence d’alternative locale rend la continuité de l’activité du centre AMP essentielle pour toutes les personnes engagées dans un protocole.</p></article>
+          <article class="issue-card"><span>Éloignement</span><h3>Des déplacements lourds à organiser</h3><p>Certains projets, notamment avec don d’ovocytes, peuvent imposer un parcours en métropole ou à l’étranger, avec des coûts et une organisation à anticiper.</p></article>
+        </div>
+        <div class="info-status">
+          <p><strong>Informations vérifiées en août 2026.</strong><br>Cette page donne des repères d’orientation et ne remplace ni l’avis de l’équipe médicale, ni une confirmation de prise en charge par la CAFAT.</p>
+          <div><strong>Sources officielles</strong><div class="official-sources"><a href="https://dass.gouv.nc/node/267" target="_blank" rel="noopener">DASS Nouvelle-Calédonie ↗</a><a href="https://maternite.cht.nc/maternite-aide-medicale-a-la-procreation-amp/" target="_blank" rel="noopener">Centre AMP du CHT ↗</a><a href="https://www.legifrance.gouv.fr/dossierlegislatif/JORFDOLE000047084763/" target="_blank" rel="noopener">Ordonnance bioéthique 2023 ↗</a><a href="https://www.cafat.nc/wp-content/uploads/Prise-en-charge-a-100-et-en-tiers-payant-maladie-Assistance-Medicale-a-la-procreation.pdf" target="_blank" rel="noopener">Prise en charge CAFAT ↗</a></div></div>
+        </div>
+      </div>
+    </section>
 
     <section class="about" id="association">
       <div class="container about-grid">
@@ -694,7 +969,7 @@
           </details>
           <details>
             <summary>S’informer <span aria-hidden="true">+</span></summary>
-            <div><a href="#ressources">Ressources utiles</a><a href="#actualites">Actualités BAMP NC</a><a href="https://www.bamp.fr/" target="_blank" rel="noopener">Site national BAMP ↗</a></div>
+            <div><a href="#parcours">Comprendre le parcours AMP</a><a href="#affiches">Voir les affiches pédagogiques</a><a href="#acces-amp">Accès et règles en Nouvelle-Calédonie</a><a href="#centre-amp">Contacter le centre AMP</a><a href="#ressources">Ressources utiles</a></div>
           </details>
           <details>
             <summary>Participer <span aria-hidden="true">+</span></summary>
@@ -740,6 +1015,20 @@
       menu.classList.remove('open');
       setMenuState(false);
     }));
+
+    const revealItems = [...document.querySelectorAll('[data-reveal]')];
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if ('IntersectionObserver' in window && !reducedMotion) {
+      document.documentElement.classList.add('reveal-ready');
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+      revealItems.forEach(item => revealObserver.observe(item));
+    }
 
     const guideDetails = document.querySelector('.guide-side');
     const compactGuideQuery = window.matchMedia('(max-width: 680px)');
