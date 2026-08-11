@@ -23,7 +23,7 @@
   <meta name="twitter:title" content="L’AMP en Nouvelle-Calédonie — BAMP Nouméa">
   <meta name="twitter:description" content="Les démarches, le centre du Médipôle, l’offre locale et le soutien BAMP NC, étape par étape.">
   <meta name="twitter:image" content="https://collectifbampnoumea-cmd.github.io/BAMP-Noum-a/assets/partage-bamp-nc.png">
-  <title>L’AMP en Nouvelle-Calédonie — Guide BAMP Nouméa</title>
+  <title>L’AMP en Nouvelle-Calédonie — BAMP Nouméa</title>
   <style>
     :root {
       --ink: #272626;
@@ -222,6 +222,15 @@
     .nav-resources:hover { background: #d4ebe8; }
     .menu-toggle { display: none; border: 0; background: transparent; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
 
+    .hero-context { max-width: 700px; margin: 10px 0 0; color: var(--muted); font-size: 1rem; }
+
+    .nav-links > a.nav-current:not(.button),
+    .nav-item.nav-current > .nav-parent { color: var(--lagoon-dark); }
+    .nav-links > a.nav-current:not(.button) { position: relative; }
+    .nav-links > a.nav-current:not(.button)::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 3px; height: 3px; border-radius: 99px; background: var(--coral); }
+    .nav-item.nav-current > .nav-parent::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+    .nav-links > .button.nav-current { box-shadow: 0 0 0 4px rgba(231,189,53,.32); }
+
     .hero {
       position: relative;
       overflow: hidden;
@@ -394,48 +403,43 @@
     .event h3 { margin: 0; }
     .event p { margin: 5px 0 0; color: white; }
 
-    .guide-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 20px; }
-    .guide-main, .guide-side { min-height: 450px; padding: 42px; border-radius: var(--radius-lg); }
-    .guide-main { position: relative; overflow: hidden; color: white; background: #176d93; }
-    .guide-main::after { content: "INSCRIPTIONS OUVERTES"; position: absolute; right: -20px; bottom: -8px; max-width: 760px; color: rgba(255,255,255,.14); font-size: clamp(3rem, 6vw, 6.8rem); font-weight: 950; line-height: .75; letter-spacing: -.08em; text-align: right; }
-    .guide-main p { max-width: 580px; color: white; }
-    .guide-main .form-privacy { position: relative; z-index: 1; margin: 18px 0 0; font-size: .86rem; }
-    .guide-main .form-privacy a { color: white; font-weight: 800; text-underline-offset: 3px; }
-    .guide-side { background: var(--paper); }
-    .guide-side summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; list-style: none; cursor: pointer; }
-    .guide-side summary::-webkit-details-marker { display: none; }
-    .guide-side summary h3 { margin-bottom: 0; }
-    .guide-side summary > span { color: var(--lagoon-dark); font-size: 1.8rem; font-weight: 500; line-height: 1; transition: transform .2s ease; }
-    .guide-side[open] summary > span { transform: rotate(45deg); }
-    .guide-side[open] summary { margin-bottom: 22px; }
-    .guide-side ul { margin: 28px 0 0; padding: 0; list-style: none; }
-    .guide-side[open] ul { margin-top: 0; }
-    .guide-side li { position: relative; margin: 15px 0; padding: 0 0 15px 29px; border-bottom: 1px solid var(--line); }
-    .guide-side li::before { content: ""; position: absolute; top: 8px; left: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--coral); }
-    .professional-directory { margin-top: 20px; padding: 34px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--paper); }
-    .directory-head { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
-    .directory-head h3 { margin-bottom: 0; }
-    .directory-count { color: var(--lagoon-dark); font-size: .82rem; font-weight: 850; }
-    .directory-tools { display: none; grid-template-columns: minmax(180px, 1fr) minmax(180px, 1fr); gap: 12px; margin-bottom: 22px; }
-    .directory-tools.visible { display: grid; }
-    .directory-tools label { display: grid; gap: 6px; color: var(--lagoon-dark); font-size: .78rem; font-weight: 850; letter-spacing: .05em; text-transform: uppercase; }
-    .directory-tools select { min-height: 48px; padding: 9px 38px 9px 13px; border: 1px solid var(--line); border-radius: 13px; color: var(--ink); background: var(--sand); }
-    .professional-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .professional-card { padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--sand); }
-    .professional-card p { color: var(--muted); }
-    .professional-meta { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0; }
-    .professional-meta span { padding: 5px 9px; border-radius: 999px; color: var(--lagoon-dark); background: var(--lagoon-soft); font-size: .75rem; font-weight: 750; }
-    .professional-links { display: flex; flex-wrap: wrap; gap: 12px; }
-    .professional-links a { color: var(--lagoon-dark); font-weight: 800; text-underline-offset: 3px; }
-    .directory-empty { padding: 28px; border-radius: 18px; color: var(--muted); background: var(--lagoon-soft); text-align: center; }
-    .update-note { display: inline-flex; margin-top: 10px; padding: 6px 10px; border-radius: 999px; color: var(--lagoon-dark); background: var(--lagoon-soft); font-size: .78rem; font-weight: 800; }
-    .guide-criteria { margin: 24px 0 0; padding: 18px; border-radius: 16px; color: #514b4a; background: #fff5d7; }
-    .guide-criteria strong { display: block; margin-bottom: 5px; color: var(--ink); }
-    .guide-disclaimer { margin: 20px 0 0; padding: 18px 20px; border-left: 5px solid var(--yellow); border-radius: 12px; color: var(--muted); background: var(--sand); }
     .event-redirect { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 32px; padding: 36px 0; border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2); }
     .event-redirect p { margin-bottom: 0; color: white; }
     .event-action { display: grid; gap: 10px; }
     .facebook-mobile-help { display: none; max-width: 360px; margin: 0; font-size: .78rem; line-height: 1.45; text-align: center; }
+
+    .annuaire-preview { background: var(--paper); }
+    .annuaire-status-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr);
+      gap: 34px;
+      padding: 40px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #fff5d7 0%, #fffdf9 52%, #edf8f6 100%);
+      box-shadow: 0 10px 36px rgba(8,72,73,.06);
+    }
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin-bottom: 22px; padding: 8px 12px;
+      border-radius: 999px; color: #6c5410; background: rgba(231,189,53,.22); font-size: .76rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .status-badge span { color: var(--yellow); font-size: .9rem; }
+    .annuaire-status-copy h3 { max-width: 650px; margin-bottom: 14px; font-size: clamp(1.7rem, 3vw, 2.5rem); }
+    .annuaire-status-copy p { max-width: 720px; color: var(--muted); }
+    .annuaire-categories { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+    .annuaire-categories span { padding: 8px 11px; border-radius: 999px; color: var(--lagoon-dark); background: rgba(226,241,239,.88); font-size: .8rem; font-weight: 800; }
+    .annuaire-status-actions { display: grid; align-content: center; gap: 14px; padding: 28px; border-radius: 24px; background: rgba(255,255,255,.78); }
+    .annuaire-status-actions p { margin-bottom: 2px; color: var(--muted); }
+    .annuaire-status-actions strong { color: var(--ink); }
+    .annuaire-status-actions .button { width: 100%; }
+    .privacy-link { color: var(--lagoon-dark); font-size: .84rem; font-weight: 800; text-align: center; text-underline-offset: 3px; }
+
+    .back-to-top {
+      position: fixed; z-index: 70; right: 18px; bottom: 18px; display: none; place-items: center; width: 48px; height: 48px;
+      border: 2px solid white; border-radius: 50%; color: white; background: var(--lagoon-dark); box-shadow: 0 12px 28px rgba(13,102,104,.24);
+      font-size: 1.2rem; font-weight: 950; text-decoration: none; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .2s ease, transform .2s ease;
+    }
+    .back-to-top.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 
     .resources { background: var(--paper); }
     .resource-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
@@ -541,7 +545,7 @@
       .nav-resources { margin-top: 3px; text-align: center; }
       .nav-links .button { width: 100%; margin-top: 4px; }
       .menu-toggle { display: block; }
-      .hero-grid, .journey-intro, .center-card, .about-grid, .guide-layout, .contact-card { grid-template-columns: 1fr; }
+      .hero-grid, .journey-intro, .center-card, .about-grid, .contact-card, .annuaire-status-card { grid-template-columns: 1fr; }
       .hero-aside { min-height: 430px; max-width: 560px; width: 100%; }
       .about-copy { position: static; }
       .journey-step { grid-template-columns: 70px 1fr; }
@@ -553,6 +557,10 @@
     }
     @media (max-width: 680px) {
       .container { width: min(100% - 28px, 1180px); }
+      .back-to-top { display: grid; }
+      .annuaire-status-card { grid-template-columns: 1fr; gap: 18px; padding: 24px; }
+      .annuaire-status-actions { padding: 20px; }
+      .annuaire-categories { display: grid; grid-template-columns: 1fr; }
       section { padding: 62px 0; }
       nav { min-height: 70px; }
       .brand-place { display: none; }
@@ -639,20 +647,6 @@
       .facebook-mobile-help { display: block; }
       .event { grid-template-columns: 1fr; gap: 6px; }
       .event .button { grid-column: auto; margin-top: 12px; }
-      .guide-main { min-height: auto; padding: 26px; }
-      .guide-main::after { display: none; }
-      .guide-side { min-height: auto; padding: 0; border: 1px solid var(--line); overflow: hidden; }
-      .guide-side summary { padding: 22px; }
-      .guide-side[open] summary { margin-bottom: 0; border-bottom: 1px solid var(--line); }
-      .guide-side-content { padding: 20px 22px 22px; }
-      .guide-side li { margin-block: 10px; padding-bottom: 10px; }
-      .guide-criteria { margin-top: 16px; }
-      .professional-directory { padding: 22px; }
-      .professional-directory.is-empty { padding: 0; border: 0; background: transparent; }
-      .professional-directory.is-empty .directory-head, .professional-directory.is-empty .guide-disclaimer { display: none; }
-      .professional-directory.is-empty .directory-empty { padding: 18px; }
-      .directory-head { align-items: start; flex-direction: column; gap: 6px; }
-      .directory-tools, .professional-grid { grid-template-columns: 1fr; }
       .resource { flex: 0 0 82vw; min-height: 112px; scroll-snap-align: center; }
       .voices { padding-block: 42px; }
       .quote { margin-bottom: 18px; font-size: clamp(1.8rem, 8vw, 2.35rem); }
@@ -716,7 +710,7 @@
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
         <div class="nav-links" id="menu">
-          <div class="nav-item has-submenu">
+          <div class="nav-item has-submenu" data-sections="parcours affiches centre-amp">
             <button class="nav-parent" type="button" aria-expanded="false" aria-controls="submenu-parcours">Mon parcours</button>
             <div class="submenu" id="submenu-parcours">
               <a href="#parcours">Les étapes du parcours</a>
@@ -725,7 +719,7 @@
             </div>
           </div>
 
-          <div class="nav-item has-submenu">
+          <div class="nav-item has-submenu" data-sections="acces-amp prise-en-charge enjeux-locaux">
             <button class="nav-parent" type="button" aria-expanded="false" aria-controls="submenu-acces">Accès & prise en charge</button>
             <div class="submenu" id="submenu-acces">
               <a href="#acces-amp">Qui peut en bénéficier ?</a>
@@ -734,7 +728,7 @@
             </div>
           </div>
 
-          <div class="nav-item has-submenu">
+          <div class="nav-item has-submenu" data-sections="association actualites agenda temoignages partenaires">
             <button class="nav-parent" type="button" aria-expanded="false" aria-controls="submenu-bamp">BAMP NC</button>
             <div class="submenu" id="submenu-bamp">
               <a href="#association">Qui sommes-nous ?</a>
@@ -744,10 +738,10 @@
               <a href="#partenaires">Partenaires</a>
             </div>
           </div>
-          <a href="#annuaire">Annuaire & accompagnement</a>
+          <a href="#annuaire" data-sections="annuaire">Annuaire & accompagnement</a>
 
-          <a class="nav-resources" href="#ressources">Ressources</a>
-          <a class="button" href="#contact">Nous contacter</a>
+          <a class="nav-resources" href="#liens-utiles" data-sections="liens-utiles">Liens utiles</a>
+          <a class="button" href="#contact" data-sections="contact">Nous contacter</a>
         </div>
       </nav>
     </div>
@@ -765,8 +759,9 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Antenne de Nouvelle-Calédonie</p>
-          <h1>Vous n'êtes <span>pas seul.e</span></h1>
-          <p class="lead">Ecouter  Informer  Rassembler  Accompagner</p>
+          <h1>Vous n’êtes <span>pas seul·e.</span></h1>
+          <p class="lead">Écouter · Informer · Rassembler · Accompagner</p>
+          <p class="hero-context">BAMP Nouvelle-Calédonie accompagne les personnes confrontées à l’infertilité et aux parcours d’AMP, avec des repères locaux, de l’écoute et de l’entraide.</p>
           <div class="actions">
             <a class="button" href="#parcours">Commencer le parcours <span aria-hidden="true">↓</span></a>
             <a class="button outline" href="#centre-amp">Contacter le centre AMP</a>
@@ -999,55 +994,39 @@
       </div>
     </section>
 
-    <section id="annuaire">
+    <section class="annuaire-preview" id="annuaire">
       <div class="container">
         <div class="section-head">
-          <div><p class="eyebrow">S’orienter</p><h2>Annuaire des professionnels & accompagnants</h2></div>
-          <p>Retrouvez des professionnels de santé et des accompagnants sensibilisés aux parcours de fertilité et d’AMP en Nouvelle-Calédonie.<br><span class="update-note">Mise à jour : août 2026</span></p>
+          <div><p class="eyebrow">S’orienter</p><h2>Annuaire & accompagnement</h2></div>
+          <p>Un futur point d’entrée unique pour trouver des professionnels de santé, des thérapeutes & bien-être et des contacts AMP utiles en Nouvelle-Calédonie.</p>
         </div>
-        <div class="guide-layout">
-          <article class="guide-main">
-            <span class="news-tag">Inscriptions ouvertes</span>
-            <h3 style="margin-top:30px">Vous accompagnez les parcours de fertilité ?</h3>
-            <p>Psychologues, sages-femmes, thérapeutes et autres professionnels de l’accompagnement peuvent demander leur inscription.</p>
-            <div class="actions" style="position:relative;z-index:1">
-              <!-- TEMPORAIRE : réactiver quand la page Ressources AMP sera prête -->
-              <!-- <a class="button light" href="ressources.html">Consulter l’annuaire & les ressources →</a> -->
-              <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScu8kFkW5Jb5lnsVsIvNyaPwPzwt10yaa-pBDYcl5LBY-0xsQ/viewform?usp=dialog" target="_blank" rel="noopener">S’inscrire à l’annuaire ↗</a>
+        <div class="annuaire-status-card">
+          <div class="annuaire-status-copy">
+            <span class="status-badge"><span aria-hidden="true">●</span> Annuaire en cours d’élaboration</span>
+            <h3>Nous constituons progressivement l’annuaire BAMP NC.</h3>
+            <p>Les fiches sont ajoutées après vérification des informations professionnelles et accord explicite de publication. L’objectif est de faciliter l’orientation sans se substituer à un avis médical ni certifier une pratique.</p>
+            <div class="annuaire-categories" aria-label="Contenu prévu dans l’annuaire">
+              <span>Professionnels de santé</span>
+              <span>Thérapeutes & bien-être</span>
+              <span>Contacts AMP utiles</span>
             </div>
-            <p class="form-privacy"><a href="informations-legales.html#donnees">Comment les données sont-elles utilisées ?</a></p>
-          </article>
-          <details class="guide-side" open>
-            <summary><h3>Informations et critères de l’annuaire</h3><span aria-hidden="true">+</span></summary>
-            <div class="guide-side-content">
-              <ul>
-                <li>Profession, activités et publics accompagnés</li>
-                <li>Présentation et coordonnées professionnelles</li>
-                <li>Cabinet, téléconsultation ou intervention à domicile</li>
-                <li>Secteur géographique en Nouvelle-Calédonie</li>
-              </ul>
-              <div class="guide-criteria"><strong>Critères de publication</strong>Activité en lien avec la fertilité ou l’AMP, informations professionnelles vérifiables et accord explicite pour leur publication. Chaque professionnel reste responsable de l’exactitude de sa fiche.</div>
-            </div>
-          </details>
-        </div>
-        <div class="professional-directory">
-          <div class="directory-head"><h3>Professionnels référencés</h3><span class="directory-count" id="professional-count" aria-live="polite"></span></div>
-          <div class="directory-tools" id="directory-tools">
-            <label for="activity-filter">Activité<select id="activity-filter"><option value="">Toutes les activités</option></select></label>
-            <label for="sector-filter">Secteur<select id="sector-filter"><option value="">Toute la Nouvelle-Calédonie</option></select></label>
           </div>
-          <div class="professional-grid" id="professional-list"></div>
-          <div class="directory-empty" id="professional-empty">Annuaire en cours d’élaboration. Les inscriptions sont ouvertes et les premières fiches validées seront publiées progressivement ici.</div>
-          <p class="guide-disclaimer"><strong>À savoir :</strong> cet annuaire facilite l’orientation. Le référencement ne constitue ni une certification, ni une recommandation médicale de BAMP. Vérifiez que le professionnel et son approche correspondent à vos besoins.</p>
+          <div class="annuaire-status-actions">
+            <p><strong>Vous êtes professionnel·le ou accompagnant·e ?</strong><br>Vous pouvez proposer votre inscription dès maintenant.</p>
+            <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScu8kFkW5Jb5lnsVsIvNyaPwPzwt10yaa-pBDYcl5LBY-0xsQ/viewform?usp=dialog" target="_blank" rel="noopener">S’inscrire à l’annuaire ↗</a>
+            <a class="privacy-link" href="informations-legales.html#donnees">Utilisation des données personnelles</a>
+            <!-- À RÉACTIVER LORSQUE L’ANNUAIRE EST FINALISÉ : -->
+            <!-- <a class="button light annuaire-public-link" href="annuaire.html">Consulter l’annuaire →</a> -->
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="resources" id="ressources">
+    <section class="resources" id="liens-utiles">
       <div class="container">
         <div class="section-head">
-          <div><p class="eyebrow">S’informer</p><h2>Ressources d’information</h2></div>
-          <p>Des sites, informations et espaces de soutien pour comprendre l’infertilité, l’AMP et connaître ses droits.</p>
+          <div><p class="eyebrow">S’informer</p><h2>Liens utiles</h2></div>
+          <p>Des portes d’entrée externes pour approfondir l’information, suivre BAMP NC, rejoindre le groupe privé ou soutenir le collectif.</p>
         </div>
         <div class="resource-grid">
           <a class="resource" href="https://www.bamp.fr/" target="_blank" rel="noopener"><span class="resource-icon">B!</span><span><strong>Site national BAMP</strong><br><small>Actualités, dossiers et accompagnement</small></span><span class="resource-arrow" aria-hidden="true">↗</span></a>
@@ -1131,11 +1110,11 @@
           </details>
           <details>
             <summary>S’informer <span aria-hidden="true">+</span></summary>
-            <div><a href="#parcours">Comprendre le parcours AMP</a><a href="#affiches">Voir les affiches pédagogiques</a><a href="#acces-amp">Accès et prise en charge en Nouvelle-Calédonie</a><a href="#centre-amp">Contacter le centre AMP</a><a href="#ressources">Ressources d’information</a></div>
+            <div><a href="#parcours">Comprendre le parcours AMP</a><a href="#affiches">Voir les affiches pédagogiques</a><a href="#acces-amp">Accès et prise en charge en Nouvelle-Calédonie</a><a href="#centre-amp">Contacter le centre AMP</a><a href="#liens-utiles">Liens utiles</a></div>
           </details>
           <details>
             <summary>Participer <span aria-hidden="true">+</span></summary>
-            <div><a href="#annuaire">Participer à l’annuaire</a><a href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a><a href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener">Adhérer ou soutenir ↗</a></div>
+            <div><a href="#annuaire">Annuaire en cours d’élaboration</a><a href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a><a href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener">Adhérer ou soutenir ↗</a></div>
           </details>
           <details>
             <summary>Partenaires <span aria-hidden="true">+</span></summary>
@@ -1145,6 +1124,8 @@
       </div>
     </section>
   </main>
+
+  <a class="back-to-top" id="back-to-top" href="#accueil" aria-label="Retour en haut de la page">↑</a>
 
   <footer>
     <div class="container footer-row">
@@ -1160,7 +1141,6 @@
     </div>
   </footer>
 
-  <script src="professionnels.js"></script>
   <script>
     const button = document.querySelector('.menu-toggle');
     const menu = document.querySelector('#menu');
@@ -1223,6 +1203,36 @@
       setMenuState(false);
     });
 
+    // Met en évidence la rubrique correspondant à la zone actuellement consultée.
+    const navTrackers = [...document.querySelectorAll('#menu [data-sections]')].map(element => ({
+      element,
+      ids: (element.dataset.sections || '').split(/\s+/).filter(Boolean)
+    }));
+    const trackedSections = [...new Set(navTrackers.flatMap(item => item.ids))]
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    let scrollSpyFrame = null;
+    const updateNavigationState = () => {
+      const marker = window.scrollY + Math.min(190, window.innerHeight * .28);
+      let activeId = '';
+      [...trackedSections].sort((a, b) => a.offsetTop - b.offsetTop).forEach(section => {
+        if (section.offsetTop <= marker) activeId = section.id;
+      });
+      navTrackers.forEach(item => item.element.classList.toggle('nav-current', item.ids.includes(activeId)));
+
+      const backToTop = document.querySelector('#back-to-top');
+      if (backToTop) backToTop.classList.toggle('is-visible', window.scrollY > 720);
+      scrollSpyFrame = null;
+    };
+    const requestNavigationUpdate = () => {
+      if (scrollSpyFrame !== null) return;
+      scrollSpyFrame = requestAnimationFrame(updateNavigationState);
+    };
+    window.addEventListener('scroll', requestNavigationUpdate, { passive: true });
+    window.addEventListener('resize', requestNavigationUpdate);
+    updateNavigationState();
+
     const revealItems = [...document.querySelectorAll('[data-reveal]')];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if ('IntersectionObserver' in window && !reducedMotion) {
@@ -1237,100 +1247,6 @@
       revealItems.forEach(item => revealObserver.observe(item));
     }
 
-    const guideDetails = document.querySelector('.guide-side');
-    const compactGuideQuery = window.matchMedia('(max-width: 680px)');
-    const syncGuideDetails = event => { guideDetails.open = !event.matches; };
-    syncGuideDetails(compactGuideQuery);
-    compactGuideQuery.addEventListener('change', syncGuideDetails);
-
-    const professionals = Array.isArray(window.BAMP_PROFESSIONNELS) ? window.BAMP_PROFESSIONNELS : [];
-    const professionalDirectory = document.querySelector('.professional-directory');
-    const professionalList = document.querySelector('#professional-list');
-    const professionalEmpty = document.querySelector('#professional-empty');
-    const professionalCount = document.querySelector('#professional-count');
-    const directoryTools = document.querySelector('#directory-tools');
-    const activityFilter = document.querySelector('#activity-filter');
-    const sectorFilter = document.querySelector('#sector-filter');
-    const emptyDefaultText = professionalEmpty.textContent;
-    professionalDirectory.classList.toggle('is-empty', professionals.length === 0);
-
-    const addOptions = (select, values) => {
-      [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, 'fr')).forEach(value => {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = value;
-        select.appendChild(option);
-      });
-    };
-
-    const createProfessionalCard = person => {
-        const card = document.createElement('article');
-        card.className = 'professional-card';
-
-        const title = document.createElement('h3');
-        title.textContent = person.nom || 'Professionnel';
-        card.appendChild(title);
-
-        const profession = document.createElement('strong');
-        profession.textContent = person.profession || '';
-        card.appendChild(profession);
-
-        if (person.presentation) {
-          const presentation = document.createElement('p');
-          presentation.textContent = person.presentation;
-          card.appendChild(presentation);
-        }
-
-        const meta = document.createElement('div');
-        meta.className = 'professional-meta';
-        [...(person.activites || []), ...(person.modalites || []), ...(person.secteur ? [person.secteur] : [])].forEach(value => {
-          const tag = document.createElement('span');
-          tag.textContent = value;
-          meta.appendChild(tag);
-        });
-        card.appendChild(meta);
-
-        const links = document.createElement('div');
-        links.className = 'professional-links';
-        [[person.telephone, `tel:${(person.telephone || '').replace(/\s/g, '')}`, 'Téléphoner'], [person.email, `mailto:${person.email || ''}`, 'E-mail'], [person.site, person.site, 'Site internet ↗']].forEach(([value, href, label]) => {
-          if (!value) return;
-          const link = document.createElement('a');
-          link.href = href;
-          link.textContent = label;
-          if (String(href).startsWith('http')) { link.target = '_blank'; link.rel = 'noopener'; }
-          links.appendChild(link);
-        });
-        card.appendChild(links);
-        return card;
-    };
-
-    const renderProfessionals = people => {
-      professionalList.replaceChildren(...people.map(createProfessionalCard));
-      professionalCount.textContent = professionals.length
-        ? `${people.length} professionnel${people.length > 1 ? 's' : ''}${people.length !== professionals.length ? ` sur ${professionals.length}` : ''}`
-        : 'Annuaire en cours d’élaboration';
-      professionalEmpty.hidden = people.length > 0;
-      professionalEmpty.textContent = professionals.length ? 'Aucun professionnel ne correspond à ces filtres.' : emptyDefaultText;
-    };
-
-    const applyProfessionalFilters = () => {
-      const activity = activityFilter.value;
-      const sector = sectorFilter.value;
-      renderProfessionals(professionals.filter(person =>
-        (!activity || (person.activites || []).includes(activity)) &&
-        (!sector || person.secteur === sector)
-      ));
-    };
-
-    if (professionals.length > 1) {
-      directoryTools.classList.add('visible');
-      addOptions(activityFilter, professionals.flatMap(person => person.activites || []));
-      addOptions(sectorFilter, professionals.map(person => person.secteur));
-      activityFilter.addEventListener('change', applyProfessionalFilters);
-      sectorFilter.addEventListener('change', applyProfessionalFilters);
-    }
-
-    renderProfessionals(professionals);
   </script>
 </body>
 </html>
