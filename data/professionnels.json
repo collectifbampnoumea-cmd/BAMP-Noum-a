@@ -1,1 +1,1064 @@
-
+{
+  "version": 1,
+  "updatedAt": "2026-08-11",
+  "professionnels": [
+    {
+      "nom": "DELAUNAY",
+      "prenom": "Anaïs",
+      "profession": "Ostéopathe",
+      "cabinet": "Anais Delaunay, ostéopathe DO à Nouméa",
+      "tel": "291162",
+      "telLink": "+687291162",
+      "email": "anaisdelaunay.osteo@gmail.com",
+      "adresse": "147 Route de l'Anse Vata - Centre Médical Médisud - 3ème étage",
+      "site": "www.monosteopathenoumea.com",
+      "fb": "Anais Delaunay, ostéopathe DO à Nouméa",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Ostéopathe"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Femmes seules",
+        "Adolescents"
+      ],
+      "presentation": "Spécialisé en périnatalité depuis 13 ans, Nous sommes nous meme en parcours PMA et j'accompagne les femmes dans ce parcours qui me tient particulièrement a coeur. Il y a quelques années, j'avais fait une offre affiché a l'AMP du médipole, je ne sais pas si elle y est toujours. Juste a l'entrée du bureau de Fanny. De plus, je suis tat'ange et soeur d'Alizée Goxe, fondatrice de l'association \"les petites étoiles du lagon\". Je suis toute disposée a recevoir et aider, a mon avis, les troubles gynécos, AMP, deuil périnatal...",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "osteopathe"
+    },
+    {
+      "nom": "Klein",
+      "prenom": "Lisa",
+      "profession": "Sage-femme",
+      "cabinet": "Lisa sage-femme Tuband",
+      "tel": "858977",
+      "telLink": "+687858977",
+      "email": "lisa.sagefemme@outlook.fr",
+      "adresse": "40 rue henri bonneaud - centre médical le Tiare, Tuband",
+      "site": "",
+      "fb": "Lisa sage-femme Tuband",
+      "insta": "Lisa sage-femme",
+      "linkedin": "",
+      "activite": [
+        "Sage-femme"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Don de gamètes",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Adolescents"
+      ],
+      "presentation": "sage femme libérale , j'accompagne les femme de 12 à 92 ans pour les aider dans toutes les périodes de leurs vie . Juste par rapport aux recrutements des professionnels de santé et des thérapeutes, faites attentions au diplômes de chacun , tous les thérapeutes ne se valent pas en terme de formation ... C'est important de s'assurer de ça avant de confier les patientes surtout sur des thématiques aussi sensibles avec une grande part de vulnérabilité.",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation",
+        "À domicile"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "sage-femme"
+    },
+    {
+      "nom": "",
+      "prenom": "Laura",
+      "profession": "Praticienne en drainage lymphatique",
+      "cabinet": "LM son corps",
+      "tel": "848535",
+      "telLink": "+687848535",
+      "email": "Laura@lmsoncorps.com",
+      "adresse": "15 route du Port Despointes - Faubourg Blanchot",
+      "site": "www.lmsoncorps.com",
+      "fb": "LM son corps",
+      "insta": "lm_son_corps",
+      "linkedin": "",
+      "activite": [
+        "Massage bien-être"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Endométriose",
+        "SOPK",
+        "Femmes seules",
+        "Adolescents"
+      ],
+      "presentation": "Spécialisée en drainage lymphatique",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "esthetique-massage"
+    },
+    {
+      "nom": "Bouteille",
+      "prenom": "Djémila",
+      "profession": "Coach et thérapeute familiale",
+      "cabinet": "Harmony NC- Djémila, Coach & Thérapeute",
+      "tel": "93 18 36",
+      "telLink": "+687931836",
+      "email": "harmonynoumea@gmail.com",
+      "adresse": "5 rue de la Havannah centre NéaSanté magenta plage",
+      "site": "",
+      "fb": "Harmony NC- Djémila, Coach & Thérapeute",
+      "insta": "@harmony_noumea",
+      "linkedin": "Djémila Bouteille",
+      "activite": [
+        "Psychologie",
+        "Coaching"
+      ],
+      "public": [
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "J'accompagne les enfants, les adolescents, les parents et les familles grâce à une approche qui allie psychologie humaniste, coaching et éducation positive. Mon objectif est d'aider chacun à mieux se comprendre, renforcer ses ressources et construire des relations plus sereines.",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation",
+        "À domicile"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "coaching-familiale"
+    },
+    {
+      "nom": "Marais",
+      "prenom": "Delphiine",
+      "profession": "Hypnothérapeute & Thérapeute systémique",
+      "cabinet": "https://www.facebook.com/DelphineMaraisHypnotherapeute",
+      "tel": "784983",
+      "telLink": "+687784983",
+      "email": "hypnosecontact@gmail.com",
+      "adresse": "1 rue Faidherbe, Faubourg Blanchot",
+      "site": "www.delphinemarais.com",
+      "fb": "https://www.facebook.com/DelphineMaraisHypnotherapeute",
+      "insta": "https://www.instagram.com/delphinemaraishypnotherapeute/",
+      "linkedin": "www.linkedin.com/in/delphine-marais-356552124",
+      "activite": [
+        "Hypnose",
+        "Coaching",
+        "Thérapeute systémique et Constellations familiales"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Don de gamètes",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "J'accompagne depuis 2011 des femmes, des hommes, des couples, des adolescents, des enfants, des familles. J'utilise l'hypnose et la thérapie systémique afin de libérer les blocages inconscients et les schémas répétitifs. Je suis infirmière de profession initiale et je suis passionnée par la relation d'aide.",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "hypnotherapie"
+    },
+    {
+      "nom": "Enrico",
+      "prenom": "Adeline",
+      "profession": "Hypnotherapeute / Assistante sociale",
+      "cabinet": "",
+      "tel": "78.68.33",
+      "telLink": "+687786833",
+      "email": "A2nico@mls.nc",
+      "adresse": "Kone",
+      "site": "",
+      "fb": "",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Hypnose",
+        "Yoga",
+        "Méditation"
+      ],
+      "public": [
+        "AMP / PMA",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "Accompagnement professionnel guidé par une expérience personnelle",
+      "modalites": [
+        "Téléconsultation",
+        "À domicile",
+        "En entreprise"
+      ],
+      "secteur": [
+        "Province nord"
+      ],
+      "nord": "Kone Pouembout Voh Poya",
+      "iles": "",
+      "page": 2,
+      "groupe": "hypnotherapie"
+    },
+    {
+      "nom": "PIRRONE",
+      "prenom": "Emy",
+      "profession": "Maitre praticien en Hypnose Ericksonienne et PNL",
+      "cabinet": "Emy Pirrone - PEPS NC",
+      "tel": "818626",
+      "telLink": "+687818626",
+      "email": "peps.coach.nc@gmail.com",
+      "adresse": "5 rue Olry",
+      "site": "",
+      "fb": "Emy Pirrone - PEPS NC",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Hypnose",
+        "Coaching"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Don de gamètes",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles",
+        "Enfants à partir de 7 ans"
+      ],
+      "presentation": "J'exerce depuis 6 ans l'hypnose thérapeutique auprès d'un public large et varié. Je pratique également la Programmation Neurolinguistique et utilise la désensibilisation par mouvement oculaire. Je peux également accompagner les requérants via du coaching basé sur la PNL et l'Ennéagramme.",
+      "modalites": [
+        "Cabinet",
+        "À domicile",
+        "En entreprise"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "hypnotherapie"
+    },
+    {
+      "nom": "Boucard",
+      "prenom": "Muriel",
+      "profession": "Sophrologue et pédo sophrologie",
+      "cabinet": "Muriel Boucard sophrologie",
+      "tel": "732770",
+      "telLink": "+687732770",
+      "email": "boucardmuriel@gmail.com",
+      "adresse": "219 rue val boisé Plum 98809 Mont Dore",
+      "site": "",
+      "fb": "Muriel Boucard sophrologie",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Sophrologie"
+      ],
+      "public": [
+        "Familles",
+        "Enfants"
+      ],
+      "presentation": "Accompagnement parents et enfants d’autours des préoccupations quotidiennes (relations familiales,gestion émotions, sommeil, TDAH, difficultés scolaires, énurésie, anxiété et peur chroniques..)",
+      "modalites": [
+        "Téléconsultation",
+        "À domicile"
+      ],
+      "secteur": [
+        "Grand Nouméa",
+        "Mont-Dore"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "sophrologie"
+    },
+    {
+      "nom": "HAUCHECORNE",
+      "prenom": "Aurelie",
+      "profession": "Sage femme liberale/ accompnement en hypnose / therapie manuelle a visee osteopathie perineale.",
+      "cabinet": "Cabinet sage femme Aurelie Hauchecorne",
+      "tel": "71 87 77",
+      "telLink": "+687718777",
+      "email": "cabinet.montvenus@gmail.com",
+      "adresse": "37 rue rene coty mont venus",
+      "site": "",
+      "fb": "Cabinet sage femme Aurelie Hauchecorne",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Sage-femme"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Familles"
+      ],
+      "presentation": "Sage femme liberale , accompagnements en pré conceptionnel et dans la cadre dun parcours PMA, suivi de grossesse physiologique, preparation naissance et a la parentalité, suivi monitoring, suivi en post partum, reeducation du perinee, suivi de l'enfant jusqu'à 2 ans, suivi gynécologique physiologique de l'adolescence à l'apres ménopause ( frottis/ contraception/ dépistage ist/ desequilibre flore vaginale...).../ Accompagnement en hypnose autour de la sphère feminine/ thérapie manuelle à visée ostéopathie périnéale.",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation",
+        "À domicile",
+        "En entreprise",
+        "Université Nc"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "sage-femme"
+    },
+    {
+      "nom": "Magnin",
+      "prenom": "Mélinda",
+      "profession": "Hypnothérapeute, Consultante",
+      "cabinet": "https://www.facebook.com/revel.mel",
+      "tel": "524000",
+      "telLink": "+687524000",
+      "email": "revel.pro@outlook.com",
+      "adresse": "22 rue Henri Bonneaud",
+      "site": "www.reve-l.com",
+      "fb": "https://www.facebook.com/revel.mel",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Hypnose",
+        "Coaching"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Don de gamètes",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles",
+        "Enfants Neruoatypie (DYS TDAH HPI)"
+      ],
+      "presentation": "hypnothérapeute, j'accompagne à reprendre la main sur sa vie, à passer d'une vie subie à une vie choisie, que ce soit en gestion de la douleur, des émotions, des schémas répétitifs voire des addictions et compulsions pour retrouver de l'autonomie et du plaisir à être soi.",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation",
+        "À domicile",
+        "En entreprise"
+      ],
+      "secteur": [
+        "Toute la Nouvelle-Calédonie (visio)"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "hypnotherapie"
+    },
+    {
+      "nom": "Guenin",
+      "prenom": "Christelle",
+      "profession": "Socio-estheticienne",
+      "cabinet": "Institut Blanche Neige",
+      "tel": "80.57.99",
+      "telLink": "+687805799",
+      "email": "Christelle.guenin1981@gmail.com",
+      "adresse": "13 rue Jean-Brieuc Morault",
+      "site": "",
+      "fb": "Institut Blanche Neige",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Socio-estheticienne"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Don de gamètes",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents"
+      ],
+      "presentation": "La socio-esthétique est un accompagnement de bien-être destiné aux personnes confrontées à des épreuves de santé ou de vie. Dans le cadre de la PMA et de l'infertilité, elle offre un espace d'écoute, de détente et de reconnexion à soi grâce à des soins adaptés (visage, mains, massages bien-être...). Ces interventions contribuent à apaiser le stress, renforcer l'estime de soi et améliorer la qualité de vie tout au long du parcours.",
+      "modalites": [
+        "Cabinet",
+        "Structures médicales/médico sociales"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "esthetique-massage"
+    },
+    {
+      "nom": "Camoin",
+      "prenom": "Madeline",
+      "profession": "Naturopathe",
+      "cabinet": "Madeline camoin naturopathe relaxologue reflexologue",
+      "tel": "957088",
+      "telLink": "+687957088",
+      "email": "Madeline.camoin@gmail.com",
+      "adresse": "Trianon",
+      "site": "",
+      "fb": "Madeline camoin naturopathe relaxologue reflexologue",
+      "insta": "@madelinecamoin",
+      "linkedin": "Madeline camoin",
+      "activite": [
+        "Naturopathie",
+        "Diététique / Nutrition",
+        "Réflexologie",
+        "Massage bien-être"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "Accompagnement en naturopathie via des outils adaptés aux besoins des consultants. (Médecine chinoise, réflexologie, nutrition, micronutrition, fleurs de Bach, phytothérapie, techniques de relaxation, aromathérapie…)",
+      "modalites": [
+        "Cabinet",
+        "Visio"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa",
+        "Toute la Nouvelle-Calédonie (visio)"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "naturopathie"
+    },
+    {
+      "nom": "MAZERAT",
+      "prenom": "Solaine",
+      "profession": "Praticienne PBA",
+      "cabinet": "Solaine Psycho Bio Acupressure",
+      "tel": "826647",
+      "telLink": "+687826647",
+      "email": "gaya@nautile.nc",
+      "adresse": "16 rue de l'Alma - 98800 NOUMEA",
+      "site": "https://praticienpba.com/solainemazerat#top",
+      "fb": "Solaine Psycho Bio Acupressure",
+      "insta": "/",
+      "linkedin": "https://www.linkedin.com/in/solaine-mazerat-763468266/",
+      "activite": [
+        "Psycho-Bio-Acupressure (PBA)"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Endométriose",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "La Psycho-Bio-Acupressure (PBA) est une méthode de gestion émotionnelle rapide et douce développée par le Dr Pierre-Noël Delatte. Elle s'appuie sur les principes de l'acupression (sans aiguilles) pour libérer les blocages psychologiques et les émotions négatives.\n\nVoici comment elle fonctionne en résumé :\n\nL'acupression par circuits : Elle consiste à stimuler simultanément cinq points d'acupuncture précis en pressant avec les doigts. Chaque circuit de 5 points correspond à une émotion ou à un état à réguler (comme l'anxiété, la colère...).\n\nLa libération des blocages : le praticien va libérer des blocages émotionnels identifiés. L’hypothèse de travail est que les émotions sont des informations locales dont le cerveau a la mémoire, mais dont nous ne sommes pas conscients. Le travail en PBA consiste à traiter ces informations locales.\n\nUne méthode douce et accessible : Elle ne nécessite pas de revivre ou de raconter longuement ses traumatismes passés. \n\nElle s'adresse aussi bien aux adultes qu'aux enfants et aux nourrissons.",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Province nord"
+      ],
+      "nord": "Koumac et Bourail",
+      "iles": "",
+      "page": 2,
+      "groupe": "pba"
+    },
+    {
+      "nom": "",
+      "prenom": "Audrey",
+      "profession": "Praticienne bien-être",
+      "cabinet": "Liséo Bien-être",
+      "tel": "876101",
+      "telLink": "+687876101",
+      "email": "liseobienetre@gmail.com",
+      "adresse": "1 rue Olry à Nouméa",
+      "site": "",
+      "fb": "Liséo Bien-être",
+      "insta": "liséo.bienetre",
+      "linkedin": "",
+      "activite": [
+        "Réflexologie",
+        "Massage bien-être",
+        "LahoChi"
+      ],
+      "public": [
+        "Femmes seules",
+        "Hommes",
+        "Adolescents"
+      ],
+      "presentation": "Le bien être de la tête aux pieds : réflexologie plantaire et palmaire, maderothérapie, détente crânienne, drainage du visage et soin énergétique LaHoChi",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "reflexologie-bienetre"
+    },
+    {
+      "nom": "Gourand",
+      "prenom": "Solenn",
+      "profession": "Ostéopathe",
+      "cabinet": "osteo-noumea.nc",
+      "tel": "739015",
+      "telLink": "+687739015",
+      "email": "osteogourand@gmail.c",
+      "adresse": "224, rue Jacques Iékawé, Belle Vie",
+      "site": "https://osteo-noumea.nc/",
+      "fb": "",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Ostéopathe"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Familles",
+        "Couples homosexuels"
+      ],
+      "presentation": "Ostéopathie généraliste qui travaille au quotidien avec les sages-femmes.",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "osteopathe"
+    },
+    {
+      "nom": "Bruneel",
+      "prenom": "Charlotte",
+      "profession": "Acupunctrice thérapeute psycho-corporelle",
+      "cabinet": "Holly Terr’Happy",
+      "tel": "847874",
+      "telLink": "+687847874",
+      "email": "laptitefabriquededenetrose@hotmail.fr",
+      "adresse": "35 rue Henri Bonneaud à Tuband",
+      "site": "Holly Terr’Happy",
+      "fb": "Holly Terr’Happy",
+      "insta": "Holly Terr’Happy",
+      "linkedin": "",
+      "activite": [
+        "Psychologie",
+        "Hypnose",
+        "Acupuncture",
+        "Coaching",
+        "Sexologie",
+        "Constellations systémiques et familiales",
+        "DMO"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Don de gamètes",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles",
+        "Enfants et nourrissons"
+      ],
+      "presentation": "Je suis diplômée en Médecine Chinoise et acupuncturale . Ainsi qu’en libération émotionnelle par le mouvement oculaire, psychogenealogie , constellations systémiques et familiales. Je rassemble mes différents outils ainsi que mes dons (magnétisme, médiumnité) pour accompagner les etres à s’aligner aux désirs de leur cœur et de libérer de freins induits par des mémoires traumatiques et limitantes . Biensûr , je suis adaptée à chaque individu en respectant leur rythme et leurs croyances .",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation",
+        "À domicile",
+        "En entreprise",
+        "Clinique et Medipole"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa",
+        "Dumbéa",
+        "Païta",
+        "Province nord",
+        "Toute la Nouvelle-Calédonie (visio)"
+      ],
+      "nord": "Toutes",
+      "iles": "",
+      "page": 2,
+      "groupe": "acupuncture"
+    },
+    {
+      "nom": "OROSCO",
+      "prenom": "Cécile",
+      "profession": "Sexologue et thérapeute de couple",
+      "cabinet": "Cécile Orosco, sexologue et thérapeute de couple",
+      "tel": "833010",
+      "telLink": "+687833010",
+      "email": "sexologue.nc@gmail.com",
+      "adresse": "49 rue du RP de Fenoyl, Trianon",
+      "site": "www.sexologue.nc",
+      "fb": "Cécile Orosco, sexologue et thérapeute de couple",
+      "insta": "Cécile Orosco, sexologue et thérapeute de couple",
+      "linkedin": "",
+      "activite": [
+        "Sexologie"
+      ],
+      "public": [
+        "Infertilité",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents"
+      ],
+      "presentation": "Sexologue clinicienne, thérapeute de couple, spécialisée en psychotraumatologie, j'accompagne les personnes, en séance individuelle ou en couple, pour (re)construire une vie affective et sexuelle épanouie, notamment au moment de périodes qui peuvent fragiliser le couple (maladies, PMA, infertilité, deuils, conflits, traumatismes relationnels et sexuels..)",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation",
+        "Espace santé de la province Sud (centre de prévention et de dépistage)"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Toute la Nouvelle-Calédonie (visio)"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "sexologue"
+    },
+    {
+      "nom": "Boileau",
+      "prenom": "Cindy",
+      "profession": "Esthéticienne, masseuse",
+      "cabinet": "AMAÏA Beauty&Creations",
+      "tel": "743333",
+      "telLink": "+687743333",
+      "email": "Amaia.beautycreations@gmail.com",
+      "adresse": "37 rue René Coty Mont Venus",
+      "site": "",
+      "fb": "AMAÏA Beauty&Creations",
+      "insta": "https://www.instagram.com/amaia.beautycreations?igsh=MTk1MmdtMGk2YmZ4dA==",
+      "linkedin": "Cindy Boileau",
+      "activite": [
+        "Massage bien-être"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Femmes seules",
+        "Hommes",
+        "Femme enceinte"
+      ],
+      "presentation": "Je suis esthéticienne diplômée, spécialisée dans les soins du corps et du bien-être. J’accompagne mes clientes à travers des drainages lymphatiques, des massages relaxants et musculaires, des soins du visage et très prochainement le soin rituel Rebozo. Mon approche est centrée sur la détente, le lâcher-prise et le bien-être global du corps et de l’esprit.",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "esthetique-massage"
+    },
+    {
+      "nom": "Bellenguez",
+      "prenom": "Jennyfer",
+      "profession": "Professeur de yoga",
+      "cabinet": "Jenny Mama & Yoga NC",
+      "tel": "871084",
+      "telLink": "+687871084",
+      "email": "Jennymamayoga@gmail.com",
+      "adresse": "3 rue Adolphe Barrau baie de l’orphelinat",
+      "site": "Jennymamayoga.nc",
+      "fb": "Jenny Mama & Yoga NC",
+      "insta": "JennyMama_yoga",
+      "linkedin": "",
+      "activite": [
+        "Yoga"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Endométriose",
+        "SOPK",
+        "Toutes les femmes désireuses de prendre soin d’elles"
+      ],
+      "presentation": "Je propose une pratique de yoga issue du yoga hormonal",
+      "modalites": [
+        "Cabinet",
+        "À domicile"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa"
+      ],
+      "nord": "Bourail",
+      "iles": "",
+      "page": 2,
+      "groupe": "yoga"
+    },
+    {
+      "nom": "BONNET",
+      "prenom": "Suzanne",
+      "profession": "Acupunctrice",
+      "cabinet": "",
+      "tel": "+687 990534",
+      "telLink": "+687990534",
+      "email": "suzmaliyu38@gmail.com",
+      "adresse": "1017 route de Yahoué",
+      "site": "",
+      "fb": "",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Acupuncture"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "Acupuncture",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Grand Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "acupuncture"
+    },
+    {
+      "nom": "DELL'ERBA",
+      "prenom": "Léa",
+      "profession": "Psychologue Clinicienne",
+      "cabinet": "",
+      "tel": "507393",
+      "telLink": "+687507393",
+      "email": "lea.dellerba@gmail.com",
+      "adresse": "1er étage Centre Médisud, 147 route de l'Anse Vata",
+      "site": "",
+      "fb": "",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Psychologie"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Deuil périnatal",
+        "Endométriose",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "Consultations psychothérapeutiques entretiens, approches psycho-corporelles, EMDR, hypnose,...",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Toute la Nouvelle-Calédonie (visio)"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "psychologue"
+    },
+    {
+      "nom": "Bourdais",
+      "prenom": "Maude",
+      "profession": "Praticienne en PBA",
+      "cabinet": "Bourdais maude psycho bio acupressure",
+      "tel": "93 41 41",
+      "telLink": "+687934141",
+      "email": "Mbnoumea@gmail.com",
+      "adresse": "Quartier latin",
+      "site": "Maude bourdais pba",
+      "fb": "Bourdais maude psycho bio acupressure",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Praticienne pba"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Deuil périnatal",
+        "Endométriose",
+        "SOPK",
+        "Couple",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles",
+        "J'interviens au medipole service grossesse a risque",
+        "maternité et neonate et PMI jai ete partenaire avec le collectif  BAMP deux ans tarif préférentiels au adhérents quand Deborah etait la"
+      ],
+      "presentation": "Methode douce non intrusive qui peut ce faire du bebes a la personnes âgées.  Cette méthode permets de rééquilibrer l'état émotionnel dans un premier temps et de libérer et de travailler sur les conditionnement qui peuvent nous bloquer dans certains mécanismes inconscients.  De retrouver une harmonie plus sereine et aider a comprendre certains conditionnement accumulé a notre insu.",
+      "modalites": [
+        "Cabinet",
+        "Medipole"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Païta"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "pba"
+    },
+    {
+      "nom": "Candir",
+      "prenom": "Audrey",
+      "profession": "Sophrologue, Hypnotherapeute, DMO-IMO, Maître Reiki",
+      "cabinet": "Audrey Candir Sophrologue",
+      "tel": "750077",
+      "telLink": "+687750077",
+      "email": "audrey.candir@gmail.com",
+      "adresse": "24 rue Michel Kauma",
+      "site": "",
+      "fb": "Audrey Candir Sophrologue",
+      "insta": "audrey_candir_sophrologue",
+      "linkedin": "",
+      "activite": [
+        "Sophrologie",
+        "Hypnose",
+        "Méditation"
+      ],
+      "public": [
+        "Deuil périnatal",
+        "Endométriose",
+        "Couple",
+        "Femmes seules",
+        "Adolescents"
+      ],
+      "presentation": "J’accompagne les personnes vers un mieux-être en les aidant à mieux gérer le stress, les émotions, les troubles du sommeil, l’anxiété, le manque de confiance en soi ou les périodes de changement. Grâce à des techniques de sophrologie et d’hypnose, je propose un accompagnement personnalisé favorisant l’équilibre, les ressources personnelles et l’autonomie de chacun.",
+      "modalites": [
+        "Cabinet"
+      ],
+      "secteur": [
+        "Nouméa"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "sophrologie"
+    },
+    {
+      "nom": "Deligne",
+      "prenom": "Claire",
+      "profession": "Diététicienne",
+      "cabinet": "",
+      "tel": "853694",
+      "telLink": "+687853694",
+      "email": "deligneclaire.diet@gmail.com",
+      "adresse": "",
+      "site": "",
+      "fb": "",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Diététique / Nutrition"
+      ],
+      "public": [
+        "AMP / PMA",
+        "Endométriose",
+        "SOPK"
+      ],
+      "presentation": "Bonjour, je suis diététicienne nutritionniste depuis 2021. Je me suis spécialisée dans l accompagnement des femmes atteintes de lipoedeme mais aussi d'endometriose, adenomyose, SMOP,troubles digestifs et thyroïdienne.",
+      "modalites": [
+        "Cabinet",
+        "Téléconsultation",
+        "À domicile"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa",
+        "Dumbéa",
+        "Païta",
+        "Mont-Dore",
+        "Toute la Nouvelle-Calédonie (visio)"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "dieteticienne"
+    },
+    {
+      "nom": "Casset",
+      "prenom": "Laetitia",
+      "profession": "Praticienne en psychogénéalogie et en analyse transgénérationnelle",
+      "cabinet": "PsychoGénéalogie.nc",
+      "tel": "794478",
+      "telLink": "+687794478",
+      "email": "contact@psychogenealogie.nc",
+      "adresse": "",
+      "site": "",
+      "fb": "PsychoGénéalogie.nc",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "praticienne en psychogénéalogie et analyse transgénéraionnelle"
+      ],
+      "public": [
+        "Infertilité",
+        "AMP / PMA",
+        "Don de gamètes",
+        "Endométriose",
+        "SOPK",
+        "Femmes seules",
+        "Hommes"
+      ],
+      "presentation": "La psychogénéalogie est une approche d’exploration de l’histoire familiale et des transmissions transgénérationnelles.  \nElle étudie l'histoire familiale afin de mettre en lumière les liens qui peuvent exister entre certains événements vécus par nos ancêtres et notre propre histoire.",
+      "modalites": [
+        "Cabinet",
+        "À domicile"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa",
+        "Mont-Dore"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 2,
+      "groupe": "psychogenealogie"
+    },
+    {
+      "nom": "GILQUIN",
+      "prenom": "Liam",
+      "profession": "Ostéopathe",
+      "cabinet": "rendezvous.nc/structure/4aab35cd-1c77-409b-94c1-e1fc0e4d6a6a",
+      "tel": "743417",
+      "telLink": "+687743417",
+      "email": "gilquin.osteo@gmail.com",
+      "adresse": "6 rue de l'Yser",
+      "site": "https://rendezvous.nc/structure/4aab35cd-1c77-409b-94c1-e1fc0e4d6a6a",
+      "fb": "",
+      "insta": "",
+      "linkedin": "",
+      "activite": [
+        "Osteopathe"
+      ],
+      "public": [
+        "Endométriose",
+        "SOPK",
+        "Femmes seules",
+        "Hommes",
+        "Adolescents",
+        "Familles"
+      ],
+      "presentation": "Ostéopathie",
+      "modalites": [
+        "Cabinet",
+        "À domicile",
+        "En entreprise"
+      ],
+      "secteur": [
+        "Nouméa",
+        "Grand Nouméa",
+        "Dumbéa",
+        "Païta",
+        "Mont-Dore"
+      ],
+      "nord": "",
+      "iles": "",
+      "page": 1,
+      "groupe": "osteopathe"
+    }
+  ]
+}
