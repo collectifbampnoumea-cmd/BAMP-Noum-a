@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Annuaire & accompagnement — BAMP Nouvelle-Calédonie</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="description" content="Annuaire BAMP NC en cours d’élaboration : professionnels de santé, thérapeutes & bien-être et contacts AMP utiles en Nouvelle-Calédonie.">
@@ -524,6 +524,282 @@ main.wrap{padding:56px 20px 105px;}
 .data-status{margin:18px 0;padding:14px 16px;border-radius:14px;background:#fff3dc;color:#6f5520;font-weight:600;}
 .data-status.error{background:#ffede7;color:#9b3827;}
 
+
+/* =====================================================================
+   ERGONOMIE MOBILE — BAMP NC
+   Version optimisée pour téléphone : navigation compacte, cartes lisibles,
+   contacts tactiles et retour rapide en haut de page.
+   ===================================================================== */
+.back-top{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:60;
+  display:grid;
+  place-items:center;
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:50%;
+  color:#fff;
+  background:var(--teal-dark);
+  box-shadow:0 12px 30px rgba(52,125,127,.28);
+  font-size:22px;
+  font-weight:900;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(12px);
+  transition:opacity .2s ease,transform .2s ease,visibility .2s ease;
+}
+.back-top.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
+.back-top:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;}
+
+@media(max-width:720px){
+  html{scroll-padding-top:112px;}
+  body{font-size:15.5px;overflow-x:hidden;}
+  .wrap,.wrap-narrow{width:100%;max-width:none;padding-left:16px;padding-right:16px;}
+
+  /* Couverture plus courte et lisible */
+  .cover{padding:28px 0 38px;}
+  .cover::before{width:300px;height:300px;top:-190px;right:-130px;border-width:48px;}
+  .home-link{
+    min-height:40px;
+    margin-bottom:18px;
+    padding:8px 12px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:rgba(255,253,249,.76);
+    font-size:.82rem;
+    text-decoration:none;
+  }
+  .cover-logo-wrap{margin-bottom:16px;}
+  .cover-logo{width:190px;max-width:58vw;}
+  .eyebrow{margin-bottom:10px;font-size:.67rem;letter-spacing:.11em;}
+  .work-badge{margin-bottom:14px;padding:6px 10px;font-size:.66rem;}
+  .cover-title{
+    max-width:100%;
+    margin-bottom:16px;
+    font-size:clamp(2.65rem,13vw,3.8rem);
+    line-height:.98;
+    letter-spacing:-.05em;
+  }
+  .cover-title br{display:none;}
+  .cover-lede{margin-bottom:24px;font-size:1rem;line-height:1.55;}
+  .cover-stats{
+    display:flex;
+    grid-template-columns:none;
+    gap:10px;
+    max-width:none;
+    margin:0 -16px 22px;
+    padding:0 16px 8px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+  }
+  .cover-stats::-webkit-scrollbar{display:none;}
+  .stat{
+    flex:0 0 72vw;
+    min-width:230px;
+    padding:16px 18px;
+    border-radius:18px;
+    scroll-snap-align:start;
+  }
+  .stat-num{font-size:1.75rem;}
+  .stat-label{font-size:.82rem;}
+  .cover-cta{width:100%;min-height:48px;}
+
+  /* Introduction */
+  .intro{padding:46px 0 42px;}
+  .section-title{font-size:clamp(2rem,9vw,2.7rem);line-height:1.05;}
+  .intro p{font-size:.96rem;line-height:1.6;}
+  .callout{gap:12px;margin-top:22px;padding:16px;border-left-width:5px;border-radius:16px;}
+  .callout-icon{width:24px;height:24px;font-size:.8rem;}
+  .callout p{font-size:.87rem;line-height:1.5;}
+
+  /* Barre de recherche compacte et réellement utilisable sur mobile */
+  .controls{
+    top:0;
+    padding:9px 0 10px;
+    box-shadow:0 8px 22px rgba(52,125,127,.10);
+  }
+  .controls .wrap{padding-left:0;padding-right:0;}
+  .tabs{
+    display:flex;
+    flex-wrap:nowrap;
+    gap:8px;
+    margin:0 0 8px;
+    padding:0 16px 3px;
+    overflow-x:auto;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;
+  }
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab,.directory-link{
+    flex:0 0 auto;
+    width:auto;
+    min-height:40px;
+    padding:8px 13px;
+    border-radius:999px;
+    white-space:nowrap;
+    font-size:.79rem;
+    scroll-snap-align:start;
+  }
+  .tab-count{padding:1px 7px;font-size:.68rem;}
+  .directory-link{justify-content:center;}
+  .filters{
+    display:grid;
+    grid-template-columns:minmax(0,1.35fr) minmax(108px,.65fr);
+    gap:8px;
+    padding:0 16px;
+  }
+  .search-wrap{grid-column:auto;min-width:0;}
+  #search,#filter-secteur{min-height:44px;border-radius:13px;font-size:.9rem;box-shadow:none;}
+  #search{padding-left:13px;}
+  #filter-secteur{width:100%;min-width:0;padding:9px 32px 9px 11px;}
+  .print-btn{display:none;}
+
+  /* Contenu */
+  main.wrap{padding:28px 16px 58px;}
+  .group{
+    margin-bottom:34px;
+    padding:0;
+    border:0;
+    border-radius:0;
+    background:transparent;
+    box-shadow:none;
+  }
+  .group-head{margin-bottom:12px;padding:0 2px 10px;gap:8px;}
+  .group-title{font-size:1.33rem;line-height:1.12;}
+  .group-count{padding:4px 8px;font-size:.72rem;}
+  .entry,.info-block{
+    display:block;
+    margin-top:10px;
+    padding:17px;
+    border-radius:18px;
+    background:var(--paper);
+    box-shadow:0 7px 22px rgba(52,125,127,.055);
+  }
+  .entry-id{padding-bottom:11px;margin-bottom:12px;border-bottom:1px solid var(--line);}
+  .entry-name{margin-bottom:4px;font-size:1.22rem;line-height:1.15;}
+  .entry-profession{margin-bottom:5px;font-size:.8rem;}
+  .entry-cabinet{margin:0;font-size:.72rem;line-height:1.4;}
+  .entry-detail{gap:9px;}
+  .entry-comment{font-size:.9rem;line-height:1.55;}
+  .tag-row{gap:5px;}
+  .tag{padding:4px 8px;font-size:.69rem;white-space:normal;line-height:1.25;}
+  .entry-contact{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+    margin-top:2px;
+  }
+  .entry-contact a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:40px;
+    padding:8px 10px;
+    border:1px solid rgba(52,125,127,.18);
+    border-radius:12px;
+    background:var(--lagoon-soft);
+    color:var(--teal-dark);
+    font-size:.79rem;
+    line-height:1.25;
+    text-align:center;
+    text-decoration:none;
+    overflow-wrap:anywhere;
+  }
+  .entry-contact a:hover{text-decoration:none;}
+  .entry-contact span.plain{
+    grid-column:1 / -1;
+    padding:5px 2px 0;
+    color:var(--ink-soft);
+    font-size:.8rem;
+    line-height:1.45;
+  }
+  .entry-lieux{margin:1px 0 0;font-size:.77rem;line-height:1.45;}
+  .group-note{
+    display:grid;
+    gap:10px;
+    margin-top:10px;
+    padding:15px;
+    border-radius:16px;
+    font-size:.84rem;
+    line-height:1.45;
+  }
+  .group-note a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:40px;
+    padding:8px 10px;
+    border-radius:12px;
+    background:rgba(255,255,255,.72);
+    white-space:normal;
+    text-align:center;
+    text-decoration:none;
+  }
+
+  /* Résultats de recherche */
+  .search-results-inner{padding:24px 16px 40px;}
+  .search-results-head{align-items:flex-start;gap:10px;margin-bottom:12px;}
+  .search-results-title{font-size:1.55rem;}
+  .search-results-count{flex:none;padding:5px 8px;font-size:.72rem;}
+  .search-result-source{margin-top:14px;font-size:.66rem;line-height:1.4;}
+  .search-result-item .entry,
+  .search-result-item .info-block,
+  .search-result-item .useful-item{border-radius:18px;}
+
+  /* Contacts AMP utiles */
+  .useful-directory{padding:50px 0 58px;}
+  .useful-intro{margin-bottom:24px;font-size:.94rem;line-height:1.55;}
+  .useful-grid{gap:12px;}
+  .useful-group{padding:18px;border-radius:22px;}
+  .useful-group h3{margin-bottom:10px;font-size:1.28rem;}
+  .useful-item{padding:14px 0;}
+  .useful-name{font-size:.93rem;line-height:1.35;}
+  .useful-desc{font-size:.83rem;line-height:1.5;}
+  .useful-contact{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+  }
+  .useful-contact a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:40px;
+    padding:8px 9px;
+    border-radius:12px;
+    background:rgba(255,255,255,.78);
+    font-size:.78rem;
+    line-height:1.25;
+    text-align:center;
+    text-decoration:none;
+    overflow-wrap:anywhere;
+  }
+  .useful-meta{font-size:.76rem;line-height:1.4;}
+  .useful-note{padding:18px;border-radius:18px;font-size:.86rem;line-height:1.5;}
+
+  /* Pied de page */
+  .site-footer{padding:48px 0 88px;}
+  .site-footer .section-title{font-size:2rem;}
+  .site-footer p{font-size:.92rem;}
+  .footer-meta{font-size:.78rem;line-height:1.5;}
+  .back-top{right:14px;bottom:max(14px,env(safe-area-inset-bottom));width:46px;height:46px;}
+}
+
+@media(max-width:390px){
+  .cover-title{font-size:2.55rem;}
+  .stat{flex-basis:82vw;min-width:0;}
+  .filters{grid-template-columns:minmax(0,1.25fr) minmax(104px,.75fr);}
+  .entry-contact,.useful-contact{grid-template-columns:1fr;}
+  .entry-contact span.plain{grid-column:1;}
+  .tab,.directory-link{font-size:.75rem;padding-inline:11px;}
+}
+
 </style>
 </head>
 <body>
@@ -637,6 +913,8 @@ main.wrap{padding:56px 20px 105px;}
     <p class="footer-meta">Dernière mise à jour&nbsp;: <strong id="last-update"></strong> · <span id="footer-total"></span> fiches publiées</p>
   </div>
 </footer>
+
+<button class="back-top" id="back-top" type="button" aria-label="Retour en haut de page" title="Retour en haut">↑</button>
 
 <script>
 /* =====================================================================
@@ -986,5 +1264,17 @@ const PAGE2_GROUPS = [
 })();
 
 </script>
+
+<script>
+(function(){
+  const backTop = document.getElementById('back-top');
+  if(!backTop) return;
+  const syncBackTop = () => backTop.classList.toggle('is-visible', window.scrollY > 700);
+  window.addEventListener('scroll', syncBackTop, {passive:true});
+  backTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  syncBackTop();
+})();
+</script>
+
 </body>
 </html>
