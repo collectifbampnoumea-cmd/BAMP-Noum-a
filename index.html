@@ -132,9 +132,94 @@
     .bangs i:nth-child(2) { height: 25px; background: var(--yellow); }
     .bangs i:nth-child(3) { height: 19px; background: var(--blue); }
     .bangs i:nth-child(4) { height: 23px; background: var(--violet); }
-    .nav-links { display: flex; align-items: center; gap: 22px; }
-    .nav-links > a:not(.button) { color: var(--muted); font-size: .9rem; font-weight: 750; text-decoration: none; }
-    .nav-links > a:not(.button):hover { color: var(--lagoon); }
+    .nav-links { display: flex; align-items: center; gap: 12px; }
+    .nav-links > a:not(.button),
+    .nav-parent {
+      color: var(--muted);
+      font-size: .9rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+    .nav-links > a:not(.button):hover,
+    .nav-parent:hover,
+    .nav-item:focus-within > .nav-parent { color: var(--lagoon-dark); }
+    .nav-item { position: relative; }
+    .nav-parent {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      min-height: 44px;
+      padding: 0 4px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+    .nav-parent::after {
+      content: "⌄";
+      color: var(--lagoon-dark);
+      font-size: .9rem;
+      line-height: 1;
+      transition: transform .2s ease;
+    }
+    .nav-item:hover > .nav-parent::after,
+    .nav-item:focus-within > .nav-parent::after,
+    .nav-item.submenu-open > .nav-parent::after { transform: rotate(180deg); }
+    .submenu {
+      position: absolute;
+      z-index: 100;
+      top: calc(100% + 8px);
+      left: -14px;
+      display: grid;
+      min-width: 245px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--paper);
+      box-shadow: 0 18px 46px rgba(52, 125, 127, .16);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-6px);
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+    }
+    .submenu::before {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: 0;
+      right: 0;
+      height: 10px;
+    }
+    .nav-item:hover > .submenu,
+    .nav-item:focus-within > .submenu,
+    .nav-item.submenu-open > .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .submenu a {
+      display: block;
+      padding: 11px 12px;
+      border-radius: 11px;
+      color: var(--ink);
+      font-size: .88rem;
+      font-weight: 750;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+    .submenu a:hover, .submenu a:focus-visible {
+      color: var(--lagoon-dark);
+      background: var(--lagoon-soft);
+    }
+    .submenu a + a { margin-top: 2px; }
+    .nav-resources {
+      padding: 8px 13px !important;
+      border-radius: 999px;
+      color: var(--lagoon-dark) !important;
+      background: var(--lagoon-soft);
+    }
+    .nav-resources:hover { background: #d4ebe8; }
     .menu-toggle { display: none; border: 0; background: transparent; color: var(--ink); font-size: 1.6rem; cursor: pointer; }
 
     .hero {
@@ -406,8 +491,55 @@
     .footer-links a { color: var(--lagoon-dark); font-weight: 750; text-underline-offset: 3px; }
 
     @media (max-width: 960px) {
-      .nav-links { position: fixed; inset: 80px 0 auto; display: none; padding: 22px; border-bottom: 1px solid var(--line); background: var(--paper); flex-direction: column; align-items: stretch; }
+      .nav-links {
+        position: fixed;
+        inset: 80px 0 auto;
+        display: none;
+        max-height: calc(100vh - 80px);
+        padding: 18px 22px 24px;
+        border-bottom: 1px solid var(--line);
+        background: var(--paper);
+        box-shadow: 0 18px 40px rgba(52,125,127,.12);
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
       .nav-links.open { display: flex; }
+      .nav-links > a:not(.button) { padding: 11px 10px; }
+      .nav-item { width: 100%; }
+      .nav-parent {
+        width: 100%;
+        min-height: 46px;
+        padding: 10px;
+        justify-content: space-between;
+        text-align: left;
+      }
+      .nav-item:hover > .submenu,
+      .nav-item:focus-within > .submenu {
+        opacity: 1;
+        visibility: visible;
+      }
+      .submenu {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0 0 5px;
+        padding: 3px 0 5px 12px;
+        border: 0;
+        border-left: 3px solid var(--lagoon-soft);
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+      }
+      .nav-item.submenu-open > .submenu { display: grid; }
+      .submenu a { padding: 10px 12px; }
+      .nav-resources { margin-top: 3px; text-align: center; }
+      .nav-links .button { width: 100%; margin-top: 4px; }
       .menu-toggle { display: block; }
       .hero-grid, .journey-intro, .center-card, .about-grid, .guide-layout, .contact-card { grid-template-columns: 1fr; }
       .hero-aside { min-height: 430px; max-width: 560px; width: 100%; }
@@ -584,11 +716,37 @@
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
         <div class="nav-links" id="menu">
-          <a href="#parcours">Mon parcours</a>
-          <a href="#acces-amp">Accès en NC</a>
-          <a href="#centre-amp">Le centre AMP</a>
-          <a href="#association">BAMP NC</a>
-          <a href="#ressources">Ressources</a>
+          <div class="nav-item has-submenu">
+            <button class="nav-parent" type="button" aria-expanded="false" aria-controls="submenu-parcours">Mon parcours</button>
+            <div class="submenu" id="submenu-parcours">
+              <a href="#parcours">Les étapes du parcours</a>
+              <a href="#affiches">Affiches pédagogiques</a>
+              <a href="#centre-amp">Le centre AMP du Médipôle</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <button class="nav-parent" type="button" aria-expanded="false" aria-controls="submenu-acces">Accès en NC</button>
+            <div class="submenu" id="submenu-acces">
+              <a href="#acces-amp">Qui peut en bénéficier ?</a>
+              <a href="#prise-en-charge">Prise en charge</a>
+              <a href="#enjeux-locaux">Enjeux propres au territoire</a>
+            </div>
+          </div>
+
+          <div class="nav-item has-submenu">
+            <button class="nav-parent" type="button" aria-expanded="false" aria-controls="submenu-bamp">BAMP NC</button>
+            <div class="submenu" id="submenu-bamp">
+              <a href="#association">Qui sommes-nous ?</a>
+              <a href="#actualites">Actualités</a>
+              <a href="#agenda">Agenda</a>
+              <a href="#guide">Guide & professionnels</a>
+              <a href="#temoignages">Témoignages</a>
+              <a href="#partenaires">Partenaires</a>
+            </div>
+          </div>
+
+          <a class="nav-resources" href="ressources.html">Ressources AMP</a>
           <a class="button" href="#contact">Nous contacter</a>
         </div>
       </nav>
@@ -756,7 +914,7 @@
       </div>
     </section>
 
-    <section class="coverage" aria-labelledby="coverage-title">
+    <section class="coverage" id="prise-en-charge" aria-labelledby="coverage-title">
       <div class="container">
         <div class="coverage-grid">
           <div class="coverage-intro"><p class="eyebrow">Prise en charge</p><h2 id="coverage-title">Trois repères à connaître.</h2></div>
@@ -852,7 +1010,10 @@
             <span class="news-tag">Inscriptions ouvertes</span>
             <h3 style="margin-top:30px">Vous accompagnez les parcours de fertilité ?</h3>
             <p>Psychologues, sages-femmes, thérapeutes et autres professionnels de l’accompagnement peuvent demander leur inscription.</p>
-            <a class="button light" href="https://docs.google.com/forms/d/e/1FAIpQLScu8kFkW5Jb5lnsVsIvNyaPwPzwt10yaa-pBDYcl5LBY-0xsQ/viewform?usp=dialog" target="_blank" rel="noopener">S’inscrire au guide ↗</a>
+            <div class="actions" style="position:relative;z-index:1">
+              <a class="button light" href="ressources.html">Consulter les ressources AMP →</a>
+              <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScu8kFkW5Jb5lnsVsIvNyaPwPzwt10yaa-pBDYcl5LBY-0xsQ/viewform?usp=dialog" target="_blank" rel="noopener">S’inscrire au guide ↗</a>
+            </div>
             <p class="form-privacy"><a href="informations-legales.html#donnees">Comment les données sont-elles utilisées ?</a></p>
           </article>
           <details class="guide-side" open>
@@ -969,11 +1130,11 @@
           </details>
           <details>
             <summary>S’informer <span aria-hidden="true">+</span></summary>
-            <div><a href="#parcours">Comprendre le parcours AMP</a><a href="#affiches">Voir les affiches pédagogiques</a><a href="#acces-amp">Accès et règles en Nouvelle-Calédonie</a><a href="#centre-amp">Contacter le centre AMP</a><a href="#ressources">Ressources utiles</a></div>
+            <div><a href="#parcours">Comprendre le parcours AMP</a><a href="#affiches">Voir les affiches pédagogiques</a><a href="#acces-amp">Accès et règles en Nouvelle-Calédonie</a><a href="#centre-amp">Contacter le centre AMP</a><a href="ressources.html">Annuaire & ressources AMP</a><a href="#ressources">Liens utiles</a></div>
           </details>
           <details>
             <summary>Participer <span aria-hidden="true">+</span></summary>
-            <div><a href="#guide">Guide des professionnels</a><a href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a><a href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener">Adhérer ou soutenir ↗</a></div>
+            <div><a href="ressources.html">Consulter l’annuaire des professionnels</a><a href="#guide">Participer au guide</a><a href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a><a href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener">Adhérer ou soutenir ↗</a></div>
           </details>
           <details>
             <summary>Partenaires <span aria-hidden="true">+</span></summary>
@@ -1002,19 +1163,64 @@
   <script>
     const button = document.querySelector('.menu-toggle');
     const menu = document.querySelector('#menu');
+    const submenuItems = [...document.querySelectorAll('.nav-item.has-submenu')];
+    const desktopMenuQuery = window.matchMedia('(min-width: 961px)');
+
     const setMenuState = isOpen => {
       button.setAttribute('aria-expanded', String(isOpen));
       button.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
       button.textContent = isOpen ? '×' : '☰';
     };
+
+    const closeSubmenus = except => {
+      submenuItems.forEach(item => {
+        if (item === except) return;
+        item.classList.remove('submenu-open');
+        item.querySelector('.nav-parent')?.setAttribute('aria-expanded', 'false');
+      });
+    };
+
     button.addEventListener('click', () => {
       const isOpen = menu.classList.toggle('open');
       setMenuState(isOpen);
+      if (!isOpen) closeSubmenus();
     });
+
+    submenuItems.forEach(item => {
+      const parent = item.querySelector('.nav-parent');
+      parent.addEventListener('click', event => {
+        // Sur ordinateur, le clic permet aussi d'ouvrir le sous-menu pour le clavier/tactile.
+        event.stopPropagation();
+        const willOpen = !item.classList.contains('submenu-open');
+        closeSubmenus(item);
+        item.classList.toggle('submenu-open', willOpen);
+        parent.setAttribute('aria-expanded', String(willOpen));
+      });
+    });
+
     menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
       menu.classList.remove('open');
+      closeSubmenus();
       setMenuState(false);
     }));
+
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.nav-item.has-submenu')) closeSubmenus();
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      closeSubmenus();
+      menu.classList.remove('open');
+      setMenuState(false);
+      button.focus();
+    });
+
+    desktopMenuQuery.addEventListener('change', () => {
+      menu.classList.remove('open');
+      closeSubmenus();
+      setMenuState(false);
+    });
 
     const revealItems = [...document.querySelectorAll('[data-reveal]')];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
