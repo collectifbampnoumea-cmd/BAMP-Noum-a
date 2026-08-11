@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annuaire & accompagnement — BAMP Nouvelle-Calédonie</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Annuaire BAMP NC en cours d’élaboration : professionnels de santé, thérapeutes & bien-être et contacts AMP utiles en Nouvelle-Calédonie.">
+<style>
+:root{
+  --bg:#FFFEFA;
+  --ink:#12211E;
+  --ink-soft:#5B6D68;
+  --ink-faint:#8B9995;
+  --teal:#00A99A;
+  --teal-dark:#00786D;
+  --coral:#FF5A3C;
+  --coral-dark:#C93E24;
+  --coral-tint:#FFEDE7;
+  --gold:#FFAE1F;
+  --gold-dark:#B4740A;
+  --gold-tint:#FFF3DC;
+  --line:#E7E2D3;
+  --font-display:'Petrona', Georgia, serif;
+  --font-body:'Public Sans', -apple-system, sans-serif;
+  --font-mono:'IBM Plex Mono', monospace;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:0 32px;}
+.wrap-narrow{max-width:740px;}
+a{color:var(--teal-dark);}
+
+/* ---- Cover ---- */
+.cover{
+  padding:84px 0 68px;
+  background:
+    radial-gradient(1000px 460px at 88% -15%, #D6F5EF 0%, transparent 60%),
+    radial-gradient(820px 400px at -8% 115%, #FFE3CE 0%, transparent 55%),
+    var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:12.5px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--teal-dark);
+  margin:0 0 22px;
+}
+.cover-title{
+  font-family:var(--font-display);
+  font-weight:500;
+  font-size:clamp(42px,7vw,76px);
+  line-height:1.02;
+  margin:0 0 26px;
+  color:var(--ink);
+  letter-spacing:-.01em;
+}
+.cover-title em{font-style:italic;color:var(--teal);font-weight:400;}
+
+.cover-logo-wrap{margin:0 0 18px;}
+.home-link{display:inline-flex;align-items:center;gap:7px;margin:0 0 26px;color:var(--teal-dark);font-size:14px;font-weight:750;text-decoration:none;}
+.home-link:hover{text-decoration:underline;text-underline-offset:4px;}
+.work-badge{display:inline-flex;align-items:center;gap:8px;width:fit-content;margin:0 0 20px;padding:8px 12px;border-radius:999px;background:var(--gold-tint);color:#806512;font-size:12px;font-weight:850;letter-spacing:.05em;text-transform:uppercase;}
+.cover-logo{display:block;max-width:280px;width:min(52vw,280px);height:auto;}
+
+.cover-lede{
+  max-width:640px;
+  font-size:18px;
+  color:var(--ink-soft);
+  margin:0 0 44px;
+}
+.cover-stats{display:flex;gap:40px;margin-bottom:44px;flex-wrap:wrap;}
+.stat{display:flex;flex-direction:column;gap:2px;}
+.stat-num{font-family:var(--font-display);font-size:36px;font-weight:500;color:var(--coral);}
+.stat-label{font-size:13px;color:var(--ink-soft);}
+.cover-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-mono);font-size:13px;letter-spacing:.04em;
+  text-decoration:none;color:var(--ink);
+  border-bottom:1px solid var(--teal);
+  padding-bottom:4px;
+}
+.cover-cta:hover{color:var(--teal-dark);}
+
+/* ---- Intro ---- */
+.intro{padding:60px 0 52px;}
+.section-title{
+  font-family:var(--font-display);
+  font-size:28px;
+  font-weight:500;
+  margin:0 0 20px;
+}
+.intro p{color:var(--ink-soft);margin:0 0 16px;font-size:16px;}
+.intro strong{color:var(--ink);font-weight:600;}
+.callout{
+  display:flex;gap:14px;align-items:flex-start;
+  background:var(--gold-tint);
+  border-radius:8px;
+  padding:18px 20px;
+  margin-top:28px;
+}
+.callout-icon{
+  flex:none;width:20px;height:20px;border-radius:50%;
+  background:var(--gold-dark);color:#fff;
+  font-family:var(--font-display);font-style:italic;font-size:13px;
+  display:flex;align-items:center;justify-content:center;
+}
+.callout p{margin:0;color:var(--ink);font-size:14.5px;}
+
+/* ---- Controls / tabs ---- */
+.controls{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,254,250,.95);
+  backdrop-filter:blur(6px);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:20px 0;
+}
+.tabs{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+.tab{
+  display:flex;align-items:center;gap:10px;
+  background:transparent;
+  border:1.5px solid var(--line);
+  border-radius:100px;
+  padding:10px 20px;
+  font-family:var(--font-body);
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--ink-soft);
+  cursor:pointer;
+  transition:border-color .15s, color .15s, background .15s;
+}
+.tab-count{
+  font-family:var(--font-mono);font-size:11.5px;font-weight:400;
+  background:var(--line);color:var(--ink-soft);
+  border-radius:10px;padding:1px 8px;
+}
+.tab.tab-sante.is-active{border-color:var(--coral);color:var(--coral-dark);background:var(--coral-tint);}
+.tab.tab-sante.is-active .tab-count{background:var(--coral);color:#fff;}
+.tab.tab-bienetre.is-active{border-color:var(--gold);color:var(--gold-dark);background:var(--gold-tint);}
+.tab.tab-bienetre.is-active .tab-count{background:var(--gold);color:#fff;}
+.tab:not(.is-active):hover{border-color:var(--ink-faint);}
+
+.filters{display:flex;gap:10px;flex-wrap:wrap;}
+#search{
+  flex:1;min-width:220px;
+  font-family:var(--font-body);font-size:14.5px;
+  padding:10px 14px;border:1.5px solid var(--line);border-radius:100px;
+  background:#fff;color:var(--ink);
+}
+#filter-secteur{
+  font-family:var(--font-body);font-size:14.5px;
+  padding:10px 14px;border:1.5px solid var(--line);border-radius:100px;
+  background:#fff;color:var(--ink);
+}
+.print-btn{
+  font-family:var(--font-mono);font-size:12.5px;letter-spacing:.03em;
+  padding:10px 18px;border:1.5px solid var(--teal);border-radius:100px;
+  background:transparent;color:var(--teal-dark);cursor:pointer;
+}
+.print-btn:hover{background:var(--teal);color:#fff;}
+
+/* ---- Main / groups / list ---- */
+main.wrap{padding:48px 32px 100px;}
+.panel[hidden]{display:none;}
+.empty{color:var(--ink-soft);font-style:italic;padding:40px 0;text-align:center;}
+
+.group{margin-bottom:52px;}
+.group-head{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;padding-bottom:12px;border-bottom:2px solid var(--rule,var(--coral));}
+.panel-sante .group-head{--rule:var(--coral);}
+.panel-bienetre .group-head{--rule:var(--gold);}
+.group-title{font-family:var(--font-display);font-size:22px;font-weight:600;margin:0;color:var(--ink);}
+.group-count{font-family:var(--font-mono);font-size:12px;color:var(--ink-faint);}
+
+.group-note{
+  display:flex;gap:14px;align-items:flex-start;
+  margin:16px 0 8px;padding:16px 18px;border-radius:8px;
+  font-size:14px;color:var(--ink-soft);
+}
+.panel-sante .group-note{background:var(--coral-tint);}
+.panel-bienetre .group-note{background:var(--gold-tint);}
+.group-note a{font-weight:600;white-space:nowrap;}
+.panel-sante .group-note a{color:var(--coral-dark);}
+.panel-bienetre .group-note a{color:var(--gold-dark);}
+
+.info-block{
+  padding:18px 0 8px;
+  display:grid;grid-template-columns:220px 1fr;gap:24px;
+  border-bottom:1px solid var(--line);
+}
+.info-block .entry-name{color:var(--coral-dark);}
+
+/* entry rows */
+.entry{
+  padding:24px 0;
+  border-bottom:1px solid var(--line);
+  display:grid;
+  grid-template-columns:240px 1fr;
+  gap:28px;
+}
+.entry:last-child{border-bottom:none;}
+.entry-name{
+  font-family:var(--font-display);font-size:19px;font-weight:600;margin:0 0 3px;color:var(--ink);
+}
+.entry-profession{font-size:13px;color:var(--ink-soft);margin:0 0 8px;}
+.entry-cabinet{
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:.02em;
+  color:var(--ink-faint);margin:0;
+}
+.panel-sante .entry-cabinet{color:var(--coral-dark);}
+.panel-bienetre .entry-cabinet{color:var(--gold-dark);}
+
+.entry-detail{display:flex;flex-direction:column;gap:10px;}
+.entry-comment{font-size:14.5px;color:var(--ink-soft);margin:0;}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;}
+.tag{
+  font-family:var(--font-mono);font-size:10.5px;
+  padding:3px 10px;border-radius:100px;
+  background:#F1EFE4;color:var(--ink-soft);
+  white-space:nowrap;
+}
+.panel-sante .tag.tag-public{background:var(--coral-tint);color:var(--coral-dark);}
+.panel-bienetre .tag.tag-public{background:var(--gold-tint);color:var(--gold-dark);}
+
+.entry-contact{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13.5px;}
+.entry-contact a{text-decoration:none;font-weight:500;}
+.entry-contact a:hover{text-decoration:underline;}
+.entry-contact span.plain{color:var(--ink-soft);}
+
+.entry-lieux{font-size:12.5px;color:var(--ink-faint);}
+.entry-lieux strong{color:var(--ink-soft);font-weight:600;}
+
+/* ---- Footer ---- */
+.site-footer{padding:60px 0 90px;border-top:1px solid var(--line);}
+.footer-meta{font-family:var(--font-mono);font-size:12.5px;color:var(--ink-soft);}
+
+/* ---- Responsive ---- */
+@media (max-width:720px){
+  .wrap{padding:0 20px;}
+  .cover{padding:56px 0 44px;}
+  main.wrap{padding:32px 20px 80px;}
+  .cover-stats{gap:26px;}
+  .entry, .info-block{grid-template-columns:1fr;gap:8px;}
+  .entry-cabinet{margin-bottom:8px;}
+}
+
+
+/* ---- Recherche globale ---- */
+.search-wrap{position:relative;flex:1;min-width:220px;}
+.search-wrap #search{width:100%;padding-right:42px;}
+.search-clear{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  width:28px;height:28px;border:0;border-radius:50%;
+  background:transparent;color:var(--ink-soft);font-size:22px;line-height:1;
+  cursor:pointer;display:none;align-items:center;justify-content:center;
+}
+.search-clear.is-visible{display:flex;}
+.search-clear:hover{background:#F1EFE4;color:var(--ink);}
+.search-results{display:none;border-bottom:1px solid var(--line);background:var(--bg);}
+.search-results.is-active{display:block;}
+.search-results-inner{padding:28px 32px 48px;}
+.search-results-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid var(--teal);}
+.search-results-title{font-family:var(--font-display);font-size:23px;font-weight:600;margin:0;}
+.search-results-count{font-family:var(--font-mono);font-size:12px;color:var(--ink-faint);}
+.search-result-item{position:relative;padding-top:8px;}
+.search-result-source{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-dark);margin:14px 0 0;}
+.search-result-item .entry,.search-result-item .info-block{border-bottom:1px solid var(--line);}
+.search-result-item .useful-item{margin:8px 0 0;border:1px solid var(--line);border-radius:8px;padding:18px 20px;background:#fff;}
+.search-result-item .group-note{margin:8px 0 0;}
+.search-no-result{padding:24px 0;color:var(--ink-soft);font-style:italic;}
+body.searching main.wrap, body.searching .useful-directory{display:none;}
+@media(max-width:720px){.search-results-inner{padding:22px 20px 38px;}}
+@media print{.search-results,.search-clear{display:none !important;} body.searching main.wrap, body.searching .useful-directory{display:block !important;}}
+
+/* ---- Print ---- */
+@media print{
+  .controls, .cover-cta{display:none !important;}
+  .panel[hidden]{display:block !important;}
+  body{background:#fff;}
+  .cover{padding:16px 0;background:none;border:none;}
+  .entry{break-inside:avoid;}
+  #panel-2{page-break-before:always;}
+  .controls{position:static;}
+}
+
+/* ---- Annuaire AMP utile ---- */
+.useful-directory{padding:64px 0 72px;border-top:1px solid var(--line);background:linear-gradient(180deg,#FFFEFA 0%,#F7FBFA 100%);}
+.useful-intro{max-width:760px;color:var(--ink-soft);margin:0 0 30px;}
+.useful-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.useful-group{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;break-inside:avoid;}
+.useful-group h3{font-family:var(--font-display);font-size:20px;margin:0 0 14px;color:var(--ink);}
+.useful-item{padding:13px 0;border-top:1px solid var(--line);}
+.useful-item:first-of-type{border-top:0;padding-top:0;}
+.useful-name{font-weight:700;font-size:14.5px;margin:0 0 5px;}
+.useful-desc{font-size:13.5px;color:var(--ink-soft);margin:0 0 7px;line-height:1.5;}
+.useful-contact{display:flex;flex-wrap:wrap;gap:7px 14px;font-size:13px;}
+.useful-contact a{text-decoration:none;font-weight:600;}
+.useful-contact a:hover{text-decoration:underline;}
+.useful-meta{font-size:12.5px;color:var(--ink-faint);margin-top:6px;}
+.useful-note{margin-top:24px;background:var(--teal);color:#fff;border-radius:10px;padding:18px 20px;font-size:14px;}
+.directory-link{display:flex;align-items:center;gap:10px;background:transparent;border:1.5px solid var(--teal);border-radius:100px;padding:10px 20px;font-size:14.5px;font-weight:600;color:var(--teal-dark);text-decoration:none;}
+.directory-link:hover{background:var(--teal);color:#fff;}
+@media(max-width:760px){.useful-grid{grid-template-columns:1fr;}}
+@media print{.useful-directory{page-break-before:always;background:#fff;}.directory-link{display:none;}}
+
+
+
+/* =====================================================================
+   HARMONISATION VISUELLE AVEC LE SITE BAMP NOUMEA
+   Palette et langage graphique repris du site officiel local :
+   sable, papier, lagon, corail, jaune, bleu et violet ; grands rayons,
+   cartes douces, titres sans serif très affirmés et boutons capsules.
+   ===================================================================== */
+:root{
+  --bg:#fbf7f1;
+  --ink:#272626;
+  --ink-soft:#667071;
+  --ink-faint:#8a9292;
+  --teal:#73bfc1;
+  --teal-dark:#347d7f;
+  --coral:#e96165;
+  --coral-dark:#b94a4e;
+  --coral-tint:#fae8e3;
+  --gold:#e7bd35;
+  --gold-dark:#806512;
+  --gold-tint:#fff5d7;
+  --blue:#218fc2;
+  --violet:#8c4da1;
+  --blush:#efc7bd;
+  --lagoon-soft:#e2f1ef;
+  --paper:#fffdf9;
+  --line:rgba(52,125,127,.17);
+  --shadow:0 22px 60px rgba(52,125,127,.13);
+  --radius-lg:34px;
+  --radius-md:22px;
+  --font-display:"Aptos","Segoe UI",Arial,sans-serif;
+  --font-body:"Aptos","Segoe UI",Arial,sans-serif;
+  --font-mono:"Aptos","Segoe UI",Arial,sans-serif;
+}
+body{background:var(--bg);font-family:var(--font-body);color:var(--ink);line-height:1.6;}
+.wrap{max-width:1180px;padding:0 20px;}
+.wrap-narrow{max-width:820px;}
+a{color:var(--teal-dark);text-underline-offset:3px;}
+
+/* Hero */
+.cover{
+  position:relative;overflow:hidden;padding:78px 0 82px;border-bottom:0;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(115,191,193,.18),transparent 27%),
+    radial-gradient(circle at 8% 92%,rgba(239,199,189,.34),transparent 30%),
+    var(--bg);
+}
+.cover::before{
+  content:"";position:absolute;width:520px;height:520px;top:-290px;right:-175px;
+  border:74px solid rgba(115,191,193,.12);border-radius:50%;pointer-events:none;
+}
+.cover .wrap{position:relative;z-index:1;}
+.cover-logo-wrap{margin:0 0 28px;}
+.cover-logo{width:min(50vw,265px);max-width:265px;filter:drop-shadow(0 8px 18px rgba(52,125,127,.08));}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;margin:0 0 16px;
+  color:var(--teal-dark);font-family:var(--font-body);font-size:.78rem;font-weight:850;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+.eyebrow::before{content:"";width:25px;height:4px;border-radius:99px;background:var(--coral);}
+.cover-title{
+  max-width:850px;margin:0 0 26px;font-family:var(--font-display);font-weight:900;
+  font-size:clamp(3.4rem,7vw,6.7rem);line-height:.96;letter-spacing:-.055em;color:var(--ink);
+}
+.cover-title em{font-style:normal;font-weight:900;color:var(--teal-dark);}
+.cover-lede{max-width:760px;margin-bottom:36px;color:var(--ink-soft);font-size:clamp(1.08rem,2vw,1.3rem);}
+.cover-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:850px;margin-bottom:34px;}
+.stat{padding:20px 22px;border-radius:20px;background:var(--lagoon-soft);}
+.stat:nth-child(2){background:var(--coral-tint);}
+.stat:nth-child(3){background:var(--gold-tint);}
+.stat-num{font-family:var(--font-display);font-size:2rem;font-weight:900;line-height:1.05;color:var(--teal-dark);}
+.stat:nth-child(2) .stat-num{color:var(--coral);}
+.stat:nth-child(3) .stat-num{color:#a47d0a;}
+.stat-label{margin-top:5px;color:var(--ink-soft);font-size:.88rem;}
+.cover-cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;
+  padding:12px 21px;border:2px solid var(--teal-dark);border-radius:999px;
+  color:#fff;background:var(--teal-dark);font-family:var(--font-body);font-size:.95rem;font-weight:800;
+  text-decoration:none;transition:transform .2s ease,box-shadow .2s ease;
+}
+.cover-cta:hover{color:#fff;transform:translateY(-2px);box-shadow:0 12px 28px rgba(52,125,127,.22);}
+
+/* Intro */
+.intro{padding:88px 0;background:var(--paper);}
+.section-title{font-family:var(--font-display);font-size:clamp(2.15rem,4vw,3.65rem);font-weight:880;line-height:1.03;letter-spacing:-.045em;margin-bottom:22px;}
+.intro p{color:var(--ink-soft);font-size:1.04rem;}
+.callout{margin-top:28px;padding:20px 22px;border-left:6px solid var(--yellow);border-radius:18px;background:var(--gold-tint);}
+.callout-icon{width:28px;height:28px;background:var(--yellow);color:var(--ink);font-family:var(--font-body);font-style:normal;font-weight:900;}
+.callout p{font-size:.94rem;color:#514b4a;}
+
+/* Barre de navigation / recherche */
+.controls{top:0;padding:17px 0;border-color:var(--line);background:rgba(251,247,241,.94);backdrop-filter:blur(18px);box-shadow:0 8px 24px rgba(52,125,127,.05);}
+.tabs{gap:10px;margin-bottom:14px;}
+.tab,.directory-link{
+  min-height:46px;padding:10px 18px;border:1px solid var(--line);border-radius:999px;
+  background:var(--paper);color:var(--ink-soft);font-family:var(--font-body);font-size:.9rem;font-weight:800;
+  transition:transform .18s ease,border-color .18s ease,background .18s ease,color .18s ease;
+}
+.tab:hover,.directory-link:hover{transform:translateY(-1px);border-color:var(--teal);}
+.tab.tab-sante.is-active{border-color:var(--teal-dark);color:#fff;background:var(--teal-dark);}
+.tab.tab-bienetre.is-active{border-color:#176d93;color:#fff;background:#176d93;}
+.tab-count{background:rgba(255,255,255,.72);color:var(--ink-soft);font-family:var(--font-body);font-weight:800;}
+.tab.is-active .tab-count{background:rgba(255,255,255,.2)!important;color:#fff!important;}
+.directory-link{border-color:var(--coral);color:var(--coral-dark);text-decoration:none;}
+.directory-link:hover{background:var(--coral-tint);color:var(--coral-dark);}
+.filters{gap:12px;align-items:stretch;}
+.search-wrap{min-width:260px;}
+#search,#filter-secteur{
+  min-height:50px;border:1px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:.94rem;box-shadow:0 5px 16px rgba(52,125,127,.04);
+}
+#search{padding:11px 46px 11px 15px;}
+#search:focus,#filter-secteur:focus{outline:3px solid rgba(231,189,53,.52);outline-offset:2px;border-color:var(--teal-dark);}
+.search-clear{right:11px;width:30px;height:30px;color:var(--teal-dark);font-size:23px;}
+.search-clear:hover{background:var(--lagoon-soft);}
+.print-btn{min-height:50px;padding:11px 18px;border:2px solid var(--teal-dark);border-radius:999px;background:transparent;color:var(--teal-dark);font-family:var(--font-body);font-size:.84rem;font-weight:850;}
+.print-btn:hover{background:var(--teal-dark);color:white;}
+
+/* Répertoire principal */
+main.wrap{padding:56px 20px 105px;}
+.group{margin-bottom:22px;padding:30px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--paper);box-shadow:0 10px 36px rgba(8,72,73,.055);}
+.group-head{align-items:center;margin-bottom:18px;padding-bottom:15px;border-bottom:1px solid var(--line);}
+.panel-sante .group-head,.panel-bienetre .group-head{--rule:transparent;}
+.group-title{font-family:var(--font-display);font-size:clamp(1.45rem,2vw,1.85rem);font-weight:820;letter-spacing:-.025em;}
+.group-count{padding:5px 9px;border-radius:999px;background:var(--lagoon-soft);color:var(--teal-dark);font-family:var(--font-body);font-weight:850;}
+.entry,.info-block{
+  margin-top:14px;padding:24px;border:1px solid var(--line);border-radius:20px;background:var(--bg);
+  grid-template-columns:240px 1fr;gap:28px;
+}
+.entry:last-child{border-bottom:1px solid var(--line);}
+.entry-name{font-family:var(--font-display);font-size:1.24rem;font-weight:850;letter-spacing:-.018em;}
+.entry-profession{color:var(--teal-dark);font-size:.83rem;font-weight:800;}
+.entry-cabinet{font-family:var(--font-body);font-size:.75rem;font-weight:750;letter-spacing:.01em;color:var(--ink-faint);}
+.panel-sante .entry-cabinet,.panel-bienetre .entry-cabinet{color:var(--ink-faint);}
+.entry-comment{color:var(--ink-soft);font-size:.93rem;}
+.tag{padding:5px 9px;background:var(--lagoon-soft);color:var(--teal-dark);font-family:var(--font-body);font-size:.74rem;font-weight:750;}
+.panel-sante .tag.tag-public{background:var(--coral-tint);color:var(--coral-dark);}
+.panel-bienetre .tag.tag-public{background:var(--gold-tint);color:#806512;}
+.entry-contact{gap:8px 16px;font-size:.85rem;}
+.entry-contact a{color:var(--teal-dark);font-weight:800;}
+.entry-lieux{color:var(--ink-faint);font-size:.8rem;}
+.group-note{margin-top:16px;padding:18px 20px;border-radius:17px;background:var(--lagoon-soft)!important;color:var(--ink-soft);}
+.panel-sante .group-note{border-left:5px solid var(--coral);}
+.panel-bienetre .group-note{border-left:5px solid var(--yellow);}
+.group-note a,.panel-sante .group-note a,.panel-bienetre .group-note a{color:var(--teal-dark);font-weight:850;}
+.info-block .entry-name{color:var(--teal-dark);}
+
+/* Résultats globaux */
+.search-results{background:var(--paper);border-bottom:1px solid var(--line);}
+.search-results-inner{padding:34px 20px 54px;}
+.search-results-head{margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--line);}
+.search-results-title{font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:880;letter-spacing:-.035em;}
+.search-results-count{padding:6px 10px;border-radius:999px;background:var(--lagoon-soft);color:var(--teal-dark);font-family:var(--font-body);font-weight:850;}
+.search-result-source{color:var(--teal-dark);font-family:var(--font-body);font-size:.72rem;font-weight:900;letter-spacing:.08em;}
+.search-result-item .entry,.search-result-item .info-block,.search-result-item .useful-item{border-radius:20px;background:var(--bg);box-shadow:none;}
+
+/* Annuaire AMP utile */
+.useful-directory{padding:92px 0;background:var(--paper);border-top:1px solid var(--line);}
+.useful-intro{max-width:780px;margin-bottom:36px;color:var(--ink-soft);font-size:1.04rem;}
+.useful-grid{gap:18px;}
+.useful-group{padding:28px;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--bg);box-shadow:0 10px 36px rgba(8,72,73,.045);}
+.useful-group:nth-child(2n){background:#edf8f6;}
+.useful-group:nth-child(3n){background:#fae8e3;}
+.useful-group:nth-child(4n){background:#fff5d7;}
+.useful-group h3{font-family:var(--font-display);font-size:1.5rem;font-weight:850;letter-spacing:-.028em;color:var(--ink);}
+.useful-item{padding:16px 0;border-top:1px solid var(--line);}
+.useful-name{font-size:.97rem;font-weight:850;}
+.useful-desc{color:var(--ink-soft);font-size:.87rem;}
+.useful-contact a{color:var(--teal-dark);font-weight:850;}
+.useful-note{margin-top:26px;padding:22px 24px;border-radius:18px;color:#fff;background:var(--teal-dark);box-shadow:var(--shadow);}
+
+/* Pied de page */
+.site-footer{padding:66px 0 76px;border-top:0;color:#fff;background:var(--teal-dark);}
+.site-footer .section-title,.site-footer p,.site-footer .footer-meta{color:#fff;}
+.site-footer .section-title{font-size:clamp(2rem,4vw,3.2rem);}
+.footer-meta{font-family:var(--font-body);opacity:.86;}
+
+.empty{padding:42px;border-radius:20px;background:var(--lagoon-soft);color:var(--ink-soft);font-style:normal;}
+
+@media(max-width:820px){
+  .cover{padding:58px 0 62px;}
+  .cover-stats{grid-template-columns:1fr;max-width:520px;}
+  .group{padding:22px;}
+  .entry,.info-block{grid-template-columns:1fr;gap:10px;padding:20px;}
+  .useful-grid{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+  .wrap{width:100%;padding-left:18px;padding-right:18px;}
+  .cover-logo{width:225px;max-width:72vw;}
+  .cover-title{font-size:clamp(3rem,16vw,4.5rem);}
+  .tabs{display:grid;grid-template-columns:1fr;}
+  .tab,.directory-link{width:100%;justify-content:center;}
+  .filters{display:grid;grid-template-columns:1fr;}
+  .search-wrap{min-width:0;}
+  #filter-secteur,.print-btn{width:100%;}
+  main.wrap{padding-left:18px;padding-right:18px;}
+  .group{padding:18px;border-radius:24px;}
+}
+
+@media print{
+  body{background:#fff;}
+  .cover,.intro,.useful-directory,.site-footer{background:#fff;}
+  .group,.useful-group,.entry,.info-block{box-shadow:none;}
+  .site-footer{color:var(--ink);}
+  .site-footer .section-title,.site-footer p,.site-footer .footer-meta{color:var(--ink);}
+}
+
+.data-status{margin:18px 0;padding:14px 16px;border-radius:14px;background:#fff3dc;color:#6f5520;font-weight:600;}
+.data-status.error{background:#ffede7;color:#9b3827;}
+
+</style>
+</head>
+<body>
+
+<header class="cover" id="top">
+  <div class="wrap">
+    <a class="home-link" href="index.html">← Retour au site BAMP NC</a>
+    <div class="cover-logo-wrap">
+      <img class="cover-logo" src="assets/logo_bamp.svg" alt="Collectif BAMP — Antenne de Nouvelle-Calédonie">
+    </div>
+    <p class="eyebrow">Collectif BAMP · Nouvelle-Calédonie</p>
+    <span class="work-badge">Annuaire en cours d’élaboration</span>
+    <h1 class="cover-title">Annuaire &amp;<br><em>accompagnement</em></h1>
+    <p class="cover-lede">
+      Un point d’entrée local pour trouver des professionnels de santé, des thérapeutes &amp; bien-être et des contacts AMP utiles en Nouvelle-Calédonie. L’annuaire est actuellement en cours d’élaboration.
+    </p>
+    <div class="cover-stats">
+      <div class="stat"><span class="stat-num" id="stat-total">0</span><span class="stat-label">professionnel·le·s référencé·e·s</span></div>
+      <div class="stat"><span class="stat-num" id="stat-sante">0</span><span class="stat-label">côté santé</span></div>
+      <div class="stat"><span class="stat-num" id="stat-bienetre">0</span><span class="stat-label">côté thérapeutes &amp; bien-être</span></div>
+    </div>
+    <a class="cover-cta" href="#annuaire">Explorer l’annuaire <span aria-hidden="true">↓</span></a>
+  </div>
+</header>
+
+<section class="intro" aria-labelledby="intro-h">
+  <div class="wrap wrap-narrow">
+    <h2 id="intro-h" class="section-title">À propos de l’annuaire</h2>
+    <p>
+      Cet annuaire recense des professionnel·le·s de santé et des thérapeutes de Nouvelle-Calédonie ayant répondu
+      à l'appel du Collectif BAMP NC, lancé sur notre page Facebook. Chaque fiche a été renseignée
+      directement par la professionnelle ou le professionnel concerné, qui a donné son accord explicite
+      pour la publication de ses coordonnées.
+    </p>
+    <p>
+      L’annuaire est organisé en <strong>trois espaces</strong> : les <strong>professionnels de santé</strong>
+      (centres AMP, gynécologues, sages-femmes, psychologues, diététiciennes, ostéopathes…) puis les
+      <strong>thérapeutes et praticien·ne·s du bien-être</strong> (hypnothérapeutes, sophrologues,
+      naturopathes, acupunctrices…), ainsi que les <strong>contacts AMP utiles</strong> pour l’orientation et le soutien.
+    </p>
+    <div class="callout">
+      <span class="callout-icon" aria-hidden="true">i</span>
+      <p>Le Collectif BAMP NC ne délivre aucune garantie sur les pratiques présentées ici et vous invite,
+      comme le rappellent plusieurs professionnel·le·s elles-mêmes, à toujours vérifier les qualifications
+      et diplômes avant un premier rendez-vous.</p>
+    </div>
+  </div>
+</section>
+
+<nav class="controls" id="annuaire" aria-label="Recherche et filtres de l'annuaire">
+  <div class="wrap">
+    <div class="tabs" role="tablist" aria-label="Catégories">
+      <button class="tab tab-sante is-active" data-page="1" role="tab" aria-selected="true">
+        <span class="tab-text">Professionnels de santé</span>
+        <span class="tab-count" id="count-1">0</span>
+      </button>
+      <button class="tab tab-bienetre" data-page="2" role="tab" aria-selected="false">
+        <span class="tab-text">Thérapeutes &amp; bien-être</span>
+        <span class="tab-count" id="count-2">0</span>
+      </button>
+      <a class="directory-link" href="#contacts-amp-utiles">Contacts AMP utiles ↓</a>
+    </div>
+    <div class="filters">
+      <div class="search-wrap">
+        <input type="text" id="search" placeholder="Rechercher dans tout l’annuaire…" aria-label="Rechercher dans tout l’annuaire">
+        <button id="search-clear" class="search-clear" type="button" aria-label="Effacer la recherche" title="Effacer la recherche">×</button>
+      </div>
+      <select id="filter-secteur" aria-label="Filtrer par secteur géographique">
+        <option value="">Tous les secteurs</option>
+      </select>
+      <button id="print-btn" class="print-btn" type="button">Version imprimable</button>
+    </div>
+  </div>
+</nav>
+
+<section id="search-results" class="search-results" aria-live="polite">
+  <div class="wrap search-results-inner">
+    <div class="search-results-head">
+      <h2 class="search-results-title">Résultats de recherche</h2>
+      <span class="search-results-count" id="search-results-count"></span>
+    </div>
+    <div id="search-results-list"></div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section id="panel-1" class="panel is-active" aria-label="Professionnels de santé"></section>
+  <section id="panel-2" class="panel" aria-label="Thérapeutes et bien-être" hidden></section>
+  <p class="empty" id="empty-state" hidden>Aucun résultat pour cette recherche.</p>
+</main>
+
+
+<section class="useful-directory" id="contacts-amp-utiles" aria-labelledby="useful-title">
+  <div class="wrap">
+    <p class="eyebrow">Contacts &amp; orientations</p>
+    <h2 id="useful-title" class="section-title">Contacts AMP utiles</h2>
+    <p class="useful-intro">Des contacts pratiques pour compléter l’accompagnement pendant un parcours d’AMP en Nouvelle-Calédonie : soutien psychologique, santé, accompagnement social, addictologie, structures de proximité, mutuelles et second avis médical.</p>
+
+    <div class="useful-grid" id="useful-grid"></div>
+    <p class="data-status" id="useful-data-status" hidden></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap wrap-narrow">
+    <h2 class="section-title">Faire évoluer l’annuaire</h2>
+    <p>
+      Vous êtes un·e professionnel·le et souhaitez rejoindre cet annuaire, ou une fiche existante doit être
+      mise à jour ? Contactez le Collectif BAMP Nouvelle-Calédonie.
+    </p>
+    <p class="footer-meta">Dernière mise à jour&nbsp;: <strong id="last-update"></strong> · <span id="footer-total"></span> fiches publiées</p>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   ANNUAIRE & ACCOMPAGNEMENT - COLLECTIF BAMP NC
+   Données chargées automatiquement depuis GitHub :
+   - data/professionnels.json
+   - data/contacts-amp-utiles.json
+   Pour une mise à jour courante, modifiez les JSON et non cette page.
+   ===================================================================== */
+
+const PAGE1_GROUPS = [
+  { key:'amp', title:'Centre AMP', type:'useful', usefulGroup:'centre-amp' },
+  {
+    key:'gyneco', title:'Gynécologues', type:'linkout',
+    note:"Aucun gynécologue n'a pour l'instant répondu à notre appel à contributions.",
+    link:'https://plan.nc/medecine/gynecologue-obstetricien/',
+    linkLabel:'Voir les gynécologues sur Plan.nc'
+  },
+  {
+    key:'sage-femme', title:'Sages-femmes', type:'members',
+    link:'https://plan.nc/recherche/sage%20femme/',
+    linkLabel:"Voir d'autres sages-femmes sur Plan.nc"
+  },
+  { key:'psychologue', title:'Psychologues', type:'members', link:'https://plan.nc/recherche/psychologue/', linkLabel:"Voir d'autres psychologues sur Plan.nc" },
+  { key:'sexologue', title:'Sexologues & thérapie de couple', type:'members', link:'https://plan.nc/recherche/sexologue/', linkLabel:"Voir d'autres sexologues sur Plan.nc" },
+  { key:'dieteticienne', title:'Diététique & nutrition', type:'members', link:'https://plan.nc/recherche/di%C3%A9t%C3%A9ticien/', linkLabel:"Voir d'autres diététicien·ne·s sur Plan.nc" },
+  { key:'osteopathe', title:'Ostéopathes', type:'members', link:'https://plan.nc/recherche/osth%C3%A9opathe/', linkLabel:"Voir d'autres ostéopathes sur Plan.nc" },
+];
+
+const PAGE2_GROUPS = [
+  { key:'hypnotherapie', title:'Hypnothérapie', type:'members' },
+  { key:'sophrologie', title:'Sophrologie & relaxation', type:'members' },
+  { key:'coaching-familiale', title:'Coaching & thérapie familiale', type:'members' },
+  { key:'pba', title:'Psycho-bio-acupressure (PBA)', type:'members' },
+  { key:'acupuncture', title:'Acupuncture & médecine chinoise', type:'members' },
+  { key:'naturopathie', title:'Naturopathie', type:'members' },
+  { key:'esthetique-massage', title:'Massages, esthétique & soins du corps', type:'members' },
+  { key:'reflexologie-bienetre', title:'Réflexologie & bien-être', type:'members' },
+  { key:'yoga', title:'Yoga & pratiques corporelles', type:'members' },
+  { key:'psychogenealogie', title:'Psychogénéalogie', type:'members' },
+];
+
+(function(){
+  let data = [];
+  let usefulGroups = [];
+  let dataUpdatedAt = '';
+
+  function esc(s){
+    return String(s || '').replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
+  }
+
+  function tagList(arr, cls){
+    if(!arr || !arr.length) return '';
+    return `<div class="tag-row">${arr.map(t => `<span class="tag ${cls}">${esc(t)}</span>`).join('')}</div>`;
+  }
+
+  function contactRow(rec){
+    const items = [];
+    if(rec.telLink) items.push(`<a href="tel:${esc(rec.telLink)}">${esc(rec.tel)}</a>`);
+    if(rec.email) items.push(`<a href="mailto:${esc(rec.email)}">${esc(rec.email)}</a>`);
+    if(rec.site) items.push(`<a href="${esc(rec.site.startsWith('http')?rec.site:'https://'+rec.site)}" target="_blank" rel="noopener">Site</a>`);
+    if(rec.fb) items.push(`<a href="${esc(rec.fb.startsWith('http')?rec.fb:'https://www.facebook.com/search/top?q='+encodeURIComponent(rec.fb))}" target="_blank" rel="noopener">Facebook</a>`);
+    if(rec.insta) items.push(`<a href="${esc(rec.insta.startsWith('http')?rec.insta:'https://instagram.com/'+rec.insta.replace('@',''))}" target="_blank" rel="noopener">Instagram</a>`);
+    if(rec.linkedin) items.push(`<a href="${esc(rec.linkedin.startsWith('http')?rec.linkedin:'https://'+rec.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`);
+    if(rec.adresse) items.push(`<span class="plain">${esc(rec.adresse)}</span>`);
+    return items.length ? `<div class="entry-contact">${items.join('')}</div>` : '';
+  }
+
+  function entryHTML(rec){
+    const displayName = [rec.prenom, rec.nom].filter(Boolean).join(' ') || rec.cabinet || rec.profession;
+    const secteurTxt = (rec.secteur||[]).join(', ') + (rec.nord ? ' (' + rec.nord + ')' : '') + (rec.iles ? ' (' + rec.iles + ')' : '');
+    const searchBlob = (displayName+' '+rec.profession+' '+rec.cabinet+' '+(rec.activite||[]).join(' ')+' '+(rec.public||[]).join(' ')+' '+rec.presentation+' '+rec.adresse).toLowerCase();
+    return `
+    <article class="entry" data-search="${esc(searchBlob)}" data-secteur="${esc((rec.secteur||[]).join('|'))}">
+      <div class="entry-id">
+        <p class="entry-name">${esc(displayName)}</p>
+        <p class="entry-profession">${esc(rec.profession)}</p>
+        ${rec.cabinet ? `<p class="entry-cabinet">${esc(rec.cabinet)}</p>` : ''}
+      </div>
+      <div class="entry-detail">
+        ${rec.presentation ? `<p class="entry-comment">${esc(rec.presentation)}</p>` : ''}
+        ${tagList(rec.public, 'tag-public')}
+        ${contactRow(rec)}
+        ${secteurTxt ? `<p class="entry-lieux"><strong>Lieux d'exercice&nbsp;:</strong> ${esc(secteurTxt)}${rec.modalites && rec.modalites.length ? ' · ' + esc(rec.modalites.join(', ')) : ''}</p>` : ''}
+      </div>
+    </article>`;
+  }
+
+  function usefulGroupById(id){
+    return usefulGroups.find(g => g.id === id);
+  }
+
+  function usefulContactHTML(contact){
+    if(!contact || !contact.href) return '';
+    const external = /^https?:/i.test(contact.href);
+    return `<a href="${esc(contact.href)}"${external ? ' target="_blank" rel="noopener"' : ''}>${esc(contact.label)}${external && !String(contact.label).includes('↗') ? ' ↗' : ''}</a>`;
+  }
+
+  function usefulItemHTML(item){
+    const contacts = (item.contacts || []).map(usefulContactHTML).join('');
+    return `<div class="useful-item">
+      <p class="useful-name">${esc(item.nom)}</p>
+      ${item.description ? `<p class="useful-desc">${esc(item.description)}</p>` : ''}
+      ${contacts ? `<div class="useful-contact">${contacts}</div>` : ''}
+      ${item.meta ? `<p class="useful-meta">${esc(item.meta)}</p>` : ''}
+    </div>`;
+  }
+
+  function renderUsefulDirectory(){
+    const grid = document.getElementById('useful-grid');
+    if(!grid) return;
+    grid.innerHTML = usefulGroups.map(group => `
+      <article class="useful-group" data-useful-group="${esc(group.id)}">
+        <h3>${esc(group.titre)}</h3>
+        ${(group.items || []).map(usefulItemHTML).join('')}
+      </article>`).join('');
+  }
+
+  function infoBlockHTML(info){
+    if(!info) return '';
+    const contacts = (info.contacts || []).map(usefulContactHTML).join('');
+    return `
+    <div class="info-block">
+      <div class="entry-id"><p class="entry-name">${esc(info.nom)}</p></div>
+      <div class="entry-detail">
+        ${info.description ? `<p class="entry-comment">${esc(info.description)}</p>` : ''}
+        ${contacts ? `<div class="entry-contact">${contacts}</div>` : ''}
+        ${info.meta ? `<p class="entry-lieux">${esc(info.meta)}</p>` : ''}
+      </div>
+    </div>`;
+  }
+
+  function groupHTML(group, members){
+    let inner = `<div class="group-head"><h3 class="group-title">${esc(group.title)}</h3>`;
+    if(group.type === 'members') inner += `<span class="group-count">${members.length}</span>`;
+    inner += `</div>`;
+
+    if(group.type === 'useful'){
+      const source = usefulGroupById(group.usefulGroup);
+      const info = source && source.items && source.items[0];
+      inner += infoBlockHTML(info);
+      return `<section class="group" data-group="${group.key}" data-empty-ok="true">${inner}</section>`;
+    }
+    if(group.type === 'linkout'){
+      inner += `<div class="group-note"><span>${esc(group.note)}</span><a href="${esc(group.link)}" target="_blank" rel="noopener">${esc(group.linkLabel)} ↗</a></div>`;
+      return `<section class="group" data-group="${group.key}" data-empty-ok="true">${inner}</section>`;
+    }
+    inner += members.map(entryHTML).join('');
+    if(group.link){
+      inner += `<div class="group-note"><span>Vous cherchez d'autres options&nbsp;?</span><a href="${esc(group.link)}" target="_blank" rel="noopener">${esc(group.linkLabel)} ↗</a></div>`;
+    }
+    return `<section class="group" data-group="${group.key}" data-count="${members.length}">${inner}</section>`;
+  }
+
+  function renderPanel(panelEl, groups, pageNum, cssClass){
+    panelEl.classList.add(cssClass);
+    const byGroup = {};
+    data.filter(r => r.page === pageNum).forEach(r => {
+      (byGroup[r.groupe] = byGroup[r.groupe] || []).push(r);
+    });
+    panelEl.innerHTML = groups.map(g => groupHTML(g, byGroup[g.key] || [])).join('');
+  }
+
+  function formatDateISO(iso){
+    if(!iso) return '';
+    const d = new Date(iso + 'T12:00:00');
+    return Number.isNaN(d.getTime()) ? iso : d.toLocaleDateString('fr-FR', {day:'numeric', month:'long', year:'numeric'});
+  }
+
+  function render(){
+    renderUsefulDirectory();
+    renderPanel(document.getElementById('panel-1'), PAGE1_GROUPS, 1, 'panel-sante');
+    renderPanel(document.getElementById('panel-2'), PAGE2_GROUPS, 2, 'panel-bienetre');
+
+    const total = data.length;
+    const c1 = data.filter(r=>r.page===1).length;
+    const c2 = data.filter(r=>r.page===2).length;
+    document.getElementById('stat-total').textContent = total;
+    document.getElementById('stat-sante').textContent = c1;
+    document.getElementById('stat-bienetre').textContent = c2;
+    document.getElementById('count-1').textContent = c1;
+    document.getElementById('count-2').textContent = c2;
+    document.getElementById('footer-total').textContent = total;
+    document.getElementById('last-update').textContent = formatDateISO(dataUpdatedAt) || '—';
+
+    const secteurs = new Set();
+    data.forEach(r => (r.secteur||[]).forEach(s => secteurs.add(s)));
+    const sel = document.getElementById('filter-secteur');
+    sel.querySelectorAll('option:not(:first-child)').forEach(o => o.remove());
+    Array.from(secteurs).sort((a,b)=>a.localeCompare(b,'fr')).forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = s; opt.textContent = s;
+      sel.appendChild(opt);
+    });
+  }
+
+  function normalizeText(txt){
+    return String(txt || '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  }
+
+  function sourceLabelFor(el){
+    if(el.closest('.useful-directory')){
+      const h = el.closest('.useful-group')?.querySelector('h3');
+      return 'Contacts AMP utiles' + (h ? ' · ' + h.textContent.trim() : '');
+    }
+    const panel = el.closest('.panel');
+    const group = el.closest('.group');
+    const groupTitle = group?.querySelector('.group-title')?.textContent.trim() || '';
+    const side = panel?.id === 'panel-1' ? 'Professionnels de santé' : 'Thérapeutes & bien-être';
+    return side + (groupTitle ? ' · ' + groupTitle : '');
+  }
+
+  function collectGlobalSearchItems(){
+    const items = [];
+    document.querySelectorAll('#panel-1 .entry, #panel-2 .entry, #panel-1 .info-block, #panel-2 .info-block, #panel-1 .group-note, #panel-2 .group-note').forEach(el => {
+      const groupTitle = el.closest('.group')?.querySelector('.group-title')?.textContent || '';
+      items.push({el, source: sourceLabelFor(el), text: normalizeText(groupTitle + ' ' + (el.dataset.search || '') + ' ' + el.textContent)});
+    });
+    document.querySelectorAll('.useful-directory .useful-item').forEach(el => {
+      const h = el.closest('.useful-group')?.querySelector('h3')?.textContent || '';
+      items.push({el, source: sourceLabelFor(el), text: normalizeText(h + ' ' + el.textContent)});
+    });
+    return items;
+  }
+
+  function renderGlobalSearch(q){
+    const resultsBox = document.getElementById('search-results');
+    const resultsList = document.getElementById('search-results-list');
+    const countEl = document.getElementById('search-results-count');
+    const clearBtn = document.getElementById('search-clear');
+    const query = q.trim();
+    clearBtn.classList.toggle('is-visible', !!query);
+
+    if(!query){
+      document.body.classList.remove('searching');
+      resultsBox.classList.remove('is-active');
+      resultsList.innerHTML = '';
+      countEl.textContent = '';
+      return false;
+    }
+
+    document.body.classList.add('searching');
+    resultsBox.classList.add('is-active');
+    const nq = normalizeText(query);
+    const secteur = document.getElementById('filter-secteur').value;
+    const matches = collectGlobalSearchItems().filter(item => {
+      if(!item.text.includes(nq)) return false;
+      if(!secteur) return true;
+      const entry = item.el.matches('.entry') ? item.el : null;
+      if(!entry) return true;
+      return (entry.dataset.secteur || '').split('|').includes(secteur);
+    });
+
+    countEl.textContent = matches.length + (matches.length > 1 ? ' résultats' : ' résultat');
+    resultsList.innerHTML = '';
+    if(!matches.length){
+      resultsList.innerHTML = '<p class="search-no-result">Aucun résultat pour cette recherche.</p>';
+      return true;
+    }
+    matches.forEach(item => {
+      const wrap = document.createElement('div');
+      wrap.className = 'search-result-item';
+      const source = document.createElement('p');
+      source.className = 'search-result-source';
+      source.textContent = item.source;
+      wrap.appendChild(source);
+      wrap.appendChild(item.el.cloneNode(true));
+      resultsList.appendChild(wrap);
+    });
+    return true;
+  }
+
+  function applyFilters(){
+    const q = document.getElementById('search').value;
+    if(renderGlobalSearch(q)){
+      document.getElementById('empty-state').hidden = true;
+      return;
+    }
+
+    const secteur = document.getElementById('filter-secteur').value;
+    const activePage = document.querySelector('.tab.is-active').dataset.page;
+    [1,2].forEach(p => { document.getElementById('panel-'+p).hidden = String(p) !== activePage; });
+
+    let anyVisible = false;
+    document.querySelectorAll('.panel:not([hidden]) .group').forEach(group => {
+      if(group.dataset.emptyOk){ group.style.display = ''; anyVisible = true; return; }
+      let groupHasVisible = false;
+      group.querySelectorAll('.entry').forEach(entry => {
+        const matchesSecteur = !secteur || entry.dataset.secteur.split('|').includes(secteur);
+        entry.style.display = matchesSecteur ? '' : 'none';
+        if(matchesSecteur) groupHasVisible = true;
+      });
+      group.style.display = groupHasVisible ? '' : 'none';
+      if(groupHasVisible) anyVisible = true;
+    });
+    document.getElementById('empty-state').hidden = anyVisible;
+  }
+
+  function bindEvents(){
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-selected','false'); });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-selected','true');
+        applyFilters();
+      });
+    });
+    document.getElementById('search').addEventListener('input', applyFilters);
+    document.getElementById('search-clear').addEventListener('click', () => {
+      const input = document.getElementById('search');
+      input.value = '';
+      input.focus();
+      applyFilters();
+    });
+    document.getElementById('filter-secteur').addEventListener('change', applyFilters);
+    document.getElementById('print-btn').addEventListener('click', () => window.print());
+  }
+
+  async function loadData(){
+    const status = document.getElementById('useful-data-status');
+    try{
+      const [profRes, usefulRes] = await Promise.all([
+        fetch('./data/professionnels.json', {cache:'no-store'}),
+        fetch('./data/contacts-amp-utiles.json', {cache:'no-store'})
+      ]);
+      if(!profRes.ok) throw new Error('professionnels.json : HTTP ' + profRes.status);
+      if(!usefulRes.ok) throw new Error('contacts-amp-utiles.json : HTTP ' + usefulRes.status);
+      const profJson = await profRes.json();
+      const usefulJson = await usefulRes.json();
+      data = Array.isArray(profJson) ? profJson : (profJson.professionnels || []);
+      usefulGroups = Array.isArray(usefulJson) ? usefulJson : (usefulJson.groupes || []);
+      const dates = [profJson.updatedAt, usefulJson.updatedAt].filter(Boolean).sort();
+      dataUpdatedAt = dates.length ? dates[dates.length - 1] : '';
+      render();
+      applyFilters();
+    }catch(err){
+      console.error(err);
+      status.hidden = false;
+      status.classList.add('error');
+      status.textContent = "Impossible de charger les fichiers de données. Vérifiez que data/professionnels.json et data/contacts-amp-utiles.json sont bien présents sur GitHub Pages.";
+      document.getElementById('last-update').textContent = '—';
+    }
+  }
+
+  bindEvents();
+  loadData();
+})();
+
+</script>
+</body>
+</html>
