@@ -13,8 +13,6 @@
       "adresse": "147 Route de l'Anse Vata - Centre Médical Médisud - 3ème étage",
       "site": "https://www.monosteopathenoumea.com",
       "fb": "https://www.facebook.com/ad.osteo",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Ostéopathe"
       ],
@@ -34,8 +32,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "osteopathe"
     },
@@ -50,8 +46,6 @@
       "adresse": "40 rue henri bonneaud - centre médical le Tiare, Tuband",
       "site": "https://pro.eazydoc.nc/booking/pro/Lisa-KLEIN-NEPHTALI-Sage-Femme-NOUM%C3%89A-5055605",
       "fb": "https://www.facebook.com/profile.php?id=61571395653173",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Sage-femme"
       ],
@@ -74,13 +68,11 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "sage-femme"
     },
     {
-      "nom": "",
+      "nom": "LM son corps",
       "prenom": "Laura",
       "profession": "Praticienne en drainage lymphatique",
       "cabinet": "LM son corps",
@@ -91,7 +83,6 @@
       "site": "https://www.lmsoncorps.com",
       "fb": "https://www.facebook.com/LMsoncorps",
       "insta": "https://www.instagram.com/lm_son_corps/",
-      "linkedin": "",
       "activite": [
         "Massage bien-être"
       ],
@@ -110,8 +101,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "esthetique-massage"
     },
@@ -124,7 +113,6 @@
       "telLink": "+687931836",
       "email": "harmonynoumea@gmail.com",
       "adresse": "5 rue de la Havannah centre NéaSanté magenta plage",
-      "site": "",
       "fb": "https://www.facebook.com/Harmonynoumea",
       "insta": "https://www.instagram.com/harmony_noumea/",
       "linkedin": "https://nc.linkedin.com/in/dj%C3%A9mila-bouteille-harmony-nc-a02667174",
@@ -149,8 +137,6 @@
         "Nouméa",
         "Grand Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "coaching-familiale"
     },
@@ -193,8 +179,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "hypnotherapie"
     },
@@ -202,15 +186,10 @@
       "nom": "Enrico",
       "prenom": "Adeline",
       "profession": "Hypnotherapeute / Assistante sociale",
-      "cabinet": "",
       "tel": "78.68.33",
       "telLink": "+687786833",
       "email": "A2nico@mls.nc",
       "adresse": "Kone",
-      "site": "",
-      "fb": "",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Hypnose",
         "Yoga",
@@ -234,7 +213,6 @@
         "Province nord"
       ],
       "nord": "Kone Pouembout Voh Poya",
-      "iles": "",
       "page": 2,
       "groupe": "hypnotherapie"
     },
@@ -249,7 +227,6 @@
       "adresse": "5 rue Olry",
       "site": "https://www.pepsnc.com/",
       "fb": "https://www.facebook.com/EmyPirronePEPSNC",
-      "insta": "",
       "linkedin": "https://fr.linkedin.com/in/emy-pirrone-peps-a09554a0",
       "activite": [
         "Hypnose",
@@ -279,8 +256,6 @@
         "Nouméa",
         "Grand Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "hypnotherapie"
     },
@@ -295,8 +270,6 @@
       "adresse": "219 rue val boisé Plum 98809 Mont Dore",
       "site": "https://plan.nc/recherche/Muriel%20Boucard%20sophrologie/",
       "fb": "https://www.facebook.com/profile.php?id=100089466757794",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Sophrologie"
       ],
@@ -313,8 +286,6 @@
         "Grand Nouméa",
         "Mont-Dore"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "sophrologie"
     },
@@ -329,8 +300,6 @@
       "adresse": "37 rue rene coty mont venus",
       "site": "https://pro.eazydoc.nc/booking/pro/Aur%C3%A9lie-HAUCHECORNE-Sage-Femme-NOUM%C3%89A-1323341",
       "fb": "https://www.facebook.com/profile.php?id=100063926960142",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Sage-femme"
       ],
@@ -355,8 +324,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "sage-femme"
     },
@@ -371,8 +338,6 @@
       "adresse": "22 rue Henri Bonneaud",
       "site": "https://www.reve-l.com",
       "fb": "https://www.facebook.com/revel.mel",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Hypnose",
         "Coaching"
@@ -401,8 +366,6 @@
       "secteur": [
         "Toute la Nouvelle-Calédonie (visio)"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "hypnotherapie"
     },
@@ -415,10 +378,7 @@
       "telLink": "+687805799",
       "email": "Christelle.guenin1981@gmail.com",
       "adresse": "13 rue Jean-Brieuc Morault",
-      "site": "",
       "fb": "https://www.facebook.com/profile.php?id=100057341625818",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Socio-estheticienne"
       ],
@@ -441,8 +401,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "esthetique-massage"
     },
@@ -458,7 +416,6 @@
       "site": "https://www.associationnaturopathienc.com/",
       "fb": "https://www.facebook.com/profile.php?id=61550575214716",
       "insta": "https://www.instagram.com/madelinecamoin/",
-      "linkedin": "",
       "activite": [
         "Naturopathie",
         "Diététique / Nutrition",
@@ -486,8 +443,6 @@
         "Grand Nouméa",
         "Toute la Nouvelle-Calédonie (visio)"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "naturopathie"
     },
@@ -502,7 +457,6 @@
       "adresse": "16 rue de l'Alma - 98800 NOUMEA",
       "site": "https://praticienpba.com/solainemazerat#top",
       "fb": "https://www.facebook.com/PourBeaucoupdAmour",
-      "insta": "",
       "linkedin": "https://www.linkedin.com/in/solaine-mazerat-763468266/",
       "activite": [
         "Psycho-Bio-Acupressure (PBA)"
@@ -526,12 +480,11 @@
         "Province nord"
       ],
       "nord": "Koumac et Bourail",
-      "iles": "",
       "page": 2,
       "groupe": "pba"
     },
     {
-      "nom": "",
+      "nom": "Liséo Bien-être",
       "prenom": "Audrey",
       "profession": "Praticienne bien-être",
       "cabinet": "Liséo Bien-être",
@@ -542,7 +495,6 @@
       "site": "https://plan.nc/medecine/reflexologie/liseo-bien-etre/",
       "fb": "https://www.facebook.com/profile.php?id=61580297694207",
       "insta": "https://www.instagram.com/liseo.bienetre/",
-      "linkedin": "",
       "activite": [
         "Réflexologie",
         "Massage bien-être",
@@ -560,8 +512,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "reflexologie-bienetre"
     },
@@ -575,9 +525,6 @@
       "email": "osteogourand@gmail.c",
       "adresse": "224, rue Jacques Iékawé, Belle Vie",
       "site": "https://osteo-noumea.nc/",
-      "fb": "",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Ostéopathe"
       ],
@@ -598,8 +545,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "osteopathe"
     },
@@ -612,10 +557,8 @@
       "telLink": "+687847874",
       "email": "laptitefabriquededenetrose@hotmail.fr",
       "adresse": "35 rue Henri Bonneaud à Tuband",
-      "site": "",
       "fb": "https://www.facebook.com/profile.php?id=100025134321503",
       "insta": "https://www.instagram.com/hollyterrhappy/",
-      "linkedin": "",
       "activite": [
         "Psychologie",
         "Hypnose",
@@ -656,7 +599,6 @@
         "Toute la Nouvelle-Calédonie (visio)"
       ],
       "nord": "Toutes",
-      "iles": "",
       "page": 2,
       "groupe": "acupuncture"
     },
@@ -672,7 +614,6 @@
       "site": "https://www.sexologue.nc",
       "fb": "https://www.facebook.com/cecile.orosco.nc",
       "insta": "https://www.instagram.com/cecile.orosco.nc/reels/",
-      "linkedin": "",
       "activite": [
         "Sexologie"
       ],
@@ -696,8 +637,6 @@
         "Nouméa",
         "Toute la Nouvelle-Calédonie (visio)"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "sexologue"
     },
@@ -710,7 +649,6 @@
       "telLink": "+687743333",
       "email": "Amaia.beautycreations@gmail.com",
       "adresse": "37 rue René Coty Mont Venus",
-      "site": "",
       "fb": "https://www.facebook.com/amaia.beautycreations",
       "insta": "https://www.instagram.com/amaia.beautycreations",
       "linkedin": "https://nc.linkedin.com/in/cindy-boileau-713b8797",
@@ -734,8 +672,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "esthetique-massage"
     },
@@ -751,7 +687,6 @@
       "site": "https://Jennymamayoga.nc",
       "fb": "https://www.facebook.com/profile.php?id=100089771230903",
       "insta": "https://www.instagram.com/jennymama_yoganc/",
-      "linkedin": "",
       "activite": [
         "Yoga"
       ],
@@ -772,7 +707,6 @@
         "Grand Nouméa"
       ],
       "nord": "Bourail",
-      "iles": "",
       "page": 2,
       "groupe": "yoga"
     },
@@ -780,15 +714,10 @@
       "nom": "BONNET",
       "prenom": "Suzanne",
       "profession": "Acupunctrice",
-      "cabinet": "",
       "tel": "+687 990534",
       "telLink": "+687990534",
       "email": "suzmaliyu38@gmail.com",
       "adresse": "1017 route de Yahoué",
-      "site": "",
-      "fb": "",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Acupuncture"
       ],
@@ -811,8 +740,6 @@
       "secteur": [
         "Grand Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "acupuncture"
     },
@@ -820,14 +747,10 @@
       "nom": "DELL'ERBA",
       "prenom": "Léa",
       "profession": "Psychologue Clinicienne",
-      "cabinet": "",
       "tel": "507393",
       "telLink": "+687507393",
       "email": "lea.dellerba@gmail.com",
       "adresse": "1er étage Centre Médisud, 147 route de l'Anse Vata",
-      "site": "",
-      "fb": "",
-      "insta": "",
       "linkedin": "https://nc.linkedin.com/in/l%C3%A9a-dell-erba",
       "activite": [
         "Psychologie"
@@ -852,8 +775,6 @@
         "Nouméa",
         "Toute la Nouvelle-Calédonie (visio)"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "psychologue"
     },
@@ -868,8 +789,6 @@
       "adresse": "Quartier latin",
       "site": "https://praticienpba.com/maude-bourdais",
       "fb": "https://www.facebook.com/praticiennepba",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Praticienne pba"
       ],
@@ -896,8 +815,6 @@
         "Nouméa",
         "Païta"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "pba"
     },
@@ -913,7 +830,6 @@
       "site": "https://plan.nc/medecine/sophrologue/audrey-candir/",
       "fb": "https://www.facebook.com/AudreyCandirSophro.nc",
       "insta": "https://www.instagram.com/audrey_candir_sophrologue/",
-      "linkedin": "",
       "activite": [
         "Sophrologie",
         "Hypnose",
@@ -933,8 +849,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "sophrologie"
     },
@@ -942,14 +856,10 @@
       "nom": "Deligne",
       "prenom": "Claire",
       "profession": "Diététicienne",
-      "cabinet": "",
       "tel": "853694",
       "telLink": "+687853694",
       "email": "deligneclaire.diet@gmail.com",
-      "adresse": "",
       "site": "https://plan.nc/medecine/dieteticien/deligne-claire/",
-      "fb": "",
-      "insta": "",
       "linkedin": "https://fr.linkedin.com/in/claire-deligne-2b31722a",
       "activite": [
         "Diététique / Nutrition"
@@ -973,8 +883,6 @@
         "Mont-Dore",
         "Toute la Nouvelle-Calédonie (visio)"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "dieteticienne"
     },
@@ -986,11 +894,8 @@
       "tel": "794478",
       "telLink": "+687794478",
       "email": "contact@psychogenealogie.nc",
-      "adresse": "",
       "site": "https://psychogenealogie.nc/",
       "fb": "https://www.facebook.com/profile.php?id=61579725110811",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "praticienne en psychogénéalogie et analyse transgénéraionnelle"
       ],
@@ -1013,8 +918,6 @@
         "Grand Nouméa",
         "Mont-Dore"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "psychogenealogie"
     },
@@ -1028,9 +931,6 @@
       "email": "gilquin.osteo@gmail.com",
       "adresse": "6 rue de l'Yser",
       "site": "https://rendezvous.nc/structure/4aab35cd-1c77-409b-94c1-e1fc0e4d6a6a",
-      "fb": "",
-      "insta": "",
-      "linkedin": "",
       "activite": [
         "Osteopathe"
       ],
@@ -1055,8 +955,6 @@
         "Païta",
         "Mont-Dore"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "osteopathe"
     },
@@ -1070,9 +968,7 @@
       "email": "Cabinetbeaumatin@gmail.com",
       "adresse": "3 rue Jules Garnier",
       "site": "https://cabinetbeaumatin.my.canva.site/",
-      "fb": "",
       "insta": "https://www.instagram.com/cabinetbeaumatin",
-      "linkedin": "",
       "activite": [
         "Sage-femme"
       ],
@@ -1093,8 +989,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 1,
       "groupe": "sage-femme"
     },
@@ -1106,11 +1000,9 @@
       "tel": "91.69.67",
       "telLink": "+687916967",
       "email": "Aslnutritherapie@gmail.com",
-      "adresse": "",
       "site": "https://Www.Beyondnutritherapie.com",
       "fb": "https://www.facebook.com/AnneSophieBeyondnutritherapie",
       "insta": "https://www.instagram.com/beyondnutritherapie/",
-      "linkedin": "",
       "activite": [
         "Diététique / Nutrition"
       ],
@@ -1132,8 +1024,6 @@
       "secteur": [
         "Nouméa"
       ],
-      "nord": "",
-      "iles": "",
       "page": 2,
       "groupe": "dieteticienne"
     }
