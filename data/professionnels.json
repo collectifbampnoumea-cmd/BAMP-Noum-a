@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updatedAt": "2026-08-12",
   "professionnels": [
     {
@@ -11,8 +11,8 @@
       "telLink": "+687291162",
       "email": "anaisdelaunay.osteo@gmail.com",
       "adresse": "147 Route de l'Anse Vata - Centre Médical Médisud - 3ème étage",
-      "site": "https://www.monosteopathenoumea.com/",
-      "fb": "",
+      "site": "https://www.monosteopathenoumea.com",
+      "fb": "https://www.facebook.com/ad.osteo",
       "insta": "",
       "linkedin": "",
       "activite": [
@@ -49,7 +49,7 @@
       "email": "lisa.sagefemme@outlook.fr",
       "adresse": "40 rue henri bonneaud - centre médical le Tiare, Tuband",
       "site": "https://pro.eazydoc.nc/booking/pro/Lisa-KLEIN-NEPHTALI-Sage-Femme-NOUM%C3%89A-5055605",
-      "fb": "",
+      "fb": "https://www.facebook.com/profile.php?id=61571395653173",
       "insta": "",
       "linkedin": "",
       "activite": [
@@ -88,8 +88,8 @@
       "telLink": "+687848535",
       "email": "Laura@lmsoncorps.com",
       "adresse": "15 route du Port Despointes - Faubourg Blanchot",
-      "site": "https://www.lmsoncorps.com/",
-      "fb": "",
+      "site": "https://www.lmsoncorps.com",
+      "fb": "https://www.facebook.com/LMsoncorps",
       "insta": "https://www.instagram.com/lm_son_corps/",
       "linkedin": "",
       "activite": [
@@ -125,7 +125,7 @@
       "email": "harmonynoumea@gmail.com",
       "adresse": "5 rue de la Havannah centre NéaSanté magenta plage",
       "site": "",
-      "fb": "https://www.facebook.com/Harmonynoumea/",
+      "fb": "https://www.facebook.com/Harmonynoumea",
       "insta": "https://www.instagram.com/harmony_noumea/",
       "linkedin": "https://nc.linkedin.com/in/dj%C3%A9mila-bouteille-harmony-nc-a02667174",
       "activite": [
@@ -163,10 +163,10 @@
       "telLink": "+687784983",
       "email": "hypnosecontact@gmail.com",
       "adresse": "1 rue Faidherbe, Faubourg Blanchot",
-      "site": "https://www.delphinemarais.com/",
+      "site": "https://www.delphinemarais.com",
       "fb": "https://www.facebook.com/DelphineMaraisHypnotherapeute",
       "insta": "https://www.instagram.com/delphinemaraishypnotherapeute/",
-      "linkedin": "https://nc.linkedin.com/in/delphine-marais-356552124",
+      "linkedin": "https://www.linkedin.com/in/delphine-marais-356552124",
       "activite": [
         "Hypnose",
         "Coaching",
@@ -248,7 +248,7 @@
       "email": "peps.coach.nc@gmail.com",
       "adresse": "5 rue Olry",
       "site": "https://www.pepsnc.com/",
-      "fb": "",
+      "fb": "https://www.facebook.com/EmyPirronePEPSNC",
       "insta": "",
       "linkedin": "https://fr.linkedin.com/in/emy-pirrone-peps-a09554a0",
       "activite": [
@@ -294,7 +294,7 @@
       "email": "boucardmuriel@gmail.com",
       "adresse": "219 rue val boisé Plum 98809 Mont Dore",
       "site": "https://plan.nc/recherche/Muriel%20Boucard%20sophrologie/",
-      "fb": "",
+      "fb": "https://www.facebook.com/profile.php?id=100089466757794",
       "insta": "",
       "linkedin": "",
       "activite": [
@@ -328,7 +328,7 @@
       "email": "cabinet.montvenus@gmail.com",
       "adresse": "37 rue rene coty mont venus",
       "site": "https://pro.eazydoc.nc/booking/pro/Aur%C3%A9lie-HAUCHECORNE-Sage-Femme-NOUM%C3%89A-1323341",
-      "fb": "",
+      "fb": "https://www.facebook.com/profile.php?id=100063926960142",
       "insta": "",
       "linkedin": "",
       "activite": [
@@ -369,7 +369,7 @@
       "telLink": "+687524000",
       "email": "revel.pro@outlook.com",
       "adresse": "22 rue Henri Bonneaud",
-      "site": "https://www.reve-l.com/",
+      "site": "https://www.reve-l.com",
       "fb": "https://www.facebook.com/revel.mel",
       "insta": "",
       "linkedin": "",
@@ -416,7 +416,7 @@
       "email": "Christelle.guenin1981@gmail.com",
       "adresse": "13 rue Jean-Brieuc Morault",
       "site": "",
-      "fb": "",
+      "fb": "https://www.facebook.com/profile.php?id=100057341625818",
       "insta": "",
       "linkedin": "",
       "activite": [
@@ -456,7 +456,7 @@
       "email": "Madeline.camoin@gmail.com",
       "adresse": "Trianon",
       "site": "https://www.associationnaturopathienc.com/",
-      "fb": "",
+      "fb": "https://www.facebook.com/profile.php?id=61550575214716",
       "insta": "https://www.instagram.com/madelinecamoin/",
       "linkedin": "",
       "activite": [
@@ -500,8 +500,8 @@
       "telLink": "+687826647",
       "email": "gaya@nautile.nc",
       "adresse": "16 rue de l'Alma - 98800 NOUMEA",
-      "site": "https://praticienpba.com/solainemazerat",
-      "fb": "",
+      "site": "https://praticienpba.com/solainemazerat#top",
+      "fb": "https://www.facebook.com/PourBeaucoupdAmour",
       "insta": "",
       "linkedin": "https://www.linkedin.com/in/solaine-mazerat-763468266/",
       "activite": [
@@ -540,7 +540,7 @@
       "email": "liseobienetre@gmail.com",
       "adresse": "1 rue Olry à Nouméa",
       "site": "https://plan.nc/medecine/reflexologie/liseo-bien-etre/",
-      "fb": "",
+      "fb": "https://www.facebook.com/profile.php?id=61580297694207",
       "insta": "https://www.instagram.com/liseo.bienetre/",
       "linkedin": "",
       "activite": [
@@ -613,8 +613,8 @@
       "email": "laptitefabriquededenetrose@hotmail.fr",
       "adresse": "35 rue Henri Bonneaud à Tuband",
       "site": "",
-      "fb": "",
-      "insta": "",
+      "fb": "https://www.facebook.com/profile.php?id=100025134321503",
+      "insta": "https://www.instagram.com/hollyterrhappy/",
       "linkedin": "",
       "activite": [
         "Psychologie",
@@ -669,9 +669,9 @@
       "telLink": "+687833010",
       "email": "sexologue.nc@gmail.com",
       "adresse": "49 rue du RP de Fenoyl, Trianon",
-      "site": "https://sexologue.nc/",
-      "fb": "",
-      "insta": "",
+      "site": "https://www.sexologue.nc",
+      "fb": "https://www.facebook.com/cecile.orosco.nc",
+      "insta": "https://www.instagram.com/cecile.orosco.nc/reels/",
       "linkedin": "",
       "activite": [
         "Sexologie"
@@ -711,8 +711,8 @@
       "email": "Amaia.beautycreations@gmail.com",
       "adresse": "37 rue René Coty Mont Venus",
       "site": "",
-      "fb": "",
-      "insta": "https://www.instagram.com/amaia.beautycreations/",
+      "fb": "https://www.facebook.com/amaia.beautycreations",
+      "insta": "https://www.instagram.com/amaia.beautycreations",
       "linkedin": "https://nc.linkedin.com/in/cindy-boileau-713b8797",
       "activite": [
         "Massage bien-être"
@@ -748,9 +748,9 @@
       "telLink": "+687871084",
       "email": "Jennymamayoga@gmail.com",
       "adresse": "3 rue Adolphe Barrau baie de l’orphelinat",
-      "site": "https://jennymamayoga.nc/",
-      "fb": "",
-      "insta": "https://www.instagram.com/jennymama_yoga/",
+      "site": "https://Jennymamayoga.nc",
+      "fb": "https://www.facebook.com/profile.php?id=100089771230903",
+      "insta": "https://www.instagram.com/jennymama_yoganc/",
       "linkedin": "",
       "activite": [
         "Yoga"
@@ -867,7 +867,7 @@
       "email": "Mbnoumea@gmail.com",
       "adresse": "Quartier latin",
       "site": "https://praticienpba.com/maude-bourdais",
-      "fb": "",
+      "fb": "https://www.facebook.com/praticiennepba",
       "insta": "",
       "linkedin": "",
       "activite": [
@@ -911,7 +911,7 @@
       "email": "audrey.candir@gmail.com",
       "adresse": "24 rue Michel Kauma",
       "site": "https://plan.nc/medecine/sophrologue/audrey-candir/",
-      "fb": "",
+      "fb": "https://www.facebook.com/AudreyCandirSophro.nc",
       "insta": "https://www.instagram.com/audrey_candir_sophrologue/",
       "linkedin": "",
       "activite": [
@@ -1071,7 +1071,7 @@
       "adresse": "3 rue Jules Garnier",
       "site": "https://cabinetbeaumatin.my.canva.site/",
       "fb": "",
-      "insta": "https://www.instagram.com/cabinetbeaumatin/",
+      "insta": "https://www.instagram.com/cabinetbeaumatin",
       "linkedin": "",
       "activite": [
         "Sage-femme"
@@ -1107,9 +1107,9 @@
       "telLink": "+687916967",
       "email": "Aslnutritherapie@gmail.com",
       "adresse": "",
-      "site": "https://beyondnutritherapie.com/",
-      "fb": "",
-      "insta": "",
+      "site": "https://Www.Beyondnutritherapie.com",
+      "fb": "https://www.facebook.com/AnneSophieBeyondnutritherapie",
+      "insta": "https://www.instagram.com/beyondnutritherapie/",
       "linkedin": "",
       "activite": [
         "Diététique / Nutrition"
