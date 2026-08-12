@@ -1562,11 +1562,19 @@ const PAGE2_GROUPS = [
   function renderUsefulDirectory(){
     const grid = document.getElementById('useful-grid');
     if(!grid) return;
-    grid.innerHTML = usefulGroups.map(group => `
+    grid.innerHTML = usefulGroups.map(group => {
+      const sortedItems = [...(group.items || [])].sort((a,b) =>
+        String(a.nom || '').localeCompare(String(b.nom || ''), 'fr', {
+          sensitivity: 'base',
+          ignorePunctuation: true
+        })
+      );
+      return `
       <article class="useful-group" data-useful-group="${esc(group.id)}">
         <h3>${esc(group.titre)}</h3>
-        ${(group.items || []).map(usefulItemHTML).join('')}
-      </article>`).join('');
+        ${sortedItems.map(usefulItemHTML).join('')}
+      </article>`;
+    }).join('');
   }
 
   function infoBlockHTML(info){
@@ -1611,6 +1619,26 @@ const PAGE2_GROUPS = [
     data.filter(r => r.page === pageNum).forEach(r => {
       (byGroup[r.groupe] = byGroup[r.groupe] || []).push(r);
     });
+
+    // Tri alphabétique automatique dans chaque catégorie :
+    // nom, puis prénom ; pour une structure sans nom, le nom du cabinet sert de repli.
+    Object.values(byGroup).forEach(members => {
+      members.sort((a,b) => {
+        const nomA = String(a.nom || a.cabinet || a.prenom || '');
+        const nomB = String(b.nom || b.cabinet || b.prenom || '');
+        const byName = nomA.localeCompare(nomB, 'fr', {
+          sensitivity: 'base',
+          ignorePunctuation: true
+        });
+        if(byName !== 0) return byName;
+
+        return String(a.prenom || '').localeCompare(String(b.prenom || ''), 'fr', {
+          sensitivity: 'base',
+          ignorePunctuation: true
+        });
+      });
+    });
+
     panelEl.innerHTML = groups.map(g => groupHTML(g, byGroup[g.key] || [])).join('');
   }
 
