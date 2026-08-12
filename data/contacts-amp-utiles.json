@@ -44,8 +44,7 @@
               "label": "Site ↗",
               "href": "https://www.chs.nc/cmpgalli%C3%A9ni"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Province Sud – Permanences psychologiques",
@@ -74,8 +73,7 @@
               "label": "Site ↗",
               "href": "https://acsms.nc/lepointsosecoute/"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Le Relais – Province Sud",
@@ -89,8 +87,7 @@
               "label": "Informations ↗",
               "href": "https://www.province-sud.nc/sante-social-egalite/egalite-genres-droits-intrafamiliaux/relais-violences-conjugales-et-intrafamiliales/"
             }
-          ],
-          "meta": ""
+          ]
         }
       ]
     },
@@ -110,8 +107,7 @@
               "label": "Site ↗",
               "href": "https://www.chs.nc/csa"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Centre d’Éducation Thérapeutique – ASS-NC – Obésité",
@@ -140,8 +136,7 @@
               "label": "Province Sud ↗",
               "href": "https://www.province-sud.nc/"
             }
-          ],
-          "meta": ""
+          ]
         }
       ]
     },
@@ -157,8 +152,7 @@
               "label": "Trouver un CMS ↗",
               "href": "https://www.province-nord.nc/sante-cohesion-sociale/centres-medico-sociaux"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "CMS de Koohnê / Koné",
@@ -172,8 +166,7 @@
               "label": "Informations ↗",
               "href": "https://www.province-nord.nc/demarches/acceder-centre-medico-social-dispensaire-sein-hopital-koohne"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Unité fonctionnelle Nord – CHS Albert Bousquet",
@@ -195,8 +188,7 @@
               "label": "Site ↗",
               "href": "https://www.chs.nc/uf-nord"
             }
-          ],
-          "meta": ""
+          ]
         }
       ]
     },
@@ -216,8 +208,7 @@
               "label": "Province des Îles ↗",
               "href": "https://www.province-iles.nc/"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "CMS de Wé – Lifou",
@@ -231,8 +222,7 @@
               "label": "Informations ↗",
               "href": "https://www.province-iles.nc/avp/avp-pil-4-medecins-cms-we"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Centres de soins de proximité – Maré",
@@ -246,8 +236,7 @@
               "label": "Informations ↗",
               "href": "https://www.province-iles.nc/"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Lifou et Ouvéa",
@@ -257,8 +246,7 @@
               "label": "45 52 46",
               "href": "tel:+687455246"
             }
-          ],
-          "meta": ""
+          ]
         }
       ]
     },
@@ -278,12 +266,10 @@
               "label": "Site ↗",
               "href": "https://www.mdf.nc/"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Mutuelle du Nickel – MDN",
-          "description": "",
           "contacts": [
             {
               "label": "26 60 40",
@@ -293,12 +279,10 @@
               "label": "Site ↗",
               "href": "https://mdn.nc/"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "Mutuelle du Commerce",
-          "description": "",
           "contacts": [
             {
               "label": "41 08 00",
@@ -308,12 +292,10 @@
               "label": "Site ↗",
               "href": "https://mutuelleducommerce.nc/"
             }
-          ],
-          "meta": ""
+          ]
         },
         {
           "nom": "MPL – Mutuelle Pour Tous",
-          "description": "",
           "contacts": [
             {
               "label": "28 15 97",
@@ -323,8 +305,7 @@
               "label": "Site ↗",
               "href": "https://mpl.nc/"
             }
-          ],
-          "meta": ""
+          ]
         }
       ]
     },
@@ -338,10 +319,9 @@
           "contacts": [
             {
               "label": "Accéder à Deuxième Avis ↗",
-              "href": "https://deuxiemeavis.fr"
+              "href": "https://www.mdf.nc/service/deuxieme-avis/"
             }
-          ],
-          "meta": ""
+          ]
         }
       ]
     }
