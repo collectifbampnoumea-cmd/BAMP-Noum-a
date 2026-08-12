@@ -228,7 +228,17 @@
     .nav-item.nav-current > .nav-parent { color: var(--lagoon-dark); }
     .nav-links > a.nav-current:not(.button) { position: relative; }
     .nav-links > a.nav-current:not(.button)::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 3px; height: 3px; border-radius: 99px; background: var(--coral); }
-    .nav-item.nav-current > .nav-parent::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--coral); }
+    .nav-item.nav-current > .nav-parent { position: relative; }
+    .nav-item.nav-current > .nav-parent::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      right: 22px;
+      bottom: 3px;
+      height: 3px;
+      border-radius: 99px;
+      background: var(--coral);
+    }
     .nav-links > .button.nav-current { box-shadow: 0 0 0 4px rgba(231,189,53,.32); }
 
     .hero {
@@ -424,6 +434,11 @@
       border-radius: 999px; color: #6c5410; background: rgba(231,189,53,.22); font-size: .76rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase;
     }
     .status-badge span { color: var(--yellow); font-size: .9rem; }
+    .status-badge.available {
+      color: var(--lagoon-dark);
+      background: var(--lagoon-soft);
+    }
+    .status-badge.available span { color: var(--lagoon-dark); }
     .annuaire-status-copy h3 { max-width: 650px; margin-bottom: 14px; font-size: clamp(1.7rem, 3vw, 2.5rem); }
     .annuaire-status-copy p { max-width: 720px; color: var(--muted); }
     .annuaire-categories { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
@@ -738,7 +753,7 @@
               <a href="#partenaires">Partenaires</a>
             </div>
           </div>
-          <a href="#annuaire" data-sections="annuaire">Annuaire & accompagnement</a>
+          <a href="annuaire.html" data-sections="annuaire">Annuaire & accompagnement</a>
 
           <a class="nav-resources" href="#liens-utiles" data-sections="liens-utiles">Liens utiles</a>
           <a class="button" href="#contact" data-sections="contact">Nous contacter</a>
@@ -998,25 +1013,24 @@
       <div class="container">
         <div class="section-head">
           <div><p class="eyebrow">S’orienter</p><h2>Annuaire & accompagnement</h2></div>
-          <p>Un futur point d’entrée unique pour trouver des professionnels de santé, des thérapeutes & bien-être et des contacts AMP utiles en Nouvelle-Calédonie.</p>
+          <p>Un point d’entrée unique pour trouver des professionnels de santé, des thérapeutes & bien-être et des contacts AMP utiles en Nouvelle-Calédonie.</p>
         </div>
         <div class="annuaire-status-card">
           <div class="annuaire-status-copy">
-            <span class="status-badge"><span aria-hidden="true">●</span> Annuaire en cours d’élaboration</span>
-            <h3>Nous constituons progressivement l’annuaire BAMP NC.</h3>
-            <p>Les fiches sont ajoutées après vérification des informations professionnelles et accord explicite de publication. L’objectif est de faciliter l’orientation sans se substituer à un avis médical ni certifier une pratique.</p>
-            <div class="annuaire-categories" aria-label="Contenu prévu dans l’annuaire">
+            <span class="status-badge available"><span aria-hidden="true">●</span> Annuaire disponible</span>
+            <h3>Retrouvez l’annuaire BAMP NC en ligne.</h3>
+            <p>L’annuaire rassemble des professionnels et des contacts utiles pour faciliter l’orientation autour de l’infertilité et des parcours d’AMP. Le référencement ne constitue ni une certification, ni une recommandation médicale de BAMP.</p>
+            <div class="annuaire-categories" aria-label="Contenu de l’annuaire">
               <span>Professionnels de santé</span>
               <span>Thérapeutes & bien-être</span>
               <span>Contacts AMP utiles</span>
             </div>
           </div>
           <div class="annuaire-status-actions">
-            <p><strong>Vous êtes professionnel·le ou accompagnant·e ?</strong><br>Vous pouvez proposer votre inscription dès maintenant.</p>
-            <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLScu8kFkW5Jb5lnsVsIvNyaPwPzwt10yaa-pBDYcl5LBY-0xsQ/viewform?usp=dialog" target="_blank" rel="noopener">S’inscrire à l’annuaire ↗</a>
+            <p><strong>Besoin d’un professionnel ou d’un contact utile ?</strong><br>Consultez l’annuaire BAMP NC et utilisez la recherche pour trouver rapidement la ressource adaptée.</p>
+            <a class="button" href="annuaire.html">Consulter l’annuaire →</a>
+            <a class="button outline" href="https://docs.google.com/forms/d/e/1FAIpQLScu8kFkW5Jb5lnsVsIvNyaPwPzwt10yaa-pBDYcl5LBY-0xsQ/viewform?usp=dialog" target="_blank" rel="noopener">Proposer une inscription ↗</a>
             <a class="privacy-link" href="informations-legales.html#donnees">Utilisation des données personnelles</a>
-            <!-- À RÉACTIVER LORSQUE L’ANNUAIRE EST FINALISÉ : -->
-            <!-- <a class="button light annuaire-public-link" href="annuaire.html">Consulter l’annuaire →</a> -->
           </div>
         </div>
       </div>
@@ -1114,7 +1128,7 @@
           </details>
           <details>
             <summary>Participer <span aria-hidden="true">+</span></summary>
-            <div><a href="#annuaire">Annuaire en cours d’élaboration</a><a href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a><a href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener">Adhérer ou soutenir ↗</a></div>
+            <div><a href="annuaire.html">Consulter l’annuaire</a><a href="https://docs.google.com/forms/d/e/1FAIpQLScu8kFkW5Jb5lnsVsIvNyaPwPzwt10yaa-pBDYcl5LBY-0xsQ/viewform?usp=dialog" target="_blank" rel="noopener">Proposer une inscription ↗</a><a href="mailto:collectifbampnoumea@gmail.com?subject=Proposer%20un%20témoignage">Proposer un témoignage</a><a href="https://www.helloasso.com/associations/collectif-bamp" target="_blank" rel="noopener">Adhérer ou soutenir ↗</a></div>
           </details>
           <details>
             <summary>Partenaires <span aria-hidden="true">+</span></summary>
