@@ -1,0 +1,180 @@
+media: assets
+
+content:
+  - name: annuaire-bamp
+    label: Annuaire BAMP NC
+    type: group
+    items:
+      - name: professionnels
+        label: Professionnels et thérapeutes
+        type: file
+        path: data/professionnels.json
+        format: json
+        operations:
+          delete: false
+        fields:
+          - name: version
+            label: Version
+            type: number
+            readonly: true
+          - name: updatedAt
+            label: Dernière mise à jour
+            type: date
+            options:
+              format: yyyy-MM-dd
+          - name: professionnels
+            label: Professionnels
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{prenom} {nom} — {profession}"
+            fields:
+              - name: nom
+                label: Nom
+                type: string
+                required: true
+              - name: prenom
+                label: Prénom
+                type: string
+                required: true
+              - name: profession
+                label: Profession / titre
+                type: string
+                required: true
+              - name: cabinet
+                label: Cabinet / nom commercial
+                type: string
+              - name: tel
+                label: Téléphone affiché
+                type: string
+              - name: telLink
+                label: Téléphone pour le lien
+                type: string
+                description: "Exemple : +687291162"
+              - name: email
+                label: E-mail professionnel
+                type: string
+              - name: adresse
+                label: Adresse du cabinet
+                type: string
+              - name: site
+                label: Site internet
+                type: string
+                description: "Utiliser une adresse complète commençant par https://"
+              - name: fb
+                label: Facebook
+                type: string
+                description: "Utiliser une adresse complète commençant par https://"
+              - name: insta
+                label: Instagram
+                type: string
+                description: "Utiliser une adresse complète commençant par https://"
+              - name: linkedin
+                label: LinkedIn
+                type: string
+                description: "Utiliser une adresse complète commençant par https://"
+              - name: activite
+                label: Activités
+                type: string
+                list: true
+              - name: public
+                label: Public accompagné
+                type: string
+                list: true
+              - name: presentation
+                label: Présentation
+                type: text
+              - name: modalites
+                label: Modalités de consultation
+                type: string
+                list: true
+              - name: secteur
+                label: Secteur géographique
+                type: string
+                list: true
+              - name: nord
+                label: Communes de Province Nord
+                type: string
+              - name: iles
+                label: Île / commune des Îles
+                type: string
+              - name: page
+                label: Catégorie principale
+                type: number
+                description: "1 = Professionnels de santé ; 2 = Thérapeutes & bien-être"
+              - name: groupe
+                label: Groupe / catégorie technique
+                type: string
+                description: "Exemples : sage-femme, osteopathe, hypnotherapie, sophrologie"
+
+      - name: contacts-amp
+        label: Contacts AMP utiles
+        type: file
+        path: data/contacts-amp-utiles.json
+        format: json
+        operations:
+          delete: false
+        fields:
+          - name: version
+            label: Version
+            type: number
+            readonly: true
+          - name: updatedAt
+            label: Dernière mise à jour
+            type: date
+            options:
+              format: yyyy-MM-dd
+          - name: intro
+            label: Texte d'introduction
+            type: text
+          - name: groupes
+            label: Groupes de contacts
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titre}"
+            fields:
+              - name: id
+                label: Identifiant technique
+                type: string
+                required: true
+              - name: titre
+                label: Titre du groupe
+                type: string
+                required: true
+              - name: items
+                label: Contacts / structures
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{nom}"
+                fields:
+                  - name: nom
+                    label: Nom
+                    type: string
+                    required: true
+                  - name: description
+                    label: Description
+                    type: text
+                  - name: contacts
+                    label: Coordonnées et liens
+                    type: object
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{label}"
+                    fields:
+                      - name: label
+                        label: Texte affiché
+                        type: string
+                        required: true
+                      - name: href
+                        label: Lien
+                        type: string
+                        description: "Exemples : tel:+687208301, mailto:adresse@exemple.nc ou https://..."
+                  - name: meta
+                    label: Information complémentaire
+                    type: text
