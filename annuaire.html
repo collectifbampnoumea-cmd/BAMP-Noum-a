@@ -1562,7 +1562,14 @@ const PAGE2_GROUPS = [
   function renderUsefulDirectory(){
     const grid = document.getElementById('useful-grid');
     if(!grid) return;
-    grid.innerHTML = usefulGroups.map(group => {
+    const sortedGroups = [...usefulGroups].sort((a,b) =>
+      String(a.titre || '').localeCompare(String(b.titre || ''), 'fr', {
+        sensitivity: 'base',
+        ignorePunctuation: true
+      })
+    );
+
+    grid.innerHTML = sortedGroups.map(group => {
       const sortedItems = [...(group.items || [])].sort((a,b) =>
         String(a.nom || '').localeCompare(String(b.nom || ''), 'fr', {
           sensitivity: 'base',
@@ -1639,7 +1646,14 @@ const PAGE2_GROUPS = [
       });
     });
 
-    panelEl.innerHTML = groups.map(g => groupHTML(g, byGroup[g.key] || [])).join('');
+    const sortedGroups = [...groups].sort((a,b) =>
+      String(a.title || '').localeCompare(String(b.title || ''), 'fr', {
+        sensitivity: 'base',
+        ignorePunctuation: true
+      })
+    );
+
+    panelEl.innerHTML = sortedGroups.map(g => groupHTML(g, byGroup[g.key] || [])).join('');
   }
 
   function formatDateISO(iso){
