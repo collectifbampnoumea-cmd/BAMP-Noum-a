@@ -800,6 +800,137 @@ main.wrap{padding:56px 20px 105px;}
   .tab,.directory-link{font-size:.75rem;padding-inline:11px;}
 }
 
+
+/* =====================================================================
+   LISTE COMPACTE + FICHES DÉPLIABLES
+   Les noms restent visibles en permanence ; une seule fiche est ouverte
+   à la fois dans chaque rubrique pour accélérer la lecture.
+   ===================================================================== */
+.entry{
+  display:block;
+  margin-top:10px;
+  padding:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--paper);
+  box-shadow:none;
+}
+.entry:last-child{border-bottom:1px solid var(--line);}
+.entry + .entry{margin-top:8px;}
+.entry-summary{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+  min-height:76px;
+  padding:15px 18px;
+  list-style:none;
+  cursor:pointer;
+  transition:background .18s ease,border-color .18s ease;
+}
+.entry-summary::-webkit-details-marker{display:none;}
+.entry-summary::marker{content:"";}
+.entry-summary:hover{background:var(--lagoon-soft);}
+.entry[open]>.entry-summary{background:var(--lagoon-soft);border-bottom:1px solid var(--line);}
+.entry-summary-main{display:flex;min-width:0;flex-direction:column;gap:2px;}
+.entry-summary .entry-name{
+  display:block;
+  margin:0;
+  color:var(--ink);
+  font-family:var(--font-display);
+  font-size:1.08rem;
+  font-weight:850;
+  line-height:1.2;
+  letter-spacing:-.015em;
+}
+.entry-summary .entry-profession{
+  display:block;
+  margin:0;
+  color:var(--teal-dark);
+  font-size:.79rem;
+  font-weight:800;
+  line-height:1.35;
+}
+.entry-summary .entry-cabinet{
+  display:block;
+  margin:1px 0 0;
+  color:var(--ink-faint)!important;
+  font-family:var(--font-body);
+  font-size:.72rem;
+  font-weight:650;
+  line-height:1.35;
+}
+.entry-summary-side{display:flex;align-items:center;justify-content:flex-end;gap:12px;}
+.entry-summary-location{
+  max-width:190px;
+  color:var(--ink-soft);
+  font-size:.75rem;
+  font-weight:700;
+  line-height:1.25;
+  text-align:right;
+}
+.entry-toggle{
+  display:grid;
+  flex:none;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  color:#fff;
+  background:var(--teal-dark);
+  font-size:1.35rem;
+  font-weight:500;
+  line-height:1;
+  transition:transform .2s ease,background .2s ease;
+}
+.entry[open] .entry-toggle{transform:rotate(45deg);background:var(--coral);}
+.entry>.entry-detail{
+  display:flex;
+  padding:20px 22px 22px;
+  gap:12px;
+  background:var(--paper);
+}
+.entry>.entry-detail .entry-comment{margin-bottom:2px;}
+.entry:focus-within{outline:3px solid rgba(231,189,53,.38);outline-offset:2px;}
+.group[data-count] .group-head{margin-bottom:10px;}
+.group[data-count]::after{
+  content:"Touchez ou cliquez sur un nom pour afficher sa fiche.";
+  display:block;
+  margin-top:10px;
+  color:var(--ink-faint);
+  font-size:.75rem;
+  text-align:right;
+}
+.search-result-item .entry{margin-top:8px;}
+.search-result-item .entry[open]>.entry-summary{background:var(--lagoon-soft);}
+
+@media(max-width:720px){
+  .entry{
+    margin-top:8px;
+    border-radius:16px;
+    background:var(--paper);
+    box-shadow:0 5px 16px rgba(52,125,127,.045);
+  }
+  .entry + .entry{margin-top:7px;}
+  .entry-summary{min-height:68px;padding:13px 14px;gap:10px;}
+  .entry-summary .entry-name{font-size:1.02rem;}
+  .entry-summary .entry-profession{font-size:.76rem;}
+  .entry-summary .entry-cabinet{font-size:.68rem;}
+  .entry-summary-side{gap:8px;}
+  .entry-summary-location{display:none;}
+  .entry-toggle{width:31px;height:31px;font-size:1.2rem;}
+  .entry>.entry-detail{padding:15px 14px 16px;gap:10px;}
+  .group[data-count]::after{margin:8px 2px 0;font-size:.7rem;text-align:left;}
+}
+
+@media print{
+  .entry{break-inside:avoid;}
+  .entry>.entry-detail{display:flex!important;}
+  .entry-summary{border-bottom:1px solid var(--line);}
+  .entry-toggle{display:none;}
+}
+
 </style>
 </head>
 <body>
@@ -838,7 +969,8 @@ main.wrap{padding:56px 20px 105px;}
       L’annuaire est organisé en <strong>trois espaces</strong> : les <strong>professionnels de santé</strong>
       (centres AMP, gynécologues, sages-femmes, psychologues, diététiciennes, ostéopathes…) puis les
       <strong>thérapeutes et praticien·ne·s du bien-être</strong> (hypnothérapeutes, sophrologues,
-      naturopathes, acupunctrices…), ainsi que les <strong>contacts AMP utiles</strong> pour l’orientation et le soutien.
+      naturopathes, acupunctrices…), ainsi que les <strong>contacts AMP utiles</strong> pour l’orientation et le soutien.<br>
+      Dans chaque rubrique, les professionnel·le·s sont d’abord présentés sous forme de liste&nbsp;: sélectionnez un nom pour ouvrir sa fiche détaillée.
     </p>
     <div class="callout">
       <span class="callout-icon" aria-hidden="true">i</span>
@@ -986,21 +1118,28 @@ const PAGE2_GROUPS = [
   function entryHTML(rec){
     const displayName = [rec.prenom, rec.nom].filter(Boolean).join(' ') || rec.cabinet || rec.profession;
     const secteurTxt = (rec.secteur||[]).join(', ') + (rec.nord ? ' (' + rec.nord + ')' : '') + (rec.iles ? ' (' + rec.iles + ')' : '');
+    const shortSecteur = (rec.secteur||[]).join(' · ');
     const searchBlob = (displayName+' '+rec.profession+' '+rec.cabinet+' '+(rec.activite||[]).join(' ')+' '+(rec.public||[]).join(' ')+' '+rec.presentation+' '+rec.adresse).toLowerCase();
     return `
-    <article class="entry" data-search="${esc(searchBlob)}" data-secteur="${esc((rec.secteur||[]).join('|'))}">
-      <div class="entry-id">
-        <p class="entry-name">${esc(displayName)}</p>
-        <p class="entry-profession">${esc(rec.profession)}</p>
-        ${rec.cabinet ? `<p class="entry-cabinet">${esc(rec.cabinet)}</p>` : ''}
-      </div>
+    <details class="entry" data-search="${esc(searchBlob)}" data-secteur="${esc((rec.secteur||[]).join('|'))}">
+      <summary class="entry-summary" aria-label="Afficher la fiche de ${esc(displayName)}">
+        <span class="entry-summary-main">
+          <span class="entry-name">${esc(displayName)}</span>
+          <span class="entry-profession">${esc(rec.profession)}</span>
+          ${rec.cabinet ? `<span class="entry-cabinet">${esc(rec.cabinet)}</span>` : ''}
+        </span>
+        <span class="entry-summary-side">
+          ${shortSecteur ? `<span class="entry-summary-location">${esc(shortSecteur)}</span>` : ''}
+          <span class="entry-toggle" aria-hidden="true">+</span>
+        </span>
+      </summary>
       <div class="entry-detail">
         ${rec.presentation ? `<p class="entry-comment">${esc(rec.presentation)}</p>` : ''}
         ${tagList(rec.public, 'tag-public')}
         ${contactRow(rec)}
         ${secteurTxt ? `<p class="entry-lieux"><strong>Lieux d'exercice&nbsp;:</strong> ${esc(secteurTxt)}${rec.modalites && rec.modalites.length ? ' · ' + esc(rec.modalites.join(', ')) : ''}</p>` : ''}
       </div>
-    </article>`;
+    </details>`;
   }
 
   function usefulGroupById(id){
@@ -1088,6 +1227,7 @@ const PAGE2_GROUPS = [
     renderUsefulDirectory();
     renderPanel(document.getElementById('panel-1'), PAGE1_GROUPS, 1, 'panel-sante');
     renderPanel(document.getElementById('panel-2'), PAGE2_GROUPS, 2, 'panel-bienetre');
+    bindEntryAccordions();
 
     const total = data.length;
     const c1 = data.filter(r=>r.page===1).length;
@@ -1181,7 +1321,9 @@ const PAGE2_GROUPS = [
       source.className = 'search-result-source';
       source.textContent = item.source;
       wrap.appendChild(source);
-      wrap.appendChild(item.el.cloneNode(true));
+      const clone = item.el.cloneNode(true);
+      if(clone.matches && clone.matches('details.entry')) clone.open = true;
+      wrap.appendChild(clone);
       resultsList.appendChild(wrap);
     });
     return true;
@@ -1205,12 +1347,24 @@ const PAGE2_GROUPS = [
       group.querySelectorAll('.entry').forEach(entry => {
         const matchesSecteur = !secteur || entry.dataset.secteur.split('|').includes(secteur);
         entry.style.display = matchesSecteur ? '' : 'none';
+        if(!matchesSecteur && entry.open) entry.open = false;
         if(matchesSecteur) groupHasVisible = true;
       });
       group.style.display = groupHasVisible ? '' : 'none';
       if(groupHasVisible) anyVisible = true;
     });
     document.getElementById('empty-state').hidden = anyVisible;
+  }
+
+  function bindEntryAccordions(){
+    document.querySelectorAll('main details.entry').forEach(entry => {
+      entry.addEventListener('toggle', () => {
+        if(!entry.open) return;
+        document.querySelectorAll('main details.entry[open]').forEach(other => {
+          if(other !== entry) other.open = false;
+        });
+      });
+    });
   }
 
   function bindEvents(){
@@ -1231,6 +1385,18 @@ const PAGE2_GROUPS = [
     });
     document.getElementById('filter-secteur').addEventListener('change', applyFilters);
     document.getElementById('print-btn').addEventListener('click', () => window.print());
+
+    let printOpenState = [];
+    window.addEventListener('beforeprint', () => {
+      const entries = [...document.querySelectorAll('details.entry')];
+      printOpenState = entries.map(entry => entry.open);
+      entries.forEach(entry => { entry.open = true; });
+    });
+    window.addEventListener('afterprint', () => {
+      document.querySelectorAll('details.entry').forEach((entry, index) => {
+        entry.open = Boolean(printOpenState[index]);
+      });
+    });
   }
 
   async function loadData(){
