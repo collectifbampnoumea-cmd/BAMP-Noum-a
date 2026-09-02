@@ -59,7 +59,7 @@
         "Femmes seules",
         "Adolescents"
       ],
-      "presentation": "sage femme libérale , j'accompagne les femme de 12 à 92 ans pour les aider dans toutes les périodes de leurs vie . Juste par rapport aux recrutements des professionnels de santé et des thérapeutes, faites attentions au diplômes de chacun , tous les thérapeutes ne se valent pas en terme de formation ... C'est important de s'assurer de ça avant de confier les patientes surtout sur des thématiques aussi sensibles avec une grande part de vulnérabilité.",
+      "presentation": "Sage femme libérale , j'accompagne les femme de 12 à 92 ans pour les aider dans toutes les périodes de leurs vie.",
       "modalites": [
         "Cabinet",
         "Téléconsultation",
@@ -1026,6 +1026,7 @@
       ],
       "page": 2,
       "groupe": "dieteticienne"
-    }
+    },
+    {}
   ]
 }
