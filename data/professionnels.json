@@ -993,7 +993,7 @@
       "groupe": "sage-femme"
     },
     {
-      "nom": "Castan",
+      "nom": "CASTAN",
       "prenom": "Anne-Sophie",
       "profession": "Nutrithérapeute",
       "cabinet": "BeyondNutritherapie",
@@ -1024,9 +1024,8 @@
       "secteur": [
         "Nouméa"
       ],
-      "page": 2,
+      "page": 1,
       "groupe": "dieteticienne"
-    },
-    {}
+    }
   ]
 }
