@@ -1000,6 +1000,7 @@
       "tel": "91.69.67",
       "telLink": "+687916967",
       "email": "Aslnutritherapie@gmail.com",
+      "adresse": "Nouméa",
       "site": "https://Www.Beyondnutritherapie.com",
       "fb": "https://www.facebook.com/AnneSophieBeyondnutritherapie",
       "insta": "https://www.instagram.com/beyondnutritherapie/",
@@ -1026,13 +1027,6 @@
       ],
       "page": 1,
       "groupe": "dieteticienne"
-    },
-    {
-      "nom": "GENEVIEVE",
-      "prenom": "FQSF",
-      "profession": "GEE",
-      "page": 1,
-      "groupe": "DIETETICIENNE"
     }
   ]
 }
