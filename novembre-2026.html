@@ -245,6 +245,19 @@ td.yes { color: #1C6B3E; font-weight: 800; }
 .rtable td.yes, .rtable td.no { font-weight: 600; }
 .note2 { font-size: 11px !important; font-style: italic; line-height: 1.45 !important; opacity: .85; }
 
+.small2 { font-size: 14px !important; color: var(--pink-ink); font-weight: 600; }
+.steps5 { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; flex-shrink: 0; }
+.steps5 li { position: relative; display: flex; gap: 12px; padding-bottom: 12px; }
+.steps5 li:not(:last-child)::before { content: ""; position: absolute; left: 17px; top: 36px; bottom: 0; width: 2px; background: var(--line); }
+.snum { width: 36px; height: 36px; flex-shrink: 0; border-radius: 50%; background: var(--plum); color: var(--white); font-weight: 900; font-size: 17px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 1; }
+.steps5 b { display: block; font-size: 16px; font-weight: 800; color: var(--plum); line-height: 1.25; padding-top: 6px; }
+.steps5 p { font-size: 14px; line-height: 1.45; margin-top: 2px; }
+.loop { flex-shrink: 0; background: var(--plum); color: var(--white); border-radius: 14px; padding: 11px 14px; font-size: 14px; font-weight: 600; line-height: 1.45; }
+.loop span { font-weight: 900; margin-right: 4px; }
+.concret { flex-shrink: 0; background: var(--blush); border-radius: 14px; padding: 11px 14px; display: flex; flex-direction: column; gap: 4px; }
+.concret b { font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--pink-ink); }
+.concret p { font-size: 14px; line-height: 1.45; }
+
 /* Phones: show a bit more per screen */
 @media (max-width: 560px) { .shell { zoom: .86; } }
 
@@ -461,6 +474,15 @@ td.yes { color: #1C6B3E; font-weight: 800; }
   <p class="src">Objectif du collectif : un parcours d'AMP accessible, lisible et équitable pour toutes et tous en Nouvelle-Calédonie.</p>
 </section>
 
+<section class="page" aria-label="Le parcours AMP">
+  <div class="eyebrow">Focus</div>
+  <h2>Le parcours d'AMP, étape par étape</h2>
+  <p class="small2">Parcours type d'un couple suivi au centre AMP du CHT / Médipôle, sans don de gamètes.</p>
+  <ol class="steps5"><li><span class="snum" aria-hidden="true">1</span><div><b>Consultation</b><p>Après 12 mois d'essais sans grossesse (6 mois après 35 ans) : on en parle à son médecin, sa sage-femme ou son gynécologue.</p></div></li><li><span class="snum" aria-hidden="true">2</span><div><b>Bilan</b><p>Des examens pour la femme et pour l'homme. Compter quelques semaines à plusieurs mois.</p></div></li><li><span class="snum" aria-hidden="true">3</span><div><b>Centre d'AMP</b><p>Au CHT / Médipôle : constitution du dossier, entretien et signature des consentements.</p></div></li><li><span class="snum" aria-hidden="true">4</span><div><b>Traitement</b><p>Du plus léger au plus lourd : stimulation ovarienne, insémination artificielle (IAC), fécondation in vitro (FIV) ou injection intracytoplasmique de spermatozoïde (ICSI), transfert d'embryon congelé (TEC).</p></div></li><li><span class="snum" aria-hidden="true">5</span><div><b>Résultat</b><p>Une prise de sang environ 2 semaines après.</p></div></li></ol>
+  <div class="loop"><span aria-hidden="true">↻</span> En cas d'échec : nouvelle tentative après une pause. Le parcours dure souvent <b>un à plusieurs années</b>.</div>
+  <div class="concret"><b>Concrètement</b><p>Une FIV, c'est une dizaine de rendez-vous en 2 à 3 semaines, souvent tôt le matin. Pour les patients du Nord et des Îles, chaque rendez-vous implique un déplacement à Nouméa.</p></div>
+</section>
+
 <section class="page" aria-label="Qui sommes-nous">
   <div class="eyebrow">Les organisateurs</div>
   <h2>Qui sommes-nous ?</h2>
@@ -480,7 +502,7 @@ td.yes { color: #1C6B3E; font-weight: 800; }
 </main>
 <nav class="nav" aria-label="Pages du livret">
   <button type="button" id="prev" aria-label="Page précédente">←</button>
-  <span class="navmid"><span class="dots" id="dots" aria-hidden="true"></span><span class="count" id="count" aria-live="polite">1 / 10</span></span>
+  <span class="navmid"><span class="dots" id="dots" aria-hidden="true"></span><span class="count" id="count" aria-live="polite">1 / 11</span></span>
   <button type="button" id="next" aria-label="Page suivante">Suivant →</button>
 </nav>
 </div>
