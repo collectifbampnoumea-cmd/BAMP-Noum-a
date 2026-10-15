@@ -258,6 +258,11 @@ td.yes { color: #1C6B3E; font-weight: 800; }
 .concret b { font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--pink-ink); }
 .concret p { font-size: 14px; line-height: 1.45; }
 
+.guests a { color: var(--plum); text-underline-offset: 3px; }
+.guests .sub { list-style: none; margin: 4px 0 0; padding: 0 0 0 12px; border-left: 2px solid var(--line); display: flex; flex-direction: column; gap: 5px; }
+.guests .sub li { background: none; padding: 0; font-size: 13px; line-height: 1.45; display: block; border-radius: 0; }
+.guests .sub b { font-size: 13px; }
+
 /* Phones: show a bit more per screen */
 @media (max-width: 560px) { .shell { zoom: .86; } }
 
@@ -374,9 +379,20 @@ td.yes { color: #1C6B3E; font-weight: 800; }
     <div class="fact"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B1145" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>18 h 30</span></div>
     <div class="fact"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B1145" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><a class="maplink" href="https://maps.google.com/maps?vet=10CAAQoqAOahcKEwjYxLDVwLqXAxUAAAAAHQAAAAAQCQ..i&amp;rlz=1C1GCEA_frNC1207NC1208&amp;udm&amp;fvr=1&amp;pvq=Cg0vZy8xMXA1Zm4ybnRk&amp;cs=0&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=fr&amp;sa=X&amp;ftid=0x6c27e3c12cd4a72b:0xf9e2d7560f26baf4" target="_blank" rel="noopener"><b>Auditorium de la Province Sud</b><em>Voir sur la carte ›</em></a></div>
   </div>
-  <div class="eyebrow">Avec</div>
-  <div class="partners"><span>CHT Gaston-Bourret</span><span>Clotilde Dechanet</span><a href="https://www.chu-nantes.fr/pr-thomas-freour" target="_blank" rel="noopener">Pr Thomas Fréour ›</a><span>Association Endosœurs</span><span>BAMP NC</span><span>Gouvernement NC (sous réserve)</span></div>
-  <div class="logos"><span class="lab">Partenaires</span><div class="lrow"><a class="plogo" href="https://www.province-sud.nc/" target="_blank" rel="noopener" title="Province Sud"><span>Province Sud</span></a><a class="plogo" href="https://www.cht.nc/offre-de-soins-du-cht/pole-mere-enfant/centre-dassistance-medicale-a-procreation-amp/" target="_blank" rel="noopener" title="CHT Gaston-Bourret"><span>CHT Gaston-Bourret</span></a><a class="plogo" href="https://www.facebook.com/profile.php?id=61559229787285" target="_blank" rel="noopener" title="Association Endosœurs"><span>Association Endosœurs</span></a></div></div>
+  <div class="eyebrow">Les intervenants</div>
+  <ul class="guests">
+    <li><b>Le centre AMP du CHT Gaston-Bourret</b><span>Seul centre d'AMP de Nouvelle-Calédonie, représenté par :</span>
+      <ul class="sub">
+        <li><b>Dr Clotilde Dechanet</b>, gynécologue</li>
+        <li><a href="https://www.chu-nantes.fr/pr-thomas-freour" target="_blank" rel="noopener"><b>Pr Thomas Fréour ›</b></a>, biologiste au centre AMP du CHT Gaston-Bourret (en remplacement), chef de service Biologie et médecine de la reproduction, gynécologie médicale, et responsable du centre AMP du CHU de Nantes</li>
+      </ul>
+    </li>
+    <li><b>Le Collectif BAMP</b><span>Accompagne les personnes confrontées à l'infertilité et aux parcours d'AMP.</span></li>
+    <li><b><a href="https://www.facebook.com/rainbowlutionNC" target="_blank" rel="noopener">L'association Rainbowlution ›</a></b><span>Association calédonienne qui défend les droits des personnes LGBTQIA+ et des familles homoparentales.</span></li>
+    <li><b><a href="https://www.facebook.com/profile.php?id=61559229787285" target="_blank" rel="noopener">L'association Endosœurs ›</a></b><span>Représente les personnes touchées par l'endométriose, le SOPK et les autres maladies gynécologiques qui impactent la fertilité.</span></li>
+    <li><b>Un représentant du Gouvernement de la Nouvelle-Calédonie</b><span>En attente de confirmation.</span></li>
+  </ul>
+  <div class="logos"><span class="lab">Partenaires</span><div class="lrow"><a class="plogo" href="https://www.province-sud.nc/" target="_blank" rel="noopener" title="Province Sud"><span>Province Sud</span></a></div></div>
 </section>
 
 <section class="page" aria-label="18 novembre">
