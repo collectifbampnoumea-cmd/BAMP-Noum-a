@@ -203,6 +203,51 @@ td.yes { color: #1C6B3E; font-weight: 800; }
 .maplink:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 6px; }
 .partners a, .partners span { line-height: 1.3; }
 
+.chip.row { width: 100%; box-sizing: border-box; text-align: left; font: inherit; color: inherit; cursor: pointer; display: grid; grid-template-columns: 74px 1fr; gap: 12px; align-items: start; padding: 10px 12px; border-radius: 14px; }
+.chip.row.media { background: var(--white); border: 1.5px solid var(--line); }
+.chip.row:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+.row.media u { color: var(--pink-ink); text-underline-offset: 3px; font-weight: 800; }
+.rights { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.rights li { background: var(--white); border: 1.5px solid var(--line); border-radius: 12px; padding: 9px 12px; display: flex; flex-direction: column; gap: 6px; }
+.rname { font-size: 14px; font-weight: 800; color: var(--plum); line-height: 1.3; }
+.rvals { display: flex; flex-wrap: wrap; gap: 6px; }
+.rv { display: inline-flex; align-items: baseline; gap: 6px; font-size: 13px; font-weight: 800; padding: 4px 10px; border-radius: 999px; }
+.rv i { font-style: normal; font-size: 10px; letter-spacing: .8px; text-transform: uppercase; opacity: .8; }
+.rv.no { background: #FCE3E8; color: #A3173F; }
+.rv.yes { background: #DDF2E5; color: #1C6B3E; }
+.navmid { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.dots { display: flex; gap: 5px; }
+.dots i { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.35); display: block; transition: width .2s; }
+.dots i.on { width: 16px; border-radius: 3px; background: var(--white); }
+.nextcta { appearance: none; border: 0; margin-top: auto; align-self: stretch; display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 52px; padding: 10px 18px; border-radius: 16px; background: var(--plum); color: var(--white); font: 800 15px var(--display); cursor: pointer; text-align: left; flex-shrink: 0; }
+.nextcta small { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; opacity: .75; }
+.nextcta b { font-size: 26px; line-height: 1; }
+.nextcta:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+.cover .hint { appearance: none; border: 0; background: var(--white); color: var(--plum); font: 800 15px var(--display); padding: 12px 18px; border-radius: 999px; align-self: flex-start; min-height: 48px; cursor: pointer; }
+.swipe { display: inline-block; animation: nudge 1.2s ease-in-out infinite; }
+@keyframes nudge { 0%,100% { transform: translateX(0) } 50% { transform: translateX(8px) } }
+#next.pulse { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(232,84,122,.7) } 50% { box-shadow: 0 0 0 8px rgba(232,84,122,0) } }
+@media (prefers-reduced-motion: reduce) { .swipe, #next.pulse { animation: none; } }
+
+.rtable { flex-shrink: 0; border: 1.5px solid var(--line); border-radius: 12px; overflow: hidden; }
+.rtable table { width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 11px; line-height: 1.3; }
+.rtable col, .rtable th:nth-child(1) { width: 29%; }
+.rtable thead th:nth-child(2) { width: 23%; }
+.rtable thead th:nth-child(3) { width: 17%; }
+.rtable thead th:nth-child(4) { width: 31%; }
+.rtable thead th { background: var(--plum); color: var(--white); font-size: 10.5px; font-weight: 800; text-align: left; padding: 7px 6px; vertical-align: bottom; letter-spacing: 0; }
+.rtable tbody th { font-weight: 700; text-align: left; color: var(--ink); background: transparent; font-size: 11px; letter-spacing: 0; }
+.rtable td, .rtable tbody th { padding: 6px; vertical-align: top; border-top: 1px solid var(--blush); overflow-wrap: anywhere; hyphens: auto; }
+.rtable tbody tr:nth-child(even) { background: #FDF3F5; }
+.rtable td.yes span { color: #1C6B3E; font-weight: 900; }
+.rtable td.no span { color: #C0272D; font-weight: 900; }
+.rtable td.yes, .rtable td.no { font-weight: 600; }
+.note2 { font-size: 11px !important; font-style: italic; line-height: 1.45 !important; opacity: .85; }
+
+/* Phones: show a bit more per screen */
+@media (max-width: 560px) { .shell { zoom: .86; } }
+
 /* Page 2: one card per day, like the poster */
 .days { display: flex; flex-direction: column; gap: 10px; }
 .day, .mini { appearance: none; border: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; display: flex; align-items: stretch; border-radius: 16px; overflow: hidden; background: var(--blush); padding: 0; width: 100%; }
@@ -243,7 +288,7 @@ td.yes { color: #1C6B3E; font-weight: 800; }
     <p style="font-size:20px;font-weight:800;line-height:1.3">Mois de sensibilisation à l'infertilité</p>
     <div class="tag">Infertilités : tous concernés !</div>
   </div>
-  <div class="hint">Faites glisser pour feuilleter →</div>
+  <button type="button" class="hint" data-go="2">Faites glisser pour feuilleter <span class="swipe" aria-hidden="true">→</span></button>
 </section>
 
 <section class="page" aria-label="Le mois en un coup d'œil">
@@ -318,7 +363,7 @@ td.yes { color: #1C6B3E; font-weight: 800; }
   </div>
   <div class="eyebrow">Avec</div>
   <div class="partners"><span>CHT Gaston-Bourret</span><span>Clotilde Dechanet</span><a href="https://www.chu-nantes.fr/pr-thomas-freour" target="_blank" rel="noopener">Pr Thomas Fréour ›</a><span>Association Endosœurs</span><span>BAMP NC</span><span>Gouvernement NC (sous réserve)</span></div>
-  <div class="logos"><span class="lab">Partenaires</span><div class="lrow"><a class="plogo" href="https://www.cht.nc/offre-de-soins-du-cht/pole-mere-enfant/centre-dassistance-medicale-a-procreation-amp/" target="_blank" rel="noopener" title="CHT Gaston-Bourret"><span>CHT Gaston-Bourret</span></a><a class="plogo" href="https://www.facebook.com/profile.php?id=61559229787285" target="_blank" rel="noopener" title="Association Endosœurs"><span>Association Endosœurs</span></a></div></div>
+  <div class="logos"><span class="lab">Partenaires</span><div class="lrow"><a class="plogo" href="https://www.province-sud.nc/" target="_blank" rel="noopener" title="Province Sud"><span>Province Sud</span></a><a class="plogo" href="https://www.cht.nc/offre-de-soins-du-cht/pole-mere-enfant/centre-dassistance-medicale-a-procreation-amp/" target="_blank" rel="noopener" title="CHT Gaston-Bourret"><span>CHT Gaston-Bourret</span></a><a class="plogo" href="https://www.facebook.com/profile.php?id=61559229787285" target="_blank" rel="noopener" title="Association Endosœurs"><span>Association Endosœurs</span></a></div></div>
 </section>
 
 <section class="page" aria-label="18 novembre">
@@ -389,7 +434,7 @@ td.yes { color: #1C6B3E; font-weight: 800; }
   <p>Interventions et témoignages dans les médias calédoniens.</p>
   <div class="agenda">
     <div class="row media"><div class="when">Mar. 3 nov.</div><div class="what">Témoignage d'une patiente en parcours AMP<small>Naissances insulaires</small></div></div>
-    <div class="row media"><div class="when">Mar. 10 nov.</div><div class="what">Interview du Pr Thomas Fréour sur l'infertilité masculine en Nouvelle-Calédonie<small>NC la 1ère</small></div></div>
+    <div class="row media"><div class="when">Mar. 10 nov.</div><div class="what">Interview du Pr Thomas Fréour sur l'infertilité masculine en Nouvelle-Calédonie<small>Biologiste au centre AMP du CHT Gaston-Bourret (en remplacement)</small><small>NC la 1ère</small></div></div>
     <div class="row media"><div class="when">Jeu. 12 nov.</div><div class="what">Interview de BAMP NC<small>NC la 1ère</small></div></div>
     <div class="row media"><div class="when">Ven. 13 nov.</div><div class="what">Interview radio<small>NRJ</small></div></div>
     <div class="row media"><div class="when">Mar. 24 nov.</div><div class="what">Témoignage d'une patiente en parcours AMP<small>Naissances insulaires</small></div></div>
@@ -406,20 +451,13 @@ td.yes { color: #1C6B3E; font-weight: 800; }
     <div class="stat"><strong>25 %</strong><span>de chance de grossesse par cycle de FIV débuté (13 % par insémination), données 2022</span></div>
   </div>
   <p style="font-weight:800;color:var(--plum)">Ici ou en métropole, les droits ne sont pas les mêmes.</p>
-  <div class="tablewrap">
+  <div class="rtable">
     <table>
-      <thead><tr><th scope="col">Droit ou possibilité</th><th scope="col">NC</th><th scope="col">Métropole</th></tr></thead>
-      <tbody>
-        <tr><td>AMP pour les couples hétérosexuels</td><td class="yes">Oui</td><td class="yes">Oui</td></tr>
-        <tr><td>AMP pour les couples de femmes</td><td class="no">Non accessible</td><td class="yes">Oui</td></tr>
-        <tr><td>AMP pour les femmes seules</td><td class="no">Non accessible</td><td class="yes">Oui</td></tr>
-        <tr><td>Don de gamètes</td><td class="no">Non accessible</td><td class="yes">Oui</td></tr>
-        <tr><td>Conservation des gamètes, raison médicale</td><td class="yes">Oui, si risque médical</td><td class="yes">Oui</td></tr>
-        <tr><td>Conservation des gamètes sans motif médical</td><td class="no">Non</td><td class="yes">Oui</td></tr>
-        <tr><td>Reconnaissance conjointe anticipée (couples de femmes)</td><td class="no">Non, passage par l'adoption</td><td class="yes">Oui</td></tr>
-      </tbody>
+      <thead><tr><th scope="col">Droit ou possibilité</th><th scope="col">Nouvelle-Calédonie</th><th scope="col">Métropole</th><th scope="col">À l'étranger* (Espagne, Rép. tchèque, Nouvelle-Zélande)</th></tr></thead>
+      <tbody><tr><th scope="row">AMP pour les couples hétérosexuels</th><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td>≈ 0,3 à 1,4 million XPF par FIV</td></tr><tr><th scope="row">AMP pour les couples de femmes</th><td class="no"><span aria-hidden="true">✗</span> Non accessible localement</td><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td>≈ 0,1 à 1,5 million XPF par tentative</td></tr><tr><th scope="row">AMP pour les femmes seules</th><td class="no"><span aria-hidden="true">✗</span> Non accessible localement</td><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td>≈ 0,1 à 1,5 million XPF par tentative</td></tr><tr><th scope="row">Don de gamètes (spermatozoïdes, ovocytes)</th><td class="no"><span aria-hidden="true">✗</span> Non accessible localement</td><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td>≈ 0,5 à 1,6 million XPF par tentative</td></tr><tr><th scope="row">Conservation des gamètes pour raison médicale</th><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td>Sans objet : réalisable en Nouvelle-Calédonie</td></tr><tr><th scope="row">Conservation des gamètes sans motif médical</th><td class="no"><span aria-hidden="true">✗</span> Non</td><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td>≈ 0,3 à 0,9 million XPF, plus le stockage annuel</td></tr><tr><th scope="row">Reconnaissance conjointe anticipée (couples de femmes)</th><td class="no"><span aria-hidden="true">✗</span> Non, passage par l'adoption</td><td class="yes"><span aria-hidden="true">✓</span> Oui</td><td>—</td></tr></tbody>
     </table>
   </div>
+  <p class="note2">* Prix indicatifs 2026, hors médicaments, voyage et séjour sur place. L'accès varie selon les pays : la République tchèque, par exemple, reste fermée aux femmes seules et aux couples de femmes.</p>
   <p class="src">Objectif du collectif : un parcours d'AMP accessible, lisible et équitable pour toutes et tous en Nouvelle-Calédonie.</p>
 </section>
 
@@ -442,7 +480,7 @@ td.yes { color: #1C6B3E; font-weight: 800; }
 </main>
 <nav class="nav" aria-label="Pages du livret">
   <button type="button" id="prev" aria-label="Page précédente">←</button>
-  <span class="count" id="count" aria-live="polite">1 / 10</span>
+  <span class="navmid"><span class="dots" id="dots" aria-hidden="true"></span><span class="count" id="count" aria-live="polite">1 / 10</span></span>
   <button type="button" id="next" aria-label="Page suivante">Suivant →</button>
 </nav>
 </div>
@@ -466,6 +504,7 @@ td.yes { color: #1C6B3E; font-weight: 800; }
     prev.disabled = i === 0;
     next.disabled = i === pages.length - 1;
     next.textContent = i === 0 ? 'Suivant →' : '→';
+    var ds = document.getElementById('dots').children; for (var k = 0; k < ds.length; k++) ds[k].className = k === i ? 'on' : '';
   }
   prev.addEventListener('click', function () { go(current() - 1); });
   next.addEventListener('click', function () { go(current() + 1); });
@@ -478,6 +517,28 @@ td.yes { color: #1C6B3E; font-weight: 800; }
     if (e.key === 'ArrowLeft') { go(current() - 1); }
   });
   wrap.tabIndex = 0;
+  // dots
+  var dots = document.getElementById('dots');
+  for (var d = 0; d < pages.length; d++) { dots.appendChild(document.createElement('i')); }
+  // "next page" button at the bottom of every page but the last
+  pages.forEach(function (pg, i) {
+    if (i === 0 || i === pages.length - 1) return;
+    var nxt = pages[i + 1].getAttribute('aria-label') || 'Page suivante';
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'nextcta';
+    b.innerHTML = '<span><small>Page suivante</small></span><b aria-hidden="true">→</b>';
+    b.firstChild.appendChild(document.createTextNode(nxt));
+    b.addEventListener('click', function () { go(i + 1); });
+    pg.appendChild(b);
+  });
+  // invite to swipe: the "next" button pulses until the reader moves on
+  var moved = false;
+  next.classList.add('pulse');
+  wrap.addEventListener('scroll', function () { if (!moved && current() > 0) { moved = true; next.classList.remove('pulse'); } }, { passive: true });
+  // small peek at the next page on first load
+  if (!reduce) {
+    setTimeout(function () { if (!moved && current() === 0) { wrap.scrollTo({ left: 70, behavior: 'smooth' }); setTimeout(function () { if (current() === 0) wrap.scrollTo({ left: 0, behavior: 'smooth' }); }, 650); } }, 1200);
+  }
   update();
 })();
 </script>
